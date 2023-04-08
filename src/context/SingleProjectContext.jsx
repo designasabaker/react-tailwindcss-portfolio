@@ -1,11 +1,13 @@
 import { useState, createContext } from 'react';
-import { singleProjectData as singleProjectDataJson } from '../data/singleProjectData';
+import { WeLightProjectData as WeLightProjectDataJson} from '../data/WeLightProjectData';
+import { OSBProjectData as OSBProjectDataJson} from '../data/OSBProjectData';
 
 const SingleProjectContext = createContext();
+const projectDataList = [WeLightProjectDataJson, OSBProjectDataJson];
 
-export const SingleProjectProvider = ({ children }) => {
+export const SingleProjectProvider = ({ projectName, children }) => {
 	const [singleProjectData, setSingleProjectData] = useState(
-		singleProjectDataJson
+		projectDataList[projectDataList.findIndex((projectData) => projectData.name === projectName)]
 	);
 
 	return (

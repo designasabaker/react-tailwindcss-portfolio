@@ -14,10 +14,11 @@ import {
 	FiYoutube,
 } from 'react-icons/fi';
 
-export const singleProjectData = {
+export const WeLightProjectData = {
+	name: 'WeLight',
 	ProjectHeader: {
-		title: 'Project Management UI',
-		publishDate: 'Jul 26, 2021',
+		title: 'WeLight Tech Website',
+		publishDate: 'Apr 15, 2023',
 		tags: 'UI / Frontend',
 	},
 	ProjectImages: [

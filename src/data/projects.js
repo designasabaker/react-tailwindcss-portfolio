@@ -1,6 +1,6 @@
 // Import images
 import WebImage1 from '../images/web-project-1.jpg';
-import WebImage2 from '../images/web-project-2.jpg';
+import WeLightImage from '../images/WeLight.png';
 import MobileImage1 from '../images/mobile-project-1.jpg';
 import MobileImage2 from '../images/mobile-project-2.jpg';
 import UIImage1 from '../images/ui-project-1.jpg';
@@ -9,20 +9,27 @@ import UIImage2 from '../images/ui-project-2.jpg';
 export const projectsData = [
 	{
 		id: 1,
-		title: 'Google Health Platform',
+		name: 'WeLight',
+		title: 'WeLight Tech Platform',
 		category: 'Web Application',
-		img: WebImage2,
+		img: WeLightImage,
 		ProjectHeader: {
-			title: 'Project Management UI - From Context',
-			publishDate: 'Jul 26, 2021',
+			title: 'WeLight Tech Platform',
+			publishDate: 'Apr 15, 2023',
 			tags: 'UI / Frontend',
 		},
 	},
 	{
 		id: 2,
-		title: 'Phoenix Digital Agency',
-		category: 'Mobile Application',
+		name: 'OSB',
+		title: 'OSB Website',
+		category: 'Web Application',
 		img: MobileImage2,
+		ProjectHeader: {
+			title: 'OSB Website',
+			publishDate: 'Apr 15, 2023',
+			tags: 'UI / Frontend',
+		},
 	},
 	{
 		id: 3,

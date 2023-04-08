@@ -3,8 +3,8 @@ import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import HireMeModal from '../HireMeModal';
-import logoLight from '../../images/logo-light.svg';
-import logoDark from '../../images/logo-dark.svg';
+import logoLight from '../../images/logo-lightMode.svg';
+import logoDark from '../../images/logo-darkMode.svg';
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button';
 
@@ -47,7 +47,7 @@ const AppHeader = () => {
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
 						<Link to="/">
-							{activeTheme === 'dark' ? (
+							{activeTheme === 'light' ? (
 								<img
 									src={logoDark}
 									className="w-36"
@@ -128,7 +128,7 @@ const AppHeader = () => {
 					>
 						Contact
 					</Link>
-					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+					{/* <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						<span
 							onClick={showHireMeModal}
 							className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
@@ -136,7 +136,7 @@ const AppHeader = () => {
 						>
 							<Button title="Hire Me" />
 						</span>
-					</div>
+					</div> */}
 				</div>
 
 				{/* Header links large screen */}
@@ -166,7 +166,7 @@ const AppHeader = () => {
 
 				{/* Header right section buttons */}
 				<div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
-					<div className="hidden md:flex">
+					{/* <div className="hidden md:flex">
 						<span
 							onClick={showHireMeModal}
 							className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
@@ -174,7 +174,7 @@ const AppHeader = () => {
 						>
 							<Button title="Hire Me" />
 						</span>
-					</div>
+					</div> */}
 
 					{/* Theme switcher large screen */}
 					<div
