@@ -46,7 +46,7 @@ const AppHeader = () => {
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
-						<Link to="/">
+						<Link to="home">
 							{activeTheme === 'light' ? (
 								<img
 									src={logoDark}
