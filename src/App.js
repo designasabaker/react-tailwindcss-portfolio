@@ -23,8 +23,8 @@ function App() {
 					<AppHeader />
 					<Suspense fallback={""}>
 						<Routes>
-							<Route path="/react-tailwindcss-portfolio" element={<Home />} />
-							<Route path="/react-tailwindcss-portfolio/projects" element={<Projects />} />
+							<Route path="/" element={<Home />} />
+							<Route path="/projects" element={<Projects />} />
 							<Route
 								path="/react-tailwindcss-portfolio/projects/:projectName"
 								element={<ProjectSingle />}
