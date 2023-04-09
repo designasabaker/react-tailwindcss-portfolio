@@ -12,7 +12,7 @@ const Contact = lazy(() => import('./pages/Contact.jsx'));
 const Home = lazy(() => import('./pages/Home'));
 const Projects = lazy(() => import('./pages/Projects'));
 const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
-
+// https://dev.to/janjibdev/problem-with-react-router-app-and-github-pages-lij
 
 function App() {
 	return (
@@ -23,7 +23,7 @@ function App() {
 					<AppHeader />
 					<Suspense fallback={""}>
 						<Routes>
-							<Route path="react-tailwindcss-portfolio/home" element={<Home />} />
+							<Route path="react-tailwindcss-portfolio" element={<Home />} />
 							<Route path="react-tailwindcss-portfolio/projects" element={<Projects />} />
 							<Route
 								path="react-tailwindcss-portfolio/projects/:projectName"
