@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-tailwindcss-portfolio/static/css/main.f2bb07df.chunk.css",
-    "main.js": "/react-tailwindcss-portfolio/static/js/main.e866d9ed.chunk.js",
-    "main.js.map": "/react-tailwindcss-portfolio/static/js/main.e866d9ed.chunk.js.map",
-    "runtime-main.js": "/react-tailwindcss-portfolio/static/js/runtime-main.102b2331.js",
-    "runtime-main.js.map": "/react-tailwindcss-portfolio/static/js/runtime-main.102b2331.js.map",
+    "main.js": "/react-tailwindcss-portfolio/static/js/main.fa76a777.chunk.js",
+    "main.js.map": "/react-tailwindcss-portfolio/static/js/main.fa76a777.chunk.js.map",
+    "runtime-main.js": "/react-tailwindcss-portfolio/static/js/runtime-main.e0afd378.js",
+    "runtime-main.js.map": "/react-tailwindcss-portfolio/static/js/runtime-main.e0afd378.js.map",
     "static/js/2.2903ff98.chunk.js": "/react-tailwindcss-portfolio/static/js/2.2903ff98.chunk.js",
     "static/js/2.2903ff98.chunk.js.map": "/react-tailwindcss-portfolio/static/js/2.2903ff98.chunk.js.map",
-    "static/js/3.6577786d.chunk.js": "/react-tailwindcss-portfolio/static/js/3.6577786d.chunk.js",
-    "static/js/3.6577786d.chunk.js.map": "/react-tailwindcss-portfolio/static/js/3.6577786d.chunk.js.map",
-    "static/js/4.a0530f31.chunk.js": "/react-tailwindcss-portfolio/static/js/4.a0530f31.chunk.js",
-    "static/js/4.a0530f31.chunk.js.map": "/react-tailwindcss-portfolio/static/js/4.a0530f31.chunk.js.map",
+    "static/js/3.62eaaf03.chunk.js": "/react-tailwindcss-portfolio/static/js/3.62eaaf03.chunk.js",
+    "static/js/3.62eaaf03.chunk.js.map": "/react-tailwindcss-portfolio/static/js/3.62eaaf03.chunk.js.map",
+    "static/js/4.e4752b7c.chunk.js": "/react-tailwindcss-portfolio/static/js/4.e4752b7c.chunk.js",
+    "static/js/4.e4752b7c.chunk.js.map": "/react-tailwindcss-portfolio/static/js/4.e4752b7c.chunk.js.map",
     "static/js/5.3a8c1d62.chunk.js": "/react-tailwindcss-portfolio/static/js/5.3a8c1d62.chunk.js",
     "static/js/5.3a8c1d62.chunk.js.map": "/react-tailwindcss-portfolio/static/js/5.3a8c1d62.chunk.js.map",
     "static/js/6.4a7bbfaa.chunk.js": "/react-tailwindcss-portfolio/static/js/6.4a7bbfaa.chunk.js",
@@ -51,9 +51,9 @@
     "static/media/ui-project-2.d2891914.jpg": "/react-tailwindcss-portfolio/static/media/ui-project-2.d2891914.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.102b2331.js",
+    "static/js/runtime-main.e0afd378.js",
     "static/js/2.2903ff98.chunk.js",
     "static/css/main.f2bb07df.chunk.css",
-    "static/js/main.e866d9ed.chunk.js"
+    "static/js/main.fa76a777.chunk.js"
   ]
 }
