@@ -23,7 +23,7 @@ function App() {
 					<AppHeader />
 					<Suspense fallback={""}>
 						<Routes>
-							<Route path="/" element={<Home />} />
+							<Route path="home" element={<Home />} />
 							<Route path="projects" element={<Projects />} />
 							<Route
 								path="projects/:projectName"
