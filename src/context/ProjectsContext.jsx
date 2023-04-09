@@ -9,6 +9,8 @@ export const ProjectsProvider = (props) => {
 	const [projects, setProjects] = useState(projectsData);
 	const [searchProject, setSearchProject] = useState('');
 	const [selectProject, setSelectProject] = useState('');
+	const projectCategories = Array.from(new Set(projects.map((item) => item.category)));
+	console.log("projectCategories", projectCategories);
 
 	// Search projects by project title
 	const searchProjectsByTitle = projects.filter((item) => {
@@ -40,6 +42,7 @@ export const ProjectsProvider = (props) => {
 				selectProject,
 				setSelectProject,
 				selectProjectsByCategory,
+				projectCategories,
 			}}
 		>
 			{props.children}

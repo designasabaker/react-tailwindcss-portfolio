@@ -1,11 +1,15 @@
-const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
-];
+// const selectOptions = [
+// 	'Web Application',
+// 	'XR Application',
+// 	'UI/UX Design',
+// 	'Graphic Design',
+// ];
+import {useContext} from "react";
+import {ProjectsContext} from "../../context/ProjectsContext";
 
 const ProjectsFilter = ({ setSelectProject }) => {
+	const {projectCategories} = useContext(ProjectsContext);
+
 	return (
 		<select
 			onChange={(e) => {
@@ -31,7 +35,7 @@ const ProjectsFilter = ({ setSelectProject }) => {
 				All Projects
 			</option>
 
-			{selectOptions.map((option) => (
+			{projectCategories.map((option) => (
 				<option className="text-normal sm:text-md" key={option}>
 					{option}
 				</option>

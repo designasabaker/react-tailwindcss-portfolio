@@ -1,10 +1,12 @@
 // Import images
-import Image1 from '../images/ui-project-1.jpg';
-import Image2 from '../images/web-project-2.jpg';
-import Image3 from '../images/mobile-project-2.jpg';
-import Image4 from '../images/mobile-project-1.jpg';
-import Image5 from '../images/web-project-1.jpg';
-import Image6 from '../images/ui-project-2.jpg';
+import Image1 from '../images/WeLight.png';
+import Image2 from '../images/WeLight2.png';
+import Image3 from '../images/WeLight3.png';
+import ImageLogin from '../images/WeLight-02.png';
+import ImageProfile from '../images/WeLight-04.png';
+import ImagePlan from '../images/WeLight-01.png';
+import ImageCode from '../images/WeLight-code.png';
+
 // Import icons
 import {
 	FiFacebook,
@@ -13,11 +15,12 @@ import {
 	FiTwitter,
 	FiYoutube,
 } from 'react-icons/fi';
+import Image5 from "../images/OSB-5.png";
 
 export const WeLightProjectData = {
 	name: 'WeLight',
 	ProjectHeader: {
-		title: 'WeLight Tech Website',
+		title: 'WeLight Tech Platform',
 		publishDate: 'Apr 15, 2023',
 		tags: 'UI / Frontend',
 	},
@@ -25,17 +28,32 @@ export const WeLightProjectData = {
 		{
 			id: 1,
 			title: 'Kabul Project Management UI',
-			img: Image1,
+			img: Image2,
 		},
 		{
 			id: 2,
-			title: 'Kabul Project Management UI',
-			img: Image2,
+			title: 'devices preview 2',
+			img: Image1,
 		},
 		{
 			id: 3,
 			title: 'Kabul Project Management UI',
 			img: Image3,
+		},
+		{
+			id: 4,
+			title: 'Kabul Project Management UI',
+			img: ImageLogin,
+		},
+		{
+			id: 5,
+			title: 'devices preview 2',
+			img: ImageProfile,
+		},
+		{
+			id: 6,
+			title: 'Kabul Project Management UI',
+			img: ImageCode,
 		},
 	],
 	ProjectInfo: {
@@ -44,37 +62,34 @@ export const WeLightProjectData = {
 			{
 				id: 1,
 				title: 'Name',
-				details: 'Company Ltd',
+				details: 'WeLight Tech',
 			},
 			{
 				id: 2,
 				title: 'Services',
 				details: 'UI Design & Frontend Development',
 			},
-			{
-				id: 3,
-				title: 'Website',
-				details: 'https://company.com',
-			},
-			{
-				id: 4,
-				title: 'Phone',
-				details: '555 8888 888',
-			},
+			// {
+			// 	id: 3,
+			// 	title: 'Website',
+			// 	details: '',
+			// },
+			// {
+			// 	id: 4,
+			// 	title: 'Phone',
+			// 	details: '',
+			// },
 		],
 		ObjectivesHeading: 'Objective',
 		ObjectivesDetails:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+			'My mission is to build a modern, user-friendly webpage that provides high-quality advice and resources for further education. I aim to create a comprehensive platform that helps users make informed decisions about their education and career goals.',
 		Technologies: [
 			{
 				title: 'Tools & Technologies',
 				techs: [
-					'HTML',
-					'CSS',
-					'JavaScript',
-					'Vue.js',
+					'React.js',
+					'Next.js',
 					'TailwindCSS',
-					'AdobeXD',
 				],
 			},
 		],
@@ -83,81 +98,82 @@ export const WeLightProjectData = {
 			{
 				id: 1,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+				'During my time at WeLight, an education startup brand, I held a dual role as a UI designer and front-end developer, responsible for improving the user interface of the company\'s web applications. I utilized Tailwind CSS, a popular utility-first CSS framework, to develop new components and update existing ones, with the aim of enhancing the overall look and feel of the platform.'
 			},
 			{
 				id: 2,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+				'In addition, I played a crucial role in implementing the logic for several pages, using hooks to create interactive and dynamic user interfaces. By utilizing hooks, I was able to build reusable code that facilitated more efficient development and improved the performance of the platform.'
 			},
 			{
 				id: 3,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+				'As a front-end developer, I implemented the UI design and ensured that it functioned properly across various web browsers and devices. I leveraged a range of front-end technologies, including JavaScript, CSS, and HTML, to build out the platform\'s user interface and integrate the necessary logic and functionality.'
 			},
 			{
 				id: 4,
 				details:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-			},
+				'Overall, my contributions at WeLight were instrumental in delivering an enhanced user experience, and my use of hooks for animation helped to streamline development and create a dynamic, engaging platform.'			},
 		],
-		SocialSharingHeading: 'Share This',
+		SocialSharingHeading: '',
 		SocialSharing: [
-			{
-				id: 1,
-				name: 'Twitter',
-				icon: <FiTwitter />,
-				url: 'https://twitter.com/realstoman',
-			},
-			{
-				id: 2,
-				name: 'Instagram',
-				icon: <FiInstagram />,
-				url: 'https://instagram.com/realstoman',
-			},
-			{
-				id: 3,
-				name: 'Facebook',
-				icon: <FiFacebook />,
-				url: 'https://facebook.com/',
-			},
-			{
-				id: 4,
-				name: 'LinkedIn',
-				icon: <FiLinkedin />,
-				url: 'https://linkedin.com/',
-			},
-			{
-				id: 5,
-				name: 'Youtube',
-				icon: <FiYoutube />,
-				url: 'https://www.youtube.com/c/StomanStudio',
-			},
+			// {
+			// 	id: 1,
+			// 	name: 'Twitter',
+			// 	icon: <FiTwitter />,
+			// 	url: 'https://twitter.com/realstoman',
+			// },
+			// {
+			// 	id: 2,
+			// 	name: 'Instagram',
+			// 	icon: <FiInstagram />,
+			// 	url: 'https://instagram.com/realstoman',
+			// },
+			// {
+			// 	id: 3,
+			// 	name: 'Facebook',
+			// 	icon: <FiFacebook />,
+			// 	url: 'https://facebook.com/',
+			// },
+			// {
+			// 	id: 4,
+			// 	name: 'LinkedIn',
+			// 	icon: <FiLinkedin />,
+			// 	url: 'https://linkedin.com/',
+			// },
+			// {
+			// 	id: 5,
+			// 	name: 'Youtube',
+			// 	icon: <FiYoutube />,
+			// 	url: 'https://www.youtube.com/c/StomanStudio',
+			// },
 		],
 	},
 	RelatedProject: {
 		title: 'Related Projects',
 		Projects: [
 			{
-				id: 1,
-				title: 'Mobile UI',
-				img: Image4,
+				id: 'r1',
+				name: 'OSB',
+				title: 'OSB Website',
+				img: ImageLogin,
 			},
 			{
-				id: 2,
-				title: 'Web Application',
+				id: 'r2',
+				name:'EcoHome',
+				title: 'EcoHome',
 				img: Image5,
 			},
-			{
-				id: 3,
-				title: 'UI Design',
-				img: Image6,
-			},
-			{
-				id: 4,
-				title: 'Kabul Mobile App UI',
-				img: Image3,
-			},
+			// {
+			// 	id: 3,
+			// 	title: 'UI Design',
+			// 	img: Image6,
+			// },
+			// {
+			// 	id: 4,
+			// 	title: 'Kabul Mobile App UI',
+			// 	img: Image3,
+			// },
 		],
 	},
 };
