@@ -29,22 +29,20 @@ const ContactForm = () => {
 						Contact Form
 					</p>
 					<FormInput
-						name="from_name"
 						inputLabel="Full Name"
 						labelFor="name"
 						inputType="text"
-						inputId="name"
-						inputName="name"
+						inputId="from_name"
+						inputName="from_name"
 						placeholderText="Your Name"
 						ariaLabelName="Name"
 					/>
 					<FormInput
-						name="from_visitor_email"
 						inputLabel="Email"
 						labelFor="email"
 						inputType="email"
-						inputId="email"
-						inputName="email"
+						inputId="from_visitor_email"
+						inputName="from_visitor_email"
 						placeholderText="Your email"
 						ariaLabelName="Email"
 					/>
