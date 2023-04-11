@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import ContactDetails from '../components/contact/ContactDetails';
 import ContactForm from '../components/contact/ContactForm';
+import {ContactMeProvider} from "../context/ContactMeContext";
 
 const Contact = () => {
 	return (
@@ -14,7 +15,7 @@ const Contact = () => {
 			}}
 			className="container mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-10"
 		>
-			{/* <ContactForm /> */}
+			 <ContactForm />
 			<ContactDetails />
 		</motion.div>
 	);
