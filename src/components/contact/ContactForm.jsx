@@ -1,20 +1,32 @@
 import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
-import {useRef} from "react";
+import {useCallback, useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
 import {ContactMeProvider} from "../../context/ContactMeContext";
 
 const ContactForm = () => {
+	const [send, setSend] = useState("Not yet sent");
+	const [error, setError] = useState("");
 	const form = useRef();
-	const sendEmail = (e) => {
+
+	const sendEmail = useCallback((e) => {
 		e.preventDefault();
+		setSend("sending");
 		emailjs.sendForm('service_wg3op97', 'template_rrg69cx', form.current, 'ffBCYbjlYJo_DXMRT')
 			.then((result) => {
 				console.log("success",result.text);
+				setSend("success");
 			}, (error) => {
 				console.log("error",error.text);
+				setSend("error");
+				setError(error.text);
 			});
-	};
+	},[]);
+
+	let content = <p></p>
+	if( send === "sending") { content = <p>Sending...</p> }
+	if( send === "error") { content = <p>OPS please wait a second and try again</p> }
+	if( send === "success") { content = <p>Thank you for your message!</p> }
 
 	return (
 		<ContactMeProvider>
@@ -80,6 +92,7 @@ const ContactForm = () => {
 							aria-label="Send Message"
 						/>
 					</div>
+					<p>{content}</p>
 				</form>
 			</div>
 		</div>
