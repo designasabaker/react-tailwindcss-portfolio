@@ -21,18 +21,23 @@ const ProjectInfo = () => {
 										key={info.id}
 									>
 										<span>{info.title}: </span>
-										<a
-											href="https://stoman.me"
-											className={
-												info.title === 'Website' ||
-												info.title === 'Phone'
-													? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
-													: ''
-											}
-											aria-label="Project Website and Phone"
-										>
-											{info.details}
-										</a>
+										{info.title === 'Website' ? (
+											<a
+												href={info.details}
+												target="_blank"
+												className={
+													info.title === 'Website' ||
+													info.title === 'Phone'
+														? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
+														: ''
+												}
+												aria-label="Project Website and Phone"
+											>
+												{info.details}
+											</a>): (
+											<spanp>
+												{info.details}
+											</spanp>)}
 									</li>
 								);
 							}

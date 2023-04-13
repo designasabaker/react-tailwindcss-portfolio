@@ -8,14 +8,14 @@ const contacts = [
 	},
 	{
 		id: 2,
-		name: 'xuyihao342@gmail.com',
+		name: 'yihao_xu@brown.edu',
 		icon: <FiMail />,
 	},
-	// {
-	// 	id: 3,
-	// 	name: '555 8888 888',
-	// 	icon: <FiPhone />,
-	// },
+	{
+		id: 3,
+		name: ' georgeyihaoxu@gmail.com',
+		icon: <FiMail />,
+	},
 ];
 
 const ContactDetails = () => {

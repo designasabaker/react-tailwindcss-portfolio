@@ -69,11 +69,11 @@ export const WeLightProjectData = {
 				title: 'Services',
 				details: 'UI Design & Frontend Development',
 			},
-			// {
-			// 	id: 3,
-			// 	title: 'Website',
-			// 	details: '',
-			// },
+			{
+				id: 3,
+				title: 'Website',
+				details: 'https://welightpreview.vercel.app/',
+			},
 			// {
 			// 	id: 4,
 			// 	title: 'Phone',

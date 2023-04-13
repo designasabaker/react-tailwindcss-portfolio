@@ -1498,3 +1498,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 2.25rem;
   }
 }
+
+.hover-zoom {
+  overflow: hidden;
+}
+
+.hover-zoom img {
+  transition: all 0.5s ease 0s;
+  width: 100%;
+}
+
+.hover-zoom img:hover {
+  transform: scale(1.2);
+}

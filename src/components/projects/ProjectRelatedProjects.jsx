@@ -18,7 +18,7 @@ const ProjectRelatedProjects = () => {
 				{singleProjectData.RelatedProject.Projects.map((project) => {
 					return (
 						<a href={`/projects/${project.name}`} key={project.id}>
-							<div>
+							<div className="hover-zoom">
 								<img
 									src={project.img}
 									className="rounded-xl cursor-pointer"

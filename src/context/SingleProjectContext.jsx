@@ -4,22 +4,22 @@ import { OSBProjectData as OSBProjectDataJson} from '../data/OSBProjectData';
 import { EcoHomeProjectData as EcoHomeProjectDataJson} from "../data/EcoHomeProjectData";
 
 const SingleProjectContext = createContext();
-const projectDataList = [
+export const projectsDataList = [
 	WeLightProjectDataJson,
 	OSBProjectDataJson,
 	EcoHomeProjectDataJson
 ];
 
 export const SingleProjectProvider = ({ projectName, children }) => {
-	const singleIndex = projectDataList.findIndex((projectData) => projectData.name === projectName);
+	const singleIndex = projectsDataList.findIndex((projectData) => projectData.name === projectName);
 	console.log("singleIndex", singleIndex);
 	const [singleProjectData, setSingleProjectData] = useState(
-		projectDataList[singleIndex]
+		projectsDataList[singleIndex]
 	);
 
 	return (
 		<SingleProjectContext.Provider
-			value={{ singleProjectData, setSingleProjectData }}
+			value={{ singleProjectData, setSingleProjectData, projectsDataList }}
 		>
 			{children}
 		</SingleProjectContext.Provider>

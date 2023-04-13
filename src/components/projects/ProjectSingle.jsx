@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ProjectSingle = (props) => {
 	const { title, category, brief, image, name } = props;
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -19,11 +20,13 @@ const ProjectSingle = (props) => {
 				<div 
 					className="relative shadow-lg h-lg rounded-xl hover:shadow-xl cursor-pointer dark:bg-ternary-dark"
 				>
-					<img
-						src={image}
-						className="w-full h-1/2 object-cover overflow-hidden"
-						alt="Single Project"
-					/>
+					<div className="hover-zoom">
+						<img
+							src={image}
+							className="w-full h-1/2 object-contain overflow-hidden"
+							alt="Single Project"
+						/>
+					</div>
 					<div 
 						className="flex-grow px-6 py-4"
 					>
