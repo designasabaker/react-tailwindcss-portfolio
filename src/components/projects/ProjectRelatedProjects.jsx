@@ -4,9 +4,9 @@ import {Link} from "react-router-dom";
 
 const ProjectRelatedProjects = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
-	function forceUpdate() {
-		window.location.reload();
-	}
+	// function forceUpdate() {
+	// 	window.location.reload();
+	// }
 
 	return (
 		<div className="mt-10 pt-10 sm:pt-14 sm:mt-20 border-t-2 border-primary-light dark:border-secondary-dark">
@@ -17,11 +17,11 @@ const ProjectRelatedProjects = () => {
 			<div className="grid grid-cols-1 sm:grid-cols-4 gap-10">
 				{singleProjectData.RelatedProject.Projects.map((project) => {
 					return (
-						<a href={`/projects/${project.name}`} key={project.id}>
+						<a href={`/react-tailwindcss-portfolio/projects/${project.name}`} key={project.id}>
 							<div className="hover-zoom">
 								<img
 									src={project.img}
-									className="rounded-xl cursor-pointer"
+									className="rounded-xl cursor-pointer  w-full object-cover"
 									alt={project.title}
 									key={project.id}
 								/>

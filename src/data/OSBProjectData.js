@@ -15,6 +15,7 @@ import {
 	FiTwitter,
 	FiYoutube,
 } from 'react-icons/fi';
+import EcoHomeCover from "../images/EcoHomeCover.png";
 
 export const OSBProjectData = {
 	name: 'OSB',
@@ -56,7 +57,7 @@ export const OSBProjectData = {
 		},
 	],
 	ProjectInfo: {
-		ClientHeading: 'About Client',
+		ClientHeading: 'About',
 		CompanyInfo: [
 			{
 				id: 1,
@@ -66,18 +67,18 @@ export const OSBProjectData = {
 			{
 				id: 2,
 				title: 'Services',
-				details: 'UI Design & Frontend Development',
+				details: 'Frontend Development',
 			},
-			// {
-			// 	id: 3,
-			// 	title: 'Website',
-			// 	details: 'https://company.com',
-			// },
-			// {
-			// 	id: 4,
-			// 	title: 'Phone',
-			// 	details: '555 8888 888',
-			// },
+			{
+				id: 3,
+				title: 'Website',
+				details: 'https://osb-react-ts-project.vercel.app/',
+			},
+			{
+				id: 4,
+				title: 'Coworkers',
+				details: <><br />Rui - Lead UI Designer,<br />Vic - UI Designer</>,
+			},
 		],
 		ObjectivesHeading: 'Objective',
 		ObjectivesDetails:
@@ -85,12 +86,10 @@ export const OSBProjectData = {
 			{
 				title: 'Tools & Technologies',
 				techs: [
-					'HTML',
-					'CSS',
-					'JavaScript',
 					'React.js',
+					'Tailwind CSS',
 					'Figma',
-					'Webflow',
+					'WebFlow',
 				],
 			},
 		],
@@ -164,7 +163,7 @@ export const OSBProjectData = {
 				id: 'r2',
 				name:'EcoHome',
 				title: 'EcoHome',
-				img: Image5,
+				img: EcoHomeCover,
 			},
 			// {
 			// 	id: 3,

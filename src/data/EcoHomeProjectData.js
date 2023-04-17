@@ -6,6 +6,7 @@ import Image4 from '../images/EcoHome-4.png';
 import Image5 from '../images/EcoHome-5.png';
 import Image6 from '../images/EcoHome-6.png';
 import WeLightImage1 from '../images/WeLight.png';
+import WeLight01 from '../images/WeLight2.png';
 import OSBImage1 from '../images/OSB-1.png';
 
 // Import icons
@@ -16,6 +17,7 @@ import {
 	FiTwitter,
 	FiYoutube,
 } from 'react-icons/fi';
+import OSBCover from "../images/OSB-1.png";
 
 export const EcoHomeProjectData = {
 	name: 'EcoHome',
@@ -79,6 +81,11 @@ export const EcoHomeProjectData = {
 			// 	title: 'Phone',
 			// 	details: '555 8888 888',
 			// },
+			{
+				id: 5,
+				title: 'CoWorkers',
+				details: <><br />Hermione - Designer</>,
+			},
 		],
 		ObjectivesHeading: 'Objective',
 		ObjectivesDetails:
@@ -162,15 +169,15 @@ export const EcoHomeProjectData = {
 		Projects: [
 			{
 				id: 'r1',
-				name:'WeLight',
-				title: 'WeLight Tech',
-				img: WeLightImage1,
+				name: 'OSB',
+				title: 'OSB Website',
+				img: OSBCover,
 			},
 			{
 				id: 'r2',
-				name:'OSB',
-				title: 'OSB Website',
-				img: OSBImage1,
+				name:'WeLight',
+				title: 'WeLight Tech',
+				img: WeLight01,
 			},
 			// {
 			// 	id: 3,

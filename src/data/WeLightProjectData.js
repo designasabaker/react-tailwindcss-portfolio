@@ -6,6 +6,8 @@ import ImageLogin from '../images/WeLight-02.png';
 import ImageProfile from '../images/WeLight-04.png';
 import ImagePlan from '../images/WeLight-01.png';
 import ImageCode from '../images/WeLight-code.png';
+import OSBCover from '../images/OSB-1.png';
+import EcoHomeCover from '../images/EcoHomeCover.png';
 
 // Import icons
 import {
@@ -57,7 +59,7 @@ export const WeLightProjectData = {
 		},
 	],
 	ProjectInfo: {
-		ClientHeading: 'About Client',
+		ClientHeading: 'About',
 		CompanyInfo: [
 			{
 				id: 1,
@@ -74,11 +76,16 @@ export const WeLightProjectData = {
 				title: 'Website',
 				details: 'https://welightpreview.vercel.app/',
 			},
-			// {
-			// 	id: 4,
-			// 	title: 'Phone',
-			// 	details: '',
-			// },
+			{
+				id: 4,
+				title: 'Role',
+				details: 'Front-end Developer',
+			},
+			{
+				id: 5,
+				title: 'CoWorkers',
+				details: <><br />Dri - Front-end Developer,<br />Steven - Back-end Developer, <br />Jack - Product Manager</>,
+			},
 		],
 		ObjectivesHeading: 'Objective',
 		ObjectivesDetails:
@@ -90,6 +97,7 @@ export const WeLightProjectData = {
 					'React.js',
 					'Next.js',
 					'TailwindCSS',
+					'Figma',
 				],
 			},
 		],
@@ -156,13 +164,13 @@ export const WeLightProjectData = {
 				id: 'r1',
 				name: 'OSB',
 				title: 'OSB Website',
-				img: ImageLogin,
+				img: OSBCover,
 			},
 			{
 				id: 'r2',
 				name:'EcoHome',
 				title: 'EcoHome',
-				img: Image5,
+				img: EcoHomeCover,
 			},
 			// {
 			// 	id: 3,

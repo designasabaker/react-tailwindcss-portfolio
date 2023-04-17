@@ -52,6 +52,7 @@ export const projectsData = [
 	},
 	{
 		id: 4,
+		name: 'FPShopping',
 		title: 'FPShopping',
 		brief: 'Academic Design Thesis',
 		category: 'Web Application',
@@ -59,6 +60,7 @@ export const projectsData = [
 	},
 	{
 		id: 5,
+		name: 'SimpleNim',
 		title: 'Simple Nim',
 		brief: 'Web Game Development',
 		category: 'Web Application',
@@ -66,6 +68,7 @@ export const projectsData = [
 	},
 	{
 		id: 6,
+		name: 'Shekon',
 		title: 'Shé:kon',
 		category: 'XR Application',
 		brief: 'Unity VR Development',
@@ -73,6 +76,7 @@ export const projectsData = [
 	},
 	{
 		id: 7,
+		name: 'NasaSuit',
 		title: 'Nasa Suit AR Challenge',
 		category: 'XR Application',
 		brief: 'Unity AR Development',
@@ -87,6 +91,7 @@ export const projectsData = [
 	// },
 	{
 		id: 9,
+		name: 'gd',
 		title: 'Graphic Design Collection',
 		category: 'Graphic Design',
 		brief: 'Professional Works',
@@ -94,6 +99,7 @@ export const projectsData = [
 	},
 	{
 		id: 10,
+		name: "Oceanic",
 		title: 'Oceanic',
 		category: '3D Design',
 		brief: '3D-Printing Works',
@@ -101,6 +107,7 @@ export const projectsData = [
 	},
 	{
 		id: 11,
+		name: "Carpet",
 		title: 'Carpet',
 		category: '3D Design',
 		brief: '3D-Printing Works',
