@@ -22,7 +22,7 @@ export const FPShoppingProjectData = {
     name: 'FPShopping',
     ProjectHeader: {
         title: 'First Person Shopping - Thesis Under Development',
-        publishDate: 'Jun 21, 2023',
+        publishDate: 'Coming Soon...',
         tags: 'UI / Frontend',
     },
     ProjectImages: [
@@ -88,7 +88,7 @@ export const FPShoppingProjectData = {
             {
                 title: 'Tools & Technologies',
                 techs: [
-                    'Unity',
+                    'Unity WebGL',
                     'C#',
                 ],
             },

@@ -1,10 +1,10 @@
 // Import images
-import Image1 from '../images/FPS-1.png';
-import Image2 from '../images/FPS-2.png';
-import Image3 from '../images/FPS-3.png';
-import Image4 from '../images/FPS-4.png';
-import Image5 from '../images/FPS-5.png';
-import Image6 from '../images/FPS-6.png';
+import Image1 from '../images/carpet-1.png';
+import Image2 from '../images/carpet-2.png';
+import Image3 from '../images/carpet-3.png';
+import Image4 from '../images/carpet-4.png';
+import Image5 from '../images/carpet-5.png';
+import Image6 from '../images/carpet-6.png';
 
 import WeLightImage1 from '../images/WeLight.png';
 
@@ -16,6 +16,8 @@ import {
     FiTwitter,
     FiYoutube,
 } from 'react-icons/fi';
+import OSBCover from "../images/OSB-1.png";
+import EcoHomeCover from "../images/EcoHomeCover.png";
 
 export const CarpetProjectData = {
     name: 'Carpet',
@@ -57,17 +59,17 @@ export const CarpetProjectData = {
         },
     ],
     ProjectInfo: {
-        ClientHeading: 'About Client',
+        ClientHeading: 'About',
         CompanyInfo: [
             {
                 id: 1,
                 title: 'Name',
-                details: 'Ocean State Bioactives'
+                details: 'Carpet'
             },
             {
                 id: 2,
                 title: 'Services',
-                details: 'UI Design & Frontend Development',
+                details: '3D Design',
             },
             // {
             // 	id: 3,
@@ -86,12 +88,8 @@ export const CarpetProjectData = {
             {
                 title: 'Tools & Technologies',
                 techs: [
-                    'HTML',
-                    'CSS',
-                    'JavaScript',
-                    'React.js',
-                    'Figma',
-                    'Webflow',
+                    'Rhino3D',
+                    'Grasshopper',
                 ],
             },
         ],
@@ -100,22 +98,22 @@ export const CarpetProjectData = {
             {
                 id: 1,
                 details:
-                    "Ocean State Bioactives is a brand created by Professor Ma at the University of Rhode Island that specializes in producing advanced ingredients. One of the unique features of the brand is its use of raw materials sourced from maple leaves, which are abundant in Rhode Island."
+                    "The old roof is low qualifed. Therefore, it has to be moved. To solve the space shortage, a box was inserted into the atrium. In order not to block the sunshine, the new box is located right on the top of the conference room."
             },
             {
                 id: 2,
                 details:
-                    'By incorporating this local element into the brand\'s identity, Ocean State Bioactives is closely linked to the state and its natural resources. In this UI/UX design project, we aim to showcase the brand\'s connection to Rhode Island through a visually engaging and user-friendly digital experience.',
+                    'The whole roof system is meant to be inserted into the atrium. The overall system consists of structure, water proof, sun shade, drainage and exhibiton funciton. From the structure perspective, a double-truss net is very practical, since the gap between the two corridors is about 24 meters. Otherwise, the middle of the net is weakest, and no doubt should it be strengthened.',
             },
             {
                 id: 3,
                 details:
-                    'Our goal is to create a visually engaging and user-friendly website that showcases the brand\'s advanced ingredients and its connection to Rhode Island, ultimately attracting the attention of business partners in the cosmetics industry.',
+                    'From the beginning form anysis, the use of two twisted surfaces have been determined. In other words, the pattern, which has structural meaning, comes from thin trangles, thick triangles, classic and bionic. The final bionic idea comes from the fact that the system is located between two corridors. This idea renders the feeling that the system is connecting the two old buildings.',
             },
             {
                 id: 4,
                 details:
-                    'In our design approach, we avoided using fancy elements and instead focused on creating a clean and simple aesthetic that reflects the brand\'s commitment to nature.',
+                    'Increase the usable area by 130 square meters. A 17m*8m large plate located 5.4m above the entrance of the lecture hall. Relatively compatible scale 5.4m height. And does not interfere with the sight communication of the entire space . Strive for the truss to be simple and transparent, and the internal space is bright and pleasant . The newly rebuilt roof truss is lower than the roof of the fourth floor of the Red Building, keeping a low profile to the old building. The roof of the roof truss is closed for lighting, sheltering from rain, and keeping warm. Viewed from the section, the twisted frame is connected with the original building’s stepped space.',
             },
         ],
         SocialSharingHeading: '',
@@ -157,15 +155,15 @@ export const CarpetProjectData = {
         Projects: [
             {
                 id: 'r1',
-                name:'WeLight',
-                title: 'WeLight Tech',
-                img: WeLightImage1,
+                name: 'OSB',
+                title: 'OSB Website',
+                img: OSBCover,
             },
             {
                 id: 'r2',
                 name:'EcoHome',
                 title: 'EcoHome',
-                img: Image5,
+                img: EcoHomeCover,
             },
             // {
             // 	id: 3,

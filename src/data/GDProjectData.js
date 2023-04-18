@@ -1,10 +1,10 @@
 // Import images
-import Image1 from '../images/FPS-1.png';
-import Image2 from '../images/FPS-2.png';
-import Image3 from '../images/FPS-3.png';
-import Image4 from '../images/FPS-4.png';
-import Image5 from '../images/FPS-5.png';
-import Image6 from '../images/FPS-6.png';
+import Image1 from '../images/gd-1.png';
+import Image2 from '../images/gd-2.png';
+import Image3 from '../images/gd-3.png';
+import Image4 from '../images/gd-4.png';
+import Image5 from '../images/gd-5.png';
+import Image6 from '../images/gd-6.png';
 
 import WeLightImage1 from '../images/WeLight.png';
 
@@ -20,9 +20,9 @@ import {
 export const GDProjectData = {
     name: 'gd',
     ProjectHeader: {
-        title: 'First Person Shopping',
-        publishDate: 'Jun 21, 2023',
-        tags: 'UI / Frontend',
+        title: 'Graphic Design Collection',
+        publishDate: 'Mar 1, 2023',
+        tags: 'Graphic Design',
     },
     ProjectImages: [
         {
@@ -57,17 +57,17 @@ export const GDProjectData = {
         },
     ],
     ProjectInfo: {
-        ClientHeading: 'About Client',
+        ClientHeading: 'About',
         CompanyInfo: [
             {
                 id: 1,
                 title: 'Name',
-                details: 'Ocean State Bioactives'
+                details: 'Graphic Design Collection'
             },
             {
                 id: 2,
                 title: 'Services',
-                details: 'UI Design & Frontend Development',
+                details: 'Graphic Design',
             },
             // {
             // 	id: 3,
@@ -86,37 +86,35 @@ export const GDProjectData = {
             {
                 title: 'Tools & Technologies',
                 techs: [
-                    'HTML',
-                    'CSS',
+                    'Photoshop',
+                    'Illustrator',
+                    'InDesign',
                     'JavaScript',
-                    'React.js',
-                    'Figma',
-                    'Webflow',
                 ],
             },
         ],
-        ProjectDetailsHeading: 'Challenge',
+        ProjectDetailsHeading: 'Projects',
         ProjectDetails: [
             {
                 id: 1,
                 details:
-                    "Ocean State Bioactives is a brand created by Professor Ma at the University of Rhode Island that specializes in producing advanced ingredients. One of the unique features of the brand is its use of raw materials sourced from maple leaves, which are abundant in Rhode Island."
+                    <>RISD Banner<br />Every new school year begins with many international students coming to RISD. The office will create beautiful banners to welcome these students and congratulate them on coming</>
             },
             {
                 id: 2,
                 details:
-                    'By incorporating this local element into the brand\'s identity, Ocean State Bioactives is closely linked to the state and its natural resources. In this UI/UX design project, we aim to showcase the brand\'s connection to Rhode Island through a visually engaging and user-friendly digital experience.',
+                    <>RISD ISSA Data Visualization<br />Each year there are countless international students coming to RISD. ISSA produces intuitive visualizations based on reliable and solid data.It is hoped that with the help of data visualization tools, students and their parents can better understand the situation of the school.</>,
             },
-            {
-                id: 3,
-                details:
-                    'Our goal is to create a visually engaging and user-friendly website that showcases the brand\'s advanced ingredients and its connection to Rhode Island, ultimately attracting the attention of business partners in the cosmetics industry.',
-            },
-            {
-                id: 4,
-                details:
-                    'In our design approach, we avoided using fancy elements and instead focused on creating a clean and simple aesthetic that reflects the brand\'s commitment to nature.',
-            },
+            // {
+            //     id: 3,
+            //     details:
+            //         'Our goal is to create a visually engaging and user-friendly website that showcases the brand\'s advanced ingredients and its connection to Rhode Island, ultimately attracting the attention of business partners in the cosmetics industry.',
+            // },
+            // {
+            //     id: 4,
+            //     details:
+            //         'In our design approach, we avoided using fancy elements and instead focused on creating a clean and simple aesthetic that reflects the brand\'s commitment to nature.',
+            // },
         ],
         SocialSharingHeading: '',
         SocialSharing: [

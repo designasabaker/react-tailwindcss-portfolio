@@ -1,10 +1,10 @@
 // Import images
-import Image1 from '../images/FPS-1.png';
-import Image2 from '../images/FPS-2.png';
-import Image3 from '../images/FPS-3.png';
-import Image4 from '../images/FPS-4.png';
-import Image5 from '../images/FPS-5.png';
-import Image6 from '../images/FPS-6.png';
+import Image1 from '../images/nasa-1.png';
+import Image2 from '../images/nasa-2.png';
+import Image3 from '../images/nasa-3.png';
+import Image4 from '../images/nasa-4.png';
+import Image5 from '../images/nasa-5.png';
+import Image6 from '../images/nasa-6.png';
 
 import WeLightImage1 from '../images/WeLight.png';
 
@@ -16,13 +16,15 @@ import {
     FiTwitter,
     FiYoutube,
 } from 'react-icons/fi';
+import OSBCover from "../images/OSB-1.png";
+import EcoHomeCover from "../images/EcoHomeCover.png";
 
 export const NasaSuitProjectData = {
     name: 'NasaSuit',
     ProjectHeader: {
-        title: 'First Person Shopping',
-        publishDate: 'Jun 21, 2023',
-        tags: 'UI / Frontend',
+        title: 'Nasa Suit AR Challenge - Coming Soon',
+        publishDate: 'Coming Soon',
+        tags: 'XR Application',
     },
     ProjectImages: [
         {
@@ -35,16 +37,16 @@ export const NasaSuitProjectData = {
             title: 'Kabul Project Management UI',
             img: Image2,
         },
-        {
-            id: 3,
-            title: 'Kabul Project Management UI',
-            img: Image3,
-        },
-        {
-            id: 4,
-            title: 'Kabul Project Management UI',
-            img: Image4,
-        },
+        // {
+        //     id: 3,
+        //     title: 'Kabul Project Management UI',
+        //     img: Image3,
+        // },
+        // {
+        //     id: 4,
+        //     title: 'Kabul Project Management UI',
+        //     img: Image4,
+        // },
         {
             id: 5,
             title: 'Kabul Project Management UI',
@@ -62,12 +64,12 @@ export const NasaSuitProjectData = {
             {
                 id: 1,
                 title: 'Name',
-                details: 'Ocean State Bioactives'
+                details: 'Nasa Suit AR Challenge'
             },
             {
                 id: 2,
                 title: 'Services',
-                details: 'UI Design & Frontend Development',
+                details: 'XR Application',
             },
             // {
             // 	id: 3,
@@ -80,18 +82,16 @@ export const NasaSuitProjectData = {
             // 	details: '555 8888 888',
             // },
         ],
-        ObjectivesHeading: 'Objective',
-        ObjectivesDetails:
-            'A team of design students from the Rhode Island School of Design (RISD) is collaborating with a chemistry professor from the University of Rhode Island to create a new brand. In this UI/UX design project, our team aims to deliver a comprehensive digital experience that captures the essence of the professor\'s brand and effectively communicates it to its target audience.',		Technologies: [
+        // ObjectivesHeading: 'Objective',
+        // ObjectivesDetails:
+        //     'A team of design students from the Rhode Island School of Design (RISD) is collaborating with a chemistry professor from the University of Rhode Island to create a new brand. In this UI/UX design project, our team aims to deliver a comprehensive digital experience that captures the essence of the professor\'s brand and effectively communicates it to its target audience.',
+        Technologies: [
             {
                 title: 'Tools & Technologies',
                 techs: [
-                    'HTML',
-                    'CSS',
-                    'JavaScript',
-                    'React.js',
+                    'Unity - Windows',
+                    'C#',
                     'Figma',
-                    'Webflow',
                 ],
             },
         ],
@@ -100,23 +100,23 @@ export const NasaSuitProjectData = {
             {
                 id: 1,
                 details:
-                    "Ocean State Bioactives is a brand created by Professor Ma at the University of Rhode Island that specializes in producing advanced ingredients. One of the unique features of the brand is its use of raw materials sourced from maple leaves, which are abundant in Rhode Island."
+                    "During my time working on the astronaut's rover control interface, I was responsible for designing and developing the interface used by astronauts to control the rover while on a mission. "
             },
             {
                 id: 2,
                 details:
-                    'By incorporating this local element into the brand\'s identity, Ocean State Bioactives is closely linked to the state and its natural resources. In this UI/UX design project, we aim to showcase the brand\'s connection to Rhode Island through a visually engaging and user-friendly digital experience.',
+                    'This involved working closely with a team of designers and engineers to understand the requirements and limitations of the project.',
             },
-            {
-                id: 3,
-                details:
-                    'Our goal is to create a visually engaging and user-friendly website that showcases the brand\'s advanced ingredients and its connection to Rhode Island, ultimately attracting the attention of business partners in the cosmetics industry.',
-            },
-            {
-                id: 4,
-                details:
-                    'In our design approach, we avoided using fancy elements and instead focused on creating a clean and simple aesthetic that reflects the brand\'s commitment to nature.',
-            },
+            // {
+            //     id: 3,
+            //     details:
+            //         'Our goal is to create a visually engaging and user-friendly website that showcases the brand\'s advanced ingredients and its connection to Rhode Island, ultimately attracting the attention of business partners in the cosmetics industry.',
+            // },
+            // {
+            //     id: 4,
+            //     details:
+            //         'In our design approach, we avoided using fancy elements and instead focused on creating a clean and simple aesthetic that reflects the brand\'s commitment to nature.',
+            // },
         ],
         SocialSharingHeading: '',
         SocialSharing: [
@@ -157,15 +157,15 @@ export const NasaSuitProjectData = {
         Projects: [
             {
                 id: 'r1',
-                name:'WeLight',
-                title: 'WeLight Tech',
-                img: WeLightImage1,
+                name: 'OSB',
+                title: 'OSB Website',
+                img: OSBCover,
             },
             {
                 id: 'r2',
                 name:'EcoHome',
                 title: 'EcoHome',
-                img: Image5,
+                img: EcoHomeCover,
             },
             // {
             // 	id: 3,

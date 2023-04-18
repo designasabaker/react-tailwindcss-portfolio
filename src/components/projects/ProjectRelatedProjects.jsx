@@ -21,7 +21,7 @@ const ProjectRelatedProjects = () => {
 							<div className="hover-zoom">
 								<img
 									src={project.img}
-									className="rounded-xl cursor-pointer  w-full object-cover"
+									className="w-64 h-full object-contain overflow-hidden"
 									alt={project.title}
 									key={project.id}
 								/>

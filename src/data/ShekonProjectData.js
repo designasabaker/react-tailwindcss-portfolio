@@ -1,10 +1,10 @@
 // Import images
-import Image1 from '../images/FPS-1.png';
-import Image2 from '../images/FPS-2.png';
-import Image3 from '../images/FPS-3.png';
-import Image4 from '../images/FPS-4.png';
-import Image5 from '../images/FPS-5.png';
-import Image6 from '../images/FPS-6.png';
+import Image1 from '../images/shekon-1.png';
+import Image2 from '../images/shekon-2.png';
+import Image3 from '../images/shekon-3.png';
+import Image4 from '../images/shekon-4.png';
+import Image5 from '../images/shekon-5.png';
+import Image6 from '../images/shekon-6.png';
 
 import WeLightImage1 from '../images/WeLight.png';
 
@@ -16,13 +16,15 @@ import {
     FiTwitter,
     FiYoutube,
 } from 'react-icons/fi';
+import OSBCover from "../images/OSB-1.png";
+import EcoHomeCover from "../images/EcoHomeCover.png";
 
 export const ShekonProjectData = {
-    name: 'FPShopping',
+    name: 'Shekon',
     ProjectHeader: {
-        title: 'First Person Shopping',
-        publishDate: 'Jun 21, 2023',
-        tags: 'UI / Frontend',
+        title: 'Shekon',
+        publishDate: 'Feb 21, 2023',
+        tags: 'XR Application',
     },
     ProjectImages: [
         {
@@ -62,36 +64,33 @@ export const ShekonProjectData = {
             {
                 id: 1,
                 title: 'Name',
-                details: 'Ocean State Bioactives'
+                details: 'Shé:kon'
             },
             {
                 id: 2,
                 title: 'Services',
-                details: 'UI Design & Frontend Development',
+                details: 'XR Application',
             },
-            // {
-            // 	id: 3,
-            // 	title: 'Website',
-            // 	details: 'https://company.com',
-            // },
+            {
+            	id: 3,
+            	title: 'Preview Video',
+            	details: 'https://youtu.be/T1MG7LQY81g',
+            },
             // {
             // 	id: 4,
             // 	title: 'Phone',
             // 	details: '555 8888 888',
             // },
         ],
-        ObjectivesHeading: 'Objective',
-        ObjectivesDetails:
-            'A team of design students from the Rhode Island School of Design (RISD) is collaborating with a chemistry professor from the University of Rhode Island to create a new brand. In this UI/UX design project, our team aims to deliver a comprehensive digital experience that captures the essence of the professor\'s brand and effectively communicates it to its target audience.',		Technologies: [
+        // ObjectivesHeading: 'Objective',
+        // ObjectivesDetails:
+        //     'A team of design students from the Rhode Island School of Design (RISD) is collaborating with a chemistry professor from the University of Rhode Island to create a new brand. In this UI/UX design project, our team aims to deliver a comprehensive digital experience that captures the essence of the professor\'s brand and effectively communicates it to its target audience.',
+        Technologies: [
             {
                 title: 'Tools & Technologies',
                 techs: [
-                    'HTML',
-                    'CSS',
-                    'JavaScript',
-                    'React.js',
-                    'Figma',
-                    'Webflow',
+                    'Unity Android',
+                    'C#',
                 ],
             },
         ],
@@ -100,23 +99,23 @@ export const ShekonProjectData = {
             {
                 id: 1,
                 details:
-                    "Ocean State Bioactives is a brand created by Professor Ma at the University of Rhode Island that specializes in producing advanced ingredients. One of the unique features of the brand is its use of raw materials sourced from maple leaves, which are abundant in Rhode Island."
+                    "Shé:kon is a virtual reality project that I developed for the RISD Museum, with the goal of creating an immersive and educational experience that highlights the indigenous culture of Rhode Island."
             },
             {
                 id: 2,
                 details:
-                    'By incorporating this local element into the brand\'s identity, Ocean State Bioactives is closely linked to the state and its natural resources. In this UI/UX design project, we aim to showcase the brand\'s connection to Rhode Island through a visually engaging and user-friendly digital experience.',
+                    ' The project allows users to explore the museum\'s exhibits and learn about the indigenous language and culture of the region.',
             },
-            {
-                id: 3,
-                details:
-                    'Our goal is to create a visually engaging and user-friendly website that showcases the brand\'s advanced ingredients and its connection to Rhode Island, ultimately attracting the attention of business partners in the cosmetics industry.',
-            },
-            {
-                id: 4,
-                details:
-                    'In our design approach, we avoided using fancy elements and instead focused on creating a clean and simple aesthetic that reflects the brand\'s commitment to nature.',
-            },
+            // {
+            //     id: 3,
+            //     details:
+            //         'Our goal is to create a visually engaging and user-friendly website that showcases the brand\'s advanced ingredients and its connection to Rhode Island, ultimately attracting the attention of business partners in the cosmetics industry.',
+            // },
+            // {
+            //     id: 4,
+            //     details:
+            //         'In our design approach, we avoided using fancy elements and instead focused on creating a clean and simple aesthetic that reflects the brand\'s commitment to nature.',
+            // },
         ],
         SocialSharingHeading: '',
         SocialSharing: [
@@ -157,15 +156,15 @@ export const ShekonProjectData = {
         Projects: [
             {
                 id: 'r1',
-                name:'WeLight',
-                title: 'WeLight Tech',
-                img: WeLightImage1,
+                name: 'OSB',
+                title: 'OSB Website',
+                img: OSBCover,
             },
             {
                 id: 'r2',
                 name:'EcoHome',
                 title: 'EcoHome',
-                img: Image5,
+                img: EcoHomeCover,
             },
             // {
             // 	id: 3,
