@@ -1,18 +1,26 @@
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import { FiArrowDownCircle } from 'react-icons/fi';
+import testGIF from '../../images/gif/test.gif';
 import developerLight from '../../images/developer.svg';
 import developerDark from '../../images/developer-dark.svg';
 import { motion } from 'framer-motion';
+import {useCallback} from "react";
 
 const AppBanner = () => {
 	const [activeTheme] = useThemeSwitcher();
+	const executeScroll = useCallback(() => {
+		const element = document.getElementById("homeProjects");
+		if (element) {
+			element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+		}
+	}, []);
 
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-			className="flex flex-col sm:justify-between items-center sm:flex-row mt-12 md:mt-2"
+			className="flex flex-col sm:justify-around items-center sm:flex-row mt-12 md:mt-2"
 		>
 			<div className="w-full md:w-1/3 text-left">
 				<motion.h1
@@ -63,19 +71,21 @@ const AppBanner = () => {
 					</a>
 				</motion.div>
 			</div>
-			{/* <motion.div
+			<motion.div
 				initial={{ opacity: 0, y: -180 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
 				className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
 			>
-				<img
-					src={
-						activeTheme === 'dark' ? developerLight : developerDark
-					}
-					alt="Developer"
-				/>
-			</motion.div> */}
+					<img
+						className="w-full"
+						onClick={executeScroll} className="cursor-pointer"
+						src={
+							activeTheme === 'dark' ? testGIF : testGIF
+						}
+						alt="Developer"
+					/>
+			</motion.div>
 		</motion.section>
 	);
 };
