@@ -4,6 +4,9 @@ module.exports = {
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	darkMode: 'class',
 	theme: {
+		fontFamily: {
+			sans: ['Inter', 'sans-serif'],
+		},
 		extend: {
 			colors: {
 				'primary-light': '#F7F8FC',
@@ -25,8 +28,8 @@ module.exports = {
 			},
 		},
 	},
-	variants: {
-		extend: { opacity: ['disabled'] },
-	},
+	// variants: {
+	// 	extend: { opacity: ['disabled'] },
+	// },
 	plugins: ['@tailwindcss/forms'],
 };

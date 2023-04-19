@@ -70,7 +70,7 @@ const ProjectsGrid = () => {
                                 sm:px-4
                                 py-2
                                 border 
-                            border-gray-200
+                            	border-gray-200
                                 dark:border-secondary-dark
                                 rounded-lg
                                 text-sm
@@ -93,31 +93,38 @@ const ProjectsGrid = () => {
 				</div>
 			</div>
 
+			{/*<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">*/}
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
 				{selectProject
 					? selectProjectsByCategory.map((project) => (
 							<ProjectSingle
 								title={project.title}
+								brief={project.brief}
 								category={project.category}
 								image={project.img}
 								key={project.id}
+								name={project.name}
 							/>
 					  ))
 					: searchProject
 					? searchProjectsByTitle.map((project) => (
 							<ProjectSingle
 								title={project.title}
+								brief={project.brief}
 								category={project.category}
 								image={project.img}
 								key={project.id}
+								name={project.name}
 							/>
 					  ))
 					: projects.map((project) => (
 							<ProjectSingle
 								title={project.title}
+								brief={project.brief}
 								category={project.category}
 								image={project.img}
 								key={project.id}
+								name={project.name}
 							/>
 					  ))}
 			</div>

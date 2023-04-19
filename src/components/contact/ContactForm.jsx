@@ -1,14 +1,40 @@
 import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
+import {useCallback, useRef, useState} from "react";
+import emailjs from '@emailjs/browser';
+import {ContactMeProvider} from "../../context/ContactMeContext";
 
 const ContactForm = () => {
+	const [send, setSend] = useState("Not yet sent");
+	const [error, setError] = useState("");
+	const form = useRef();
+
+	const sendEmail = useCallback((e) => {
+		e.preventDefault();
+		setSend("sending");
+		emailjs.sendForm('service_wg3op97', 'template_rrg69cx', form.current, 'ffBCYbjlYJo_DXMRT')
+			.then((result) => {
+				console.log("success",result.text);
+				setSend("success");
+			}, (error) => {
+				console.log("error",error.text);
+				setSend("error");
+				setError(error.text);
+			});
+	},[]);
+
+	let content = <p></p>
+	if( send === "sending") { content = <p>Sending...</p> }
+	if( send === "error") { content = <p>OPS please wait a second and try again</p> }
+	if( send === "success") { content = <p>Thank you for your message!</p> }
+
 	return (
+		<ContactMeProvider>
 		<div className="w-full lg:w-1/2">
 			<div className="leading-loose">
 				<form
-					onSubmit={(e) => {
-						e.preventDefault();
-					}}
+					ref={form}
+					onSubmit={sendEmail}
 					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
 				>
 					<p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
@@ -18,8 +44,8 @@ const ContactForm = () => {
 						inputLabel="Full Name"
 						labelFor="name"
 						inputType="text"
-						inputId="name"
-						inputName="name"
+						inputId="from_name"
+						inputName="from_name"
 						placeholderText="Your Name"
 						ariaLabelName="Name"
 					/>
@@ -27,8 +53,8 @@ const ContactForm = () => {
 						inputLabel="Email"
 						labelFor="email"
 						inputType="email"
-						inputId="email"
-						inputName="email"
+						inputId="from_visitor_email"
+						inputName="from_visitor_email"
 						placeholderText="Your email"
 						ariaLabelName="Email"
 					/>
@@ -66,9 +92,11 @@ const ContactForm = () => {
 							aria-label="Send Message"
 						/>
 					</div>
+					<p>{content}</p>
 				</form>
 			</div>
 		</div>
+		</ContactMeProvider>
 	);
 };
 

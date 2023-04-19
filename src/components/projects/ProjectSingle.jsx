@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const ProjectSingle = ({ title, category, image }) => {
+const ProjectSingle = (props) => {
+	const { title, category, brief, image, name } = props;
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -12,22 +14,36 @@ const ProjectSingle = ({ title, category, image }) => {
 				delay: 0.15,
 			}}
 		>
-			<Link to="/projects/single-project" aria-label="Single Project">
-				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
-					<div>
+			<Link
+				to={`/react-tailwindcss-portfolio/projects/${name}`} aria-label={`${name}`}
+			>
+				<div 
+					className="relative shadow-lg h-lg rounded-xl hover:shadow-xl cursor-pointer dark:bg-ternary-dark"
+				>
+					<div className="hover-zoom">
 						<img
 							src={image}
-							className="rounded-t-xl border-none"
+							className="w-full h-1/2 object-contain overflow-hidden"
 							alt="Single Project"
 						/>
 					</div>
-					<div className="text-center px-4 py-6">
-						<p className="font-general-medium text-lg md:text-xl text-ternary-dark dark:text-ternary-light mb-2">
+					<div 
+						className="flex-grow px-6 py-4"
+					>
+						<div 
+						className="font-bold mt-2 text-xl py-0 dark:text-ternary-light "
+						>
 							{title}
+						</div>
+						<p className="text-gray-700 text-sm dark:text-ternary-light">
+							{brief}
 						</p>
-						<span className="text-lg text-ternary-dark dark:text-ternary-light">
+					</div>
+					<div className='px-6 pb-0 mb-0 top-12 absolute bottom'>
+						<p
+							className="z-10 bg-gray-50 rounded-full px-35 py-1 text-sm font-semibold text-secondary-dark mr-2 mb-2">
 							{category}
-						</span>
+						</p>
 					</div>
 				</div>
 			</Link>

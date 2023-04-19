@@ -1,51 +1,116 @@
 // Import images
-import WebImage1 from '../images/web-project-1.jpg';
-import WebImage2 from '../images/web-project-2.jpg';
-import MobileImage1 from '../images/mobile-project-1.jpg';
-import MobileImage2 from '../images/mobile-project-2.jpg';
-import UIImage1 from '../images/ui-project-1.jpg';
-import UIImage2 from '../images/ui-project-2.jpg';
+import WeLightImage from '../images/WeLight.png';
+import OSBImage from '../images/OSB-2.png';
+import EcoHomeImage from '../images/EcoHomeCover.png';
+import FPShoppingImage from '../images/FPSCover.png';
+import SimpleNimImage from '../images/SimpleNim-cover.png';
+import shekonImage from '../images/shekon-cover.png';
+import nasaImage from '../images/nasa-cover.png';
+import gdImage from '../images/gd-cover.png';
+import oceanicImage from '../images/oceanic-cover.png';
+import carpetImage from '../images/carpet-cover.png';
 
 export const projectsData = [
 	{
 		id: 1,
-		title: 'Google Health Platform',
+		name: 'WeLight',
+		title: 'WeLight Tech',
+		brief: 'Education Website Development',
 		category: 'Web Application',
-		img: WebImage2,
+		img: WeLightImage,
 		ProjectHeader: {
-			title: 'Project Management UI - From Context',
-			publishDate: 'Jul 26, 2021',
+			title: 'WeLight Tech',
+			publishDate: 'Apr 15, 2023',
 			tags: 'UI / Frontend',
 		},
 	},
 	{
 		id: 2,
-		title: 'Phoenix Digital Agency',
-		category: 'Mobile Application',
-		img: MobileImage2,
+		name: 'OSB',
+		title: 'OSB',
+		brief: 'Cosmetic Ingredients Website Development',
+		category: 'Web Application',
+		img: OSBImage,
+		ProjectHeader: {
+			title: 'OSB Website',
+			publishDate: 'Apr 15, 2023',
+			tags: 'UI / Frontend',
+		},
 	},
 	{
 		id: 3,
-		title: 'Project Management UI',
+		name: 'EcoHome',
+		title: 'EcoHome',
+		brief: 'Energy Saving Mobile Design',
 		category: 'UI/UX Design',
-		img: UIImage1,
+		img: EcoHomeImage,
+		ProjectHeader: {
+			title: 'EcoHome',
+			publishDate: 'Feb 21, 2021',
+			tags: 'UI / Frontend',
+		},
 	},
 	{
 		id: 4,
-		title: 'Cloud Storage Platform',
-		category: 'UI/UX Design',
-		img: UIImage2,
+		name: 'FPShopping',
+		title: 'FPShopping',
+		brief: 'Academic Design Thesis',
+		category: 'Web Application',
+		img: FPShoppingImage,
 	},
 	{
 		id: 5,
-		title: 'React Social App',
-		category: 'Mobile Application',
-		img: MobileImage1,
+		name: 'SimpleNim',
+		title: 'Simple Nim',
+		brief: 'Web Game Development',
+		category: 'Web Application',
+		img: SimpleNimImage,
 	},
 	{
 		id: 6,
-		title: 'Apple Design System',
-		category: 'Web Application',
-		img: WebImage1,
+		name: 'Shekon',
+		title: 'Shé:kon',
+		category: 'XR Application',
+		brief: 'Unity VR Development',
+		img: shekonImage,
 	},
+	{
+		id: 7,
+		name: 'NasaSuit',
+		title: 'Nasa Suit AR Challenge',
+		category: 'XR Application',
+		brief: 'Unity AR Development',
+		img: nasaImage,
+	},
+	// {
+	// 	id: 8,
+	// 	title: 'Crossing the Pell',
+	// 	category: 'XR Application',
+	// 	brief: 'Unity VR Development',
+	// 	img: OSBImage,
+	// },
+	{
+		id: 9,
+		name: 'gd',
+		title: 'Graphic Design Collection',
+		category: 'Graphic Design',
+		brief: 'Professional Works',
+		img: gdImage,
+	},
+	{
+		id: 10,
+		name: "Oceanic",
+		title: 'Oceanic',
+		category: '3D Design',
+		brief: '3D-Printing Works',
+		img: oceanicImage,
+	},
+	{
+		id: 11,
+		name: "Carpet",
+		title: 'Carpet',
+		category: '3D Design',
+		brief: '3D-Printing Works',
+		img: carpetImage,
+	}
 ];
