@@ -22,8 +22,8 @@ import Image5 from "../images/OSB-5.png";
 export const WeLightProjectData = {
 	name: 'WeLight',
 	ProjectHeader: {
-		title: 'WeLight Tech Platform',
-		publishDate: 'Apr 15, 2023',
+		title: 'WeLight Tech Platform - Under Development',
+		publishDate: 'Coming soon',
 		tags: 'UI / Frontend',
 	},
 	ProjectImages: [

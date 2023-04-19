@@ -20,8 +20,8 @@ import EcoHomeCover from "../images/EcoHomeCover.png";
 export const OSBProjectData = {
 	name: 'OSB',
 	ProjectHeader: {
-		title: 'Ocean State Bioactives Website',
-		publishDate: 'Apr 21, 2023',
+		title: 'Ocean State Bioactives Website - Under Development',
+		publishDate: 'Coming soon',
 		tags: 'UI / Frontend',
 	},
 	ProjectImages: [
