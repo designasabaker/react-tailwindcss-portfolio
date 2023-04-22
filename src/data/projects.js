@@ -59,14 +59,6 @@ export const projectsData = [
 		img: FPShoppingImage,
 	},
 	{
-		id: 5,
-		name: 'SimpleNim',
-		title: 'Simple Nim',
-		brief: 'Web Game Development',
-		category: 'Web Application',
-		img: SimpleNimImage,
-	},
-	{
 		id: 6,
 		name: 'Shekon',
 		title: 'Shé:kon',
@@ -75,12 +67,28 @@ export const projectsData = [
 		img: shekonImage,
 	},
 	{
+		id: 11,
+		name: "Carpet",
+		title: 'Magic Carpet',
+		category: 'Computational Design',
+		brief: 'Recursion Generated Form Study',
+		img: carpetImage,
+	},
+	{
 		id: 7,
 		name: 'NasaSuit',
 		title: 'Nasa Suit AR Challenge',
 		category: 'XR Application',
 		brief: 'Unity AR Development',
 		img: nasaImage,
+	},
+	{
+		id: 5,
+		name: 'SimpleNim',
+		title: 'Simple Nim',
+		brief: 'Web Game Development',
+		category: 'Web Application',
+		img: SimpleNimImage,
 	},
 	// {
 	// 	id: 8,
@@ -101,16 +109,9 @@ export const projectsData = [
 		id: 10,
 		name: "Oceanic",
 		title: 'Oceanic',
-		category: '3D Design',
-		brief: '3D-Printing Works',
+		category: 'Computational Design',
+		brief: 'Algorithm Based Form Study',
 		img: oceanicImage,
 	},
-	{
-		id: 11,
-		name: "Carpet",
-		title: 'Carpet',
-		category: '3D Design',
-		brief: '3D-Printing Works',
-		img: carpetImage,
-	}
+
 ];

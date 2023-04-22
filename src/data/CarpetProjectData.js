@@ -5,6 +5,8 @@ import Image3 from '../images/carpet-3.png';
 import Image4 from '../images/carpet-4.png';
 import Image5 from '../images/carpet-5.png';
 import Image6 from '../images/carpet-6.png';
+import ImageGrid  from '../images/carpet-grid.png';
+import ImageAnalysis from '../images/carpet-analysis - Copy.png';
 
 import WeLightImage1 from '../images/WeLight.png';
 
@@ -24,7 +26,7 @@ export const CarpetProjectData = {
     ProjectHeader: {
         title: 'Carpet',
         publishDate: 'Jun 21, 2023',
-        tags: '3D Design',
+        tags: 'Computational Design',
     },
     ProjectImages: [
         {
@@ -40,7 +42,7 @@ export const CarpetProjectData = {
         {
             id: 3,
             title: 'Kabul Project Management UI',
-            img: Image3,
+            img: ImageGrid,
         },
         {
             id: 4,
@@ -55,7 +57,7 @@ export const CarpetProjectData = {
         {
             id: 6,
             title: 'Kabul Project Management UI',
-            img: Image6,
+            img: ImageAnalysis,
         },
     ],
     ProjectInfo: {
