@@ -9,6 +9,7 @@ import { NasaSuitProjectData as NasaSuitProjectDataJson } from "../data/NasaSuit
 import { GDProjectData as GDProjectDataJson } from "../data/GDProjectData";
 import { OceanicProjectData as OceanicProjectDataJson } from "../data/OceanicProjectData";
 import { CarpetProjectData as CarpetProjectDataJson } from "../data/CarpetProjectData";
+import { ScreenTableProjectData as ScreenTableProjectDataJson} from "../data/ScreenTableProjectData";
 
 // const moduleFiles = require.context('../data', true, /\.js$/);
 // const modules = moduleFiles.keys().map(moduleFile => moduleFiles(moduleFile).default);;
@@ -26,6 +27,7 @@ export const projectsDataList = [
 	GDProjectDataJson,
 	OceanicProjectDataJson,
 	CarpetProjectDataJson,
+	ScreenTableProjectDataJson
 ];
 
 // export const projectsDataList = modules;

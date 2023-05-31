@@ -113,5 +113,12 @@ export const projectsData = [
 		brief: 'Algorithm Based Form Study',
 		img: oceanicImage,
 	},
-
+	{
+		id: 11,
+		name: "Interactive Architecture",
+		title: 'Interactive Architecture',
+		category: 'Web Application',
+		brief: 'Web Game Development',
+		img: oceanicImage,
+	},
 ];
