@@ -9,6 +9,7 @@ import nasaImage from '../images/nasa-cover.png';
 import gdImage from '../images/gd-cover.png';
 import oceanicImage from '../images/oceanic-cover.png';
 import carpetImage from '../images/carpet-cover.png';
+import screenTableImage from '../images/ide-02.png';
 
 export const projectsData = [
 	{
@@ -36,6 +37,14 @@ export const projectsData = [
 			publishDate: 'Apr 15, 2023',
 			tags: 'UI / Frontend',
 		},
+	},
+	{
+		id: 2,
+		name: "Interactive Architecture",
+		title: 'Interactive Architecture',
+		category: 'Web Application',
+		brief: 'Web Game Development',
+		img: screenTableImage,
 	},
 	{
 		id: 3,
@@ -113,12 +122,5 @@ export const projectsData = [
 		brief: 'Algorithm Based Form Study',
 		img: oceanicImage,
 	},
-	{
-		id: 11,
-		name: "Interactive Architecture",
-		title: 'Interactive Architecture',
-		category: 'Web Application',
-		brief: 'Web Game Development',
-		img: oceanicImage,
-	},
+
 ];
