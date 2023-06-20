@@ -76,6 +76,11 @@ export const ShekonProjectData = {
             	title: 'Preview Video',
             	details: 'https://youtu.be/T1MG7LQY81g',
             },
+            {
+                id: 4,
+                title: 'Other VR Demo Video',
+                details: 'https://youtube.com/shorts/oXG8qh6X67I?feature=share',
+            },
             // {
             // 	id: 4,
             // 	title: 'Phone',

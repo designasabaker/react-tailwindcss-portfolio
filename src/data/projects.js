@@ -59,14 +59,14 @@ export const projectsData = [
 			tags: 'UI / Frontend',
 		},
 	},
-	{
-		id: 4,
-		name: 'FPShopping',
-		title: 'FPShopping',
-		brief: 'Academic Design Thesis',
-		category: 'Web Application',
-		img: FPShoppingImage,
-	},
+	// {
+	// 	id: 4,
+	// 	name: 'FPShopping',
+	// 	title: 'FPShopping',
+	// 	brief: 'Academic Design Thesis',
+	// 	category: 'Web Application',
+	// 	img: FPShoppingImage,
+	// },
 	{
 		id: 6,
 		name: 'Shekon',

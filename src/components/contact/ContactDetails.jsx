@@ -8,12 +8,12 @@ const contacts = [
 	},
 	{
 		id: 2,
-		name: 'yihao_xu@brown.edu',
+		name: <>yihao_xu@brown.edu&nbsp;&nbsp;&nbsp;yxu13@alumni.risd.edu</>,
 		icon: <FiMail />,
 	},
 	{
 		id: 3,
-		name: ' georgeyihaoxu@gmail.com',
+		name: ' xuyihao342@gmail.com',
 		icon: <FiMail />,
 	},
 ];
