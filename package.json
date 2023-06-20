@@ -1,6 +1,6 @@
 {
-	"homepage": "http://designasabaker.github.io/react-tailwindcss-portfolio",
-	"name": "react-tailwindcss-portfolio",
+	"homepage": "/",
+	"name": "my-portfolio",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
