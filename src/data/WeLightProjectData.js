@@ -112,12 +112,12 @@ export const WeLightProjectData = {
 				details:
 					<div className={"w-full flex flex-row justify-center"}>
 						<img src={logoOptionsImg} alt={"logo options"}
-							 className={"object-contain"}
+							 className={"object-contain px-6 pt-6"}
 							 style={{maxHeight: "300px"}}
 						/>
 						<div className={"flex flex-col px-6 "}>
 							<div style={{flex:1}} />
-							<div className={"font-bold text-md "}>Logo Design</div>
+							<div className={"font-thin text-sm"}>Logo Design</div>
 							<p className={"font-thin text-sm py-2"}>I spearheaded the logo design, creating multiple versions for team discussions.</p>
 						</div>
 					</div>,
@@ -132,13 +132,13 @@ export const WeLightProjectData = {
 				details:
 					<div className={"w-full flex flex-row justify-center"}>
 						<img src={meetingDiscussionImg} alt={"logo options"}
-							 className={"max-w-md max-h-lg object-contain"}
+							 className={"max-w-md max-h-lg object-contain px-6 pt-6"}
 							 style={{
 								 maxHeight: "300px"
 							 }}/>
 						<div className={"flex flex-col px-6"}>
 							<div style={{flex:1}} />
-							<div className={"font-bold text-md"}>Dev Meeting</div>
+							<div className={"font-thin text-sm"}>Dev Meeting</div>
 							<p className={"font-thin text-sm py-2"}>
 								Our team comprises both designers and developers. We often collaborate remotely to discuss web design.</p>
 						</div>
@@ -154,12 +154,12 @@ export const WeLightProjectData = {
 				details:
 					<div className={"w-full flex flex-row justify-center"}>
 						<img src={notionImg1} alt={"feedback"}
-							 className={"max-w-md max-h-lg object-contain"}
+							 className={"max-w-md max-h-lg object-contain px-6 pt-6"}
 							 style={{maxWidth: "450px"}}
 						/>
 						<div className={"flex flex-col px-3"}>
 							<div style={{flex:1}} />
-							<div className={"font-bold text-md"}>Iteration I</div>
+							<div className={"font-thin text-sm"}>Iteration I</div>
 							<p className={"font-thin text-sm py-2"}>When I first took over the project, the style was quite chaotic, incorporating both material-ui and tailwindcss. Moreover, the web page style was rough, using the default style of daisyui. I made modifications so that when users focus on login or sign up, corresponding animations will be triggered.
 								</p>
 						</div>
@@ -170,12 +170,12 @@ export const WeLightProjectData = {
 				details:
 					<div className={"w-full flex flex-row"}>
 						<img src={notionImg3} alt={"feedback"}
-							 className={"max-w-md max-h-lg object-contain"}
+							 className={"max-w-md max-h-lg object-contain px-6 pt-6"}
 							 style={{maxWidth: "450px"}}
 						/>
 						<div className={"flex flex-col px-3"}>
 							<div style={{flex:1}} />
-							<div className={"font-bold text-md"}>Iteration II</div>
+							<div className={"font-thin text-sm"}>Iteration II</div>
 							<p className={"font-thin text-sm py-2"}>
 								I modified the logic based on my first version, separating the login and signup into different pages. At the same time, I added a gallery to showcase the flair of my colleagues and our team.
 							</p>
@@ -187,7 +187,7 @@ export const WeLightProjectData = {
 				details:
 					<div className={"w-full flex flex-row"}>
 						<img src={notionImg4} alt={"feedback"}
-							 className={"max-w-md max-h-lg object-contain"}
+							 className={"max-w-md max-h-lg object-contain px-6 pt-6"}
 							 style={{maxWidth: "450px"}}
 						/>
 						<div className={"flex flex-col px-3"}>
@@ -209,12 +209,12 @@ export const WeLightProjectData = {
 				details:
 					<div className={"w-full flex flex-row"}>
 						<img src={feedbackImg} alt={"feedback"}
-							 className={"max-w-md max-h-lg object-contain"}
+							 className={"max-w-md max-h-lg object-contain px-6 pt-6"}
 							 style={{maxHeight: "300px"}}
 						/>
 						<div className={"flex flex-col px-3"}>
 							<div style={{flex:1}} />
-							<div className={"font-bold text-md"}>Feedback</div>
+							<div className={"font-thin text-sm"}>Feedback</div>
 							<p className={"font-thin text-sm py-2"}>
 								After our pitch, we received feedback from the audience and judges. Everyone expressed confidence in our project.</p>
 						</div>
