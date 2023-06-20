@@ -15,7 +15,7 @@ const ProjectSingle = (props) => {
 			}}
 		>
 			<Link
-				to={`/react-tailwindcss-portfolio/projects/${name}`} aria-label={`${name}`}
+				to={`/projects/${name}`} aria-label={`${name}`}
 			>
 				<div 
 					className="relative shadow-lg h-lg rounded-xl hover:shadow-xl cursor-pointer dark:bg-ternary-dark"

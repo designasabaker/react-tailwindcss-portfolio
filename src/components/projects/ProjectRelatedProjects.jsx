@@ -17,7 +17,7 @@ const ProjectRelatedProjects = () => {
 			<div className="grid grid-cols-1 sm:grid-cols-4 gap-10">
 				{singleProjectData.RelatedProject.Projects.map((project) => {
 					return (
-						<a href={`/react-tailwindcss-portfolio/projects/${project.name}`} key={project.id}>
+						<Link to={`/projects/${project.name}`} key={project.id}>
 							<div className="hover-zoom">
 								<img
 									src={project.img}
@@ -29,7 +29,7 @@ const ProjectRelatedProjects = () => {
 									className="text-center mt-2"
 								>{project.title}</p>
 							</div>
-						</a>
+						</Link>
 					);
 				})}
 			</div>

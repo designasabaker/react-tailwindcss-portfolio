@@ -1,4 +1,4 @@
-import { useState, createContext } from 'react';
+import {useState, createContext, useEffect} from 'react';
 import { WeLightProjectData as WeLightProjectDataJson} from '../data/WeLightProjectData';
 import { OSBProjectData as OSBProjectDataJson} from '../data/OSBProjectData';
 import { EcoHomeProjectData as EcoHomeProjectDataJson} from "../data/EcoHomeProjectData";
@@ -39,6 +39,11 @@ export const SingleProjectProvider = ({ projectName, children }) => {
 	const [singleProjectData, setSingleProjectData] = useState(
 		projectsDataList[singleIndex]
 	);
+
+	useEffect(() => {
+		const singleIndex = projectsDataList.findIndex((projectData) => projectData.name === projectName);
+		setSingleProjectData(projectsDataList[singleIndex]);
+	}, [projectName]);
 
 	return (
 		<SingleProjectContext.Provider
