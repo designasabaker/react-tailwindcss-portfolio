@@ -101,12 +101,12 @@ const ProjectInfo = () => {
 				</p>
 				{singleProjectData.ProjectInfo.ProjectDetails.map((details) => {
 					return (
-						<p
+						<div
 							key={details.id}
-							className="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
+							className="w-full font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
 						>
 							{details.details}
-						</p>
+						</div>
 					);
 				})}
 			</div>
