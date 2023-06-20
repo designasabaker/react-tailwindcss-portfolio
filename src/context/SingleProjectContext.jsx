@@ -11,6 +11,8 @@ import { OceanicProjectData as OceanicProjectDataJson } from "../data/OceanicPro
 import { CarpetProjectData as CarpetProjectDataJson } from "../data/CarpetProjectData";
 import { ScreenTableProjectData as ScreenTableProjectDataJson} from "../data/ScreenTableProjectData";
 
+import ProjectError from '../components/projects/ProjectError';
+
 // const moduleFiles = require.context('../data', true, /\.js$/);
 // const modules = moduleFiles.keys().map(moduleFile => moduleFiles(moduleFile).default);;
 // console.log("modules", modules);
@@ -49,7 +51,8 @@ export const SingleProjectProvider = ({ projectName, children }) => {
 		<SingleProjectContext.Provider
 			value={{ singleProjectData, setSingleProjectData, projectsDataList }}
 		>
-			{children}
+			{singleProjectData && children}
+			{!singleProjectData && <ProjectError />}
 		</SingleProjectContext.Provider>
 	);
 };

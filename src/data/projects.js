@@ -39,7 +39,7 @@ export const projectsData = [
 		},
 	},
 	{
-		id: 2,
+		id: 2.5,
 		name: "Interactive Architecture",
 		title: 'Interactive Architecture',
 		category: 'Web Application',
