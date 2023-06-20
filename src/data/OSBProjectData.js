@@ -6,16 +6,11 @@ import Image4 from '../images/OSB-4.png';
 import Image5 from '../images/OSB-5.png';
 import ImageCode from '../images/OSB-code.png';
 import WeLightImage1 from '../images/WeLight.png';
-import Image6 from '../images/ui-project-2.jpg';
-// Import icons
-import {
-	FiFacebook,
-	FiInstagram,
-	FiLinkedin,
-	FiTwitter,
-	FiYoutube,
-} from 'react-icons/fi';
+
 import EcoHomeCover from "../images/EcoHomeCover.png";
+import CheckLiveWebBtn from "../components/projects/CheckLiveWebBtn";
+
+const OSB_URL = "https://osb-react-ts-project.vercel.app";
 
 export const OSBProjectData = {
 	name: 'OSB',
@@ -72,7 +67,7 @@ export const OSBProjectData = {
 			{
 				id: 3,
 				title: 'Website',
-				details: 'https://osb-react-ts-project.vercel.app/',
+				details: <><br /><span className={"font-bold"}>{OSB_URL}</span></>,
 			},
 			{
 				id: 4,
@@ -115,6 +110,11 @@ export const OSBProjectData = {
 				details:
 					'In our design approach, we avoided using fancy elements and instead focused on creating a clean and simple aesthetic that reflects the brand\'s commitment to nature.',
 			},
+			{
+				id:100,
+				details:
+					<CheckLiveWebBtn LIVE_URL={OSB_URL} />
+			}
 		],
 		SocialSharingHeading: '',
 		SocialSharing: [

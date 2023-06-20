@@ -19,8 +19,9 @@ import notionImg3 from '../images/Projects/welight/notion3.jpg';
 import notionImg4 from '../images/Projects/welight/notion4.jpg';
 
 import style from './WeLightProjectStyle.module.scss'
+import CheckLiveWebBtn from "../components/projects/CheckLiveWebBtn";
 
-const LIVE_URL = 'https://welightpreview.vercel.app';
+const WELIGHT_LIVE_URL = 'https://welightpreview.vercel.app';
 
 export const WeLightProjectData = {
 	name: 'WeLight',
@@ -77,7 +78,7 @@ export const WeLightProjectData = {
 			{
 				id: 3,
 				title: 'Website',
-				details: <><br/><b className={"font-bold"}>{LIVE_URL}</b></>,
+				details: <><br/><b className={"font-bold"}>{WELIGHT_LIVE_URL}</b></>,
 			},
 			{
 				id: 5,
@@ -223,24 +224,7 @@ export const WeLightProjectData = {
 			{
 				id:100,
 				details:
-				<div style={{paddingTop:'30px'}}>
-					<a
-						href={LIVE_URL}
-						target={"_blank"}
-						// style={{
-						// 	color: "#fff",
-						// 	fontSize: "1.2rem",
-						// 	border: "1px solid #fff",
-						// 	padding: "0.5rem 1rem",
-						// 	borderRadius: "0.5rem",
-						// 	width: "100%",
-						// 	backgroundColor: "transparent",
-						// }}
-						className={style.liveUrlBtn}
-					>
-						Check the live website here
-					</a>
-				</div>
+				<CheckLiveWebBtn LIVE_URL={WELIGHT_LIVE_URL} />
 			}
 		],
 		SocialSharingHeading: '',

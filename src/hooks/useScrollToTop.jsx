@@ -34,7 +34,7 @@ const useScrollToTop = () => {
 	return (
 		<>
 			<FiChevronUp
-				className="scrollToTop"
+				className="scrollToTop hover:text-yellow-100 dark:hover:text-primary-light cursor-pointer fixed z-50"
 				onClick={backToTop}
 				style={{
 					height: 45,
@@ -44,6 +44,7 @@ const useScrollToTop = () => {
 					bottom: 50,
 					display: showScroll ? 'flex' : 'none',
 					padding: 5,
+					transition: 'all 0.3s ease-in-out',
 				}}
 			/>
 		</>
