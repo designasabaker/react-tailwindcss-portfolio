@@ -78,7 +78,7 @@ export const WeLightProjectData = {
 			{
 				id: 3,
 				title: 'Website',
-				details: <><br/><b className={"font-bold"}>{WELIGHT_LIVE_URL}</b></>,
+				details: WELIGHT_LIVE_URL,
 			},
 			{
 				id: 5,

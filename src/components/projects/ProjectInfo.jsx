@@ -21,7 +21,8 @@ const ProjectInfo = () => {
 										key={info.id}
 									>
 										<span>{info.title}: </span>
-										{info.title === 'Website' ? (
+										{info.title === 'Website'
+											? (
 											<a
 												href={info.details}
 												target="_blank"
@@ -33,8 +34,9 @@ const ProjectInfo = () => {
 												}
 												aria-label="Project Website and Phone"
 											>
-												{info.details}
-											</a>): (
+												<br /><b className={"font-bold"}>{info.details}</b>
+											</a>)
+											: (
 											<spanp>
 												{info.details}
 											</spanp>)}
@@ -67,7 +69,6 @@ const ProjectInfo = () => {
 					</p>
 				</div>
 
-				{/* Single project social sharing */}
 				<div>
 					<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
 						{singleProjectData.ProjectInfo.SocialSharingHeading}

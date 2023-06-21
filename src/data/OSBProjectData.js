@@ -67,7 +67,7 @@ export const OSBProjectData = {
 			{
 				id: 3,
 				title: 'Website',
-				details: <><br /><span className={"font-bold"}>{OSB_URL}</span></>,
+				details: OSB_URL,
 			},
 			{
 				id: 4,
