@@ -24,15 +24,16 @@ const ProjectSingle = (props) => {
 					className="relative shadow-lg h-lg rounded-xl hover:shadow-xl cursor-pointer dark:bg-ternary-dark"
 				>
 					<div className="hover-zoom">
-						<div style={{display: isLoading ? "block" : "none",}}>
-							<CircularProgress />
-						</div>
+						{isLoading &&
+							<div
+								className="w-full h-1/2 object-contain overflow-hidden">
+								<CircularProgress/>
+							</div>}
 						<img
-							style={{display: isLoading ? "none" : "block",}}
+							style={{display: !isLoading ? "block" : "none" ,}}
 							src={image}
 							className="w-full h-1/2 object-contain overflow-hidden"
 							alt="Single Project"
-							loading={"lazy"}
 							onLoad={()=> {setIsLoading(false)}}
 						/>
 					</div>
