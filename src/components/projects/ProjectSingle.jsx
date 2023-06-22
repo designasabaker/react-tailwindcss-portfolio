@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import {useState} from "react";
+import {CircularProgress} from "@material-ui/core";
 
 const ProjectSingle = (props) => {
 	const { title, category, brief, image, name } = props;
+	const [isLoading, setIsLoading] = useState(true);
 
 	return (
 		<motion.div
@@ -21,11 +24,16 @@ const ProjectSingle = (props) => {
 					className="relative shadow-lg h-lg rounded-xl hover:shadow-xl cursor-pointer dark:bg-ternary-dark"
 				>
 					<div className="hover-zoom">
+						<div style={{display: isLoading ? "block" : "none",}}>
+							<CircularProgress />
+						</div>
 						<img
+							style={{display: isLoading ? "none" : "block",}}
 							src={image}
 							className="w-full h-1/2 object-contain overflow-hidden"
 							alt="Single Project"
 							loading={"lazy"}
+							onLoad={()=> {setIsLoading(false)}}
 						/>
 					</div>
 					<div 
