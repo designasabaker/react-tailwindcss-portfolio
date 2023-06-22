@@ -126,6 +126,7 @@ export const ScreenTableProjectData = {
                         <img src={menuApp} alt={"feedback"}
                              className={"max-w-md max-h-lg cover px-6 pt-6"}
                              style={{maxWidth: "450px"}}
+                             loading={"lazy"}
                         />
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
@@ -143,6 +144,7 @@ export const ScreenTableProjectData = {
                         <img src={menuApp2} alt={"feedback"}
                              className={"max-w-md max-h-lg cover px-6 pt-6"}
                              style={{maxWidth: "450px"}}
+                             loading={"lazy"}
                         />
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
@@ -160,6 +162,7 @@ export const ScreenTableProjectData = {
                         <img src={menuApp3} alt={"feedback"}
                              className={"max-w-md max-h-lg contain px-6 pt-6"}
                              style={{maxWidth: "450px"}}
+                             loading={"lazy"}
                         />
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
@@ -182,6 +185,7 @@ export const ScreenTableProjectData = {
                         <img src={rgAnalysis} alt={"feedback"}
                              className={"max-w-md max-h-lg cover px-6 pt-6"}
                              style={{maxWidth: "450px"}}
+                             loading={"lazy"}
                         />
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
@@ -204,6 +208,7 @@ export const ScreenTableProjectData = {
                         <img src={rg02} alt={"feedback"}
                              className={"max-w-md max-h-lg cover px-6 pt-6"}
                              style={{maxWidth: "450px"}}
+                             loading={"lazy"}
                         />
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
@@ -222,6 +227,7 @@ export const ScreenTableProjectData = {
                         <img src={rg03} alt={"feedback"}
                              className={"max-w-md max-h-lg cover px-6 pt-6"}
                              style={{maxWidth: "450px"}}
+                             loading={"lazy"}
                         />
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
@@ -240,6 +246,7 @@ export const ScreenTableProjectData = {
                         <img src={rg05} alt={"feedback"}
                              className={"max-w-md max-h-lg cover px-6 pt-6"}
                              style={{maxWidth: "450px"}}
+                             loading={"lazy"}
                         />
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
@@ -261,14 +268,17 @@ export const ScreenTableProjectData = {
                         <img src={test01} alt={"feedback"}
                              className={"max-w-md max-h-lg cover px-2 pt-6"}
                              style={{maxWidth: "150px"}}
+                             loading={"lazy"}
                         />
                         <img src={test02} alt={"feedback"}
                              className={"max-w-md max-h-lg cover px-2 pt-6"}
                              style={{maxWidth: "150px"}}
+                             loading={"lazy"}
                         />
                         <img src={test03} alt={"feedback"}
                              className={"max-w-md max-h-lg cover px-2 pt-6"}
                              style={{maxWidth: "150px"}}
+                             loading={"lazy"}
                         />
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />

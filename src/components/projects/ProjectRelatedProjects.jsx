@@ -24,6 +24,7 @@ const ProjectRelatedProjects = () => {
 									className="w-64 h-full object-contain overflow-hidden"
 									alt={project.title}
 									key={project.id}
+									loading={"lazy"}
 								/>
 								<p
 									className="text-center mt-2"

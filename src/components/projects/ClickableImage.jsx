@@ -34,6 +34,7 @@ export const ClickableImage = (props) => {
                 src={src}
                 alt={alt}
                 onClick={handleSmallImageClick}
+                loading={"lazy"}
             />
         </div>
         {/*  larger view */}

@@ -25,6 +25,7 @@ const ProjectSingle = (props) => {
 							src={image}
 							className="w-full h-1/2 object-contain overflow-hidden"
 							alt="Single Project"
+							loading={"lazy"}
 						/>
 					</div>
 					<div 
