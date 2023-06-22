@@ -16,21 +16,39 @@ const ProjectSingle = (props) => {
 				duration: 0.7,
 				delay: 0.15,
 			}}
+			style={{
+				height: "100%",
+			}}
 		>
 			<Link
 				to={`/projects/${name}`} aria-label={`${name}`}
+				style={{
+					height: "100%",
+				}}
 			>
 				<div 
 					className="relative shadow-lg h-lg rounded-xl hover:shadow-xl cursor-pointer dark:bg-ternary-dark"
+					style={{
+						position: "relative",
+						height: "100%",
+					}}
 				>
 					<div className="hover-zoom">
 						{isLoading &&
 							<div
-								className="w-full h-1/2 object-contain overflow-hidden">
+								className="flex flex-row justify-center items-center w-full h-1/2 object-contain overflow-hidden"
+								style={{
+									height: "50%,",
+								}}
+							>
 								<CircularProgress/>
 							</div>}
 						<img
-							style={{display: !isLoading ? "block" : "none" ,}}
+							style={{
+								display: !isLoading ? "block" : "none" ,
+								height: "50%",
+								objectFit: "cover",
+							}}
 							src={image}
 							className="w-full h-1/2 object-contain overflow-hidden"
 							alt="Single Project"
@@ -39,6 +57,9 @@ const ProjectSingle = (props) => {
 					</div>
 					<div 
 						className="flex-grow px-6 py-4"
+						style={{
+							flexGrow: 1,
+						}}
 					>
 						<div 
 						className="font-bold mt-2 text-xl py-0 dark:text-ternary-light "
@@ -49,11 +70,12 @@ const ProjectSingle = (props) => {
 							{brief}
 						</p>
 					</div>
-					<div className='px-6 pb-0 mb-0 top-12 absolute bottom'>
-						<p
-							className="z-10 bg-gray-50 rounded-full px-35 py-1 text-sm font-semibold text-secondary-dark mr-2 mb-2">
+					<div className={"flex-1"} />
+					<div className='px-6 pb-0 mb-0 mt-12 top-12'>
+						<div
+							className="bg-gray-50 rounded-full px-3 py-1 text-center text-sm font-semibold text-secondary-dark mr-2 mb-2">
 							{category}
-						</p>
+						</div>
 					</div>
 				</div>
 			</Link>
