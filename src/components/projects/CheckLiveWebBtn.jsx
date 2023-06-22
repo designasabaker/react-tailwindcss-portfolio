@@ -2,6 +2,7 @@ import style from "../../data/WeLightProjectStyle.module.scss";
 
 export const CheckLiveWebBtn = (props) => {
     const {LIVE_URL} = props;
+    const value = props.value || "Check the live website here";
     return(
         <div style={{paddingTop:'30px'}}>
             <a
@@ -18,7 +19,7 @@ export const CheckLiveWebBtn = (props) => {
                 // }}
                 className={style.liveUrlBtn}
             >
-                Check the live website here
+                {value}
             </a>
         </div>
     )

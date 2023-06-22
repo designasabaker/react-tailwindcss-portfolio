@@ -17,20 +17,20 @@ const ProjectInfo = () => {
 							(info) => {
 								return (
 									<li
-										className="font-general-regular text-ternary-dark dark:text-ternary-light"
+										className="font-general-regular text-ternary-dark dark:text-ternary-light py-2"
 										key={info.id}
 									>
 										<span>{info.title}: </span>
-										{info.title === 'Website'
+										{info.title === 'Website' || info.title === 'Research Work (Under Development)'
 											? (
 											<a
 												href={info.details}
 												target="_blank"
 												className={
-													info.title === 'Website' ||
-													info.title === 'Phone'
-														? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
-														: ''
+													//info.title === 'Website' ||
+													//info.title === 'Phone'
+														'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
+														// : ''
 												}
 												aria-label="Project Website and Phone"
 											>

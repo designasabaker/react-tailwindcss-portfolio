@@ -85,6 +85,11 @@ export const WeLightProjectData = {
 				title: 'CoWorkers',
 				details: <><br />Jack - Product Manager/Founder<br />Dri - Front-end Developer,<br />Jin - Back-end Developer<br />Steven - Back-end Developer, <br />Jack - Product Manager/Founder</>,
 			},
+			{
+				id: 6,
+				title: 'Research Work (Under Development)',
+				details: 'https://myaiapp.vercel.app/'
+			}
 		],
 		ObjectivesHeading: 'Objective',
 		ObjectivesDetails:
