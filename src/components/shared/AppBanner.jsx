@@ -3,8 +3,10 @@ import { FiArrowDownCircle } from 'react-icons/fi';
 import testGIF from '../../images/gif/test.gif';
 import { motion } from 'framer-motion';
 import {useCallback} from "react";
+import {useApp} from "../../context/AppContext";
 
 const AppBanner = () => {
+	const {lang, LANGUAGE} = useApp();
 	const [activeTheme] = useThemeSwitcher();
 	const executeScroll = useCallback(() => {
 		const element = document.getElementById("homeProjects");
@@ -12,6 +14,25 @@ const AppBanner = () => {
 			element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
 		}
 	}, []);
+
+	let greeting, selfIntro, checkResume = '';
+	switch(lang){
+		case LANGUAGE.EN:
+			greeting = "Hi, I am George";
+			selfIntro = "A Front-end Developer & Design Enthusiast";
+			checkResume = "Check my Resume";
+			break;
+		case LANGUAGE.CN:
+			greeting = "欢迎";
+			selfIntro = "专注网络开发和交互设计";
+			checkResume = "我的简历";
+			break;
+		default:
+			greeting = "Hi, I am George";
+			selfIntro = "A Front-end Developer & Design Enthusiast";
+			checkResume = "Check my Resume";
+			break;
+	}
 
 	return (
 		<motion.section
@@ -31,7 +52,7 @@ const AppBanner = () => {
 					}}
 					className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
 				>
-					Hi, I am George
+					{greeting}
 				</motion.h1>
 				<motion.p
 					initial={{ opacity: 0 }}
@@ -43,7 +64,7 @@ const AppBanner = () => {
 					}}
 					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
 				>
-					A Front-end Developer & Design Enthusiast
+					{selfIntro}
 				</motion.p>
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -64,7 +85,7 @@ const AppBanner = () => {
 					>
 						<FiArrowDownCircle className="mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiArrowDownCircle>
 						<span className="text-sm sm:text-lg font-general-medium duration-100">
-							Check my Resume
+							{checkResume}
 						</span>
 					</a>
 				</motion.div>

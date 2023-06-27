@@ -1,10 +1,12 @@
-import { useContext } from 'react';
+import {useContext, useEffect} from 'react';
 import { FiSearch } from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
 import { ProjectsContext } from '../../context/ProjectsContext';
 import ProjectsFilter from './ProjectsFilter';
+import {LANGUAGE, useApp} from "../../context/AppContext";
 
 const ProjectsGrid = () => {
+	const {lang} = useApp();
 	const {
 		projects,
 		searchProject,
@@ -15,11 +17,24 @@ const ProjectsGrid = () => {
 		selectProjectsByCategory,
 	} = useContext(ProjectsContext);
 
+	let title = "";
+	switch (lang){
+		case LANGUAGE.EN:
+			title = "Projects portfolio";
+			break;
+		case LANGUAGE.CN:
+			title = "项目一览";
+			break;
+		default:
+			title = "Projects portfolio";
+			break;
+	};
+
 	return (
 		<section  id="homeProjects" className="py-5 sm:py-10 mt-5 sm:mt-10">
 			<div className="text-center">
 				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
-					Projects portfolio
+					{title}
 				</p>
 			</div>
 

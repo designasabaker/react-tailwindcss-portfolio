@@ -6,6 +6,7 @@ import AppFooter from './components/shared/AppFooter';
 import AppHeader from './components/shared/AppHeader';
 import './css/App.css';
 import UseScrollToTop from './hooks/useScrollToTop';
+import AppProvider from "./context/AppContext";
 
 const About = lazy(() => import('./pages/AboutMe'));
 const Contact = lazy(() => import('./pages/Contact.jsx'));
@@ -17,6 +18,7 @@ const Error = lazy(() => import('./pages/Error.jsx'));
 function App() {
 	return (
 		<>
+			<AppProvider>
 			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
 				<BrowserRouter>
 					<ScrollToTop />
@@ -42,6 +44,7 @@ function App() {
 				</BrowserRouter>
 				<UseScrollToTop />
 			</div>
+			</AppProvider>
 		</>
 	);
 }

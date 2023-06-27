@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
@@ -7,11 +7,46 @@ import logoLight from '../../images/logo-lightMode.svg';
 import logoDark from '../../images/logo-darkMode.svg';
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button';
+import LanguageSwitcher from "../reusable/LanguageSwitcher";
+import {LANGUAGE, useApp} from "../../context/AppContext";
 
 const AppHeader = () => {
+	const { lang } = useApp();
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
 	const [activeTheme, setTheme] = useThemeSwitcher();
+
+	const [navLinks, setNavLinks] = useState([
+		{id:1, path:'/projects', value:'Projects'},
+		{id:2, path:'/about', value:'About Me'},
+		{id:3, path:'/contact', value:'Contact'},
+	]);
+
+	const updateTextLang = (lang) => {
+		let navLinksVal;
+		switch (lang) {
+			case LANGUAGE.EN:
+				navLinksVal = ['Projects', 'About Me', 'Contact'];
+				break;
+			case LANGUAGE.CN:
+				navLinksVal = ['项目', '关于我', '联系方式'];
+				break;
+			default:
+				navLinksVal = ['Projects', 'About Me', 'Contact'];
+				break;
+		};
+
+		setNavLinks(preNavLinks => {
+			return preNavLinks.map(
+				(link, index) => {
+					return {...link, value: navLinksVal[index]}
+				})
+		});
+	}
+
+	useEffect(() => {
+		updateTextLang(lang);
+	},[lang]);
 
 	function toggleMenu() {
 		if (!showMenu) {
@@ -141,27 +176,16 @@ const AppHeader = () => {
 
 				{/* Header links large screen */}
 				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-					<Link
-						to="/projects"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-						aria-label="Projects"
-					>
-						Projects
-					</Link>
-					<Link
-						to="/about"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-						aria-label="About Me"
-					>
-						About Me
-					</Link>
-					<Link
-						to="/contact"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-						aria-label="Contact"
-					>
-						Contact
-					</Link>
+					{navLinks.map((link) => {
+						return(
+							<Link
+								to={link.path || '/'}
+								className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+								aria-label="Projects"
+								>
+								{link.value}
+							</Link>)
+					})}
 				</div>
 
 				{/* Header right section buttons */}
@@ -187,6 +211,11 @@ const AppHeader = () => {
 						) : (
 							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
 						)}
+					</div>
+
+					{/* language switcher */}
+					<div className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer">
+						<LanguageSwitcher />
 					</div>
 				</div>
 			</div>
