@@ -21,7 +21,10 @@ const ProjectInfo = () => {
 										key={info.id}
 									>
 										<span>{info.title}: </span>
-										{info.title === 'Website' || info.title === 'Research Work (Under Development)'
+										{info.title === 'Website'
+										|| info.title === 'Research Work (Under Development)'
+										|| info.title === 'Preview Video'
+										|| info.title === 'Other VR Demo Video'
 											? (
 											<a
 												href={info.details}
