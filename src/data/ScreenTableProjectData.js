@@ -100,6 +100,16 @@ export const ScreenTableProjectData = {
                 title: 'Website',
                 details: liveVideoUrl,
             },
+            {
+                id: 6,
+                title: 'Github Repo',
+                details: 'https://github.com/designasabaker/thesis-app',
+            },
+            {
+                id: 7,
+                title: 'Github Repo',
+                details: 'https://github.com/designasabaker/thesis-screen-table-react',
+            }
         ],
         // ObjectivesHeading: 'Objective',
         // ObjectivesDetails:
@@ -169,30 +179,30 @@ export const ScreenTableProjectData = {
                         </div>
                     </div>,
             },
-            {
-                id: 1.3,
-                details:
-                    <div className={"w-full grid grid-cols-2"}>
-                        {/*<ClickableImage*/}
-                        {/*    className={"max-w-md max-h-lg cover px-6 pt-6"}*/}
-                        {/*    style={{maxWidth: "450px", maxHeight: "60px"}}*/}
-                        {/*    loading={"lazy"}*/}
-                        {/*    src={menuApp3}*/}
-                        {/*    alt={"feedback"}/>*/}
-                        <img src={menuApp3} alt={"feedback"}
-                             className={"max-w-md max-h-lg contain px-6 pt-6"}
-                             style={{maxWidth: "450px"}}
-                             loading={"lazy"}
-                        />
-                        <div className={"flex flex-col px-3"}>
-                            <div style={{flex:1}} />
-                            <div className={"font-thin text-sm"}></div>
-                            <p className={"font-thin text-sm py-2"}>
-                                (Developing) Store and send data to Firebase.
-                            </p>
-                        </div>
-                    </div>,
-            },
+            // {
+            //     id: 1.3,
+            //     details:
+            //         <div className={"w-full grid grid-cols-2"}>
+            //             {/*<ClickableImage*/}
+            //             {/*    className={"max-w-md max-h-lg cover px-6 pt-6"}*/}
+            //             {/*    style={{maxWidth: "450px", maxHeight: "60px"}}*/}
+            //             {/*    loading={"lazy"}*/}
+            //             {/*    src={menuApp3}*/}
+            //             {/*    alt={"feedback"}/>*/}
+            //             <img src={menuApp3} alt={"feedback"}
+            //                  className={"max-w-md max-h-lg contain px-6 pt-6"}
+            //                  style={{maxWidth: "450px"}}
+            //                  loading={"lazy"}
+            //             />
+            //             <div className={"flex flex-col px-3"}>
+            //                 <div style={{flex:1}} />
+            //                 <div className={"font-thin text-sm"}></div>
+            //                 <p className={"font-thin text-sm py-2"}>
+            //                     (Developing) Store and send data to Firebase.
+            //                 </p>
+            //             </div>
+            //         </div>,
+            // },
             {
                 id: 2,
                 details:

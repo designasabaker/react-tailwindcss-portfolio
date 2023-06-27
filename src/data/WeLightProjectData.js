@@ -20,6 +20,7 @@ import notionImg4 from '../images/Projects/welight/notion4.jpg';
 
 import style from './WeLightProjectStyle.module.scss'
 import CheckLiveWebBtn from "../components/projects/CheckLiveWebBtn";
+import ClickableImage from "../components/projects/ClickableImage";
 
 const WELIGHT_LIVE_URL = 'https://welightpreview.vercel.app';
 
@@ -116,11 +117,15 @@ export const WeLightProjectData = {
 			{
 				id: 1.1,
 				details:
-					<div className={"w-full flex flex-row justify-center"}>
-						<img src={logoOptionsImg} alt={"logo options"}
-							 className={"object-contain px-6 pt-6"}
-							 style={{maxHeight: "300px"}}
-						/>
+					<div className={"w-full grid grid-cols-2"}>
+						<ClickableImage
+							src={logoOptionsImg} alt={"logo options"}
+							className={"object-contain px-6 pt-6"}
+							style={{maxHeight: "300px"}}/>
+						{/*<img src={logoOptionsImg} alt={"logo options"}*/}
+						{/*	 className={"object-contain px-6 pt-6"}*/}
+						{/*	 style={{maxHeight: "300px"}}*/}
+						{/*/>*/}
 						<div className={"flex flex-col px-6 "}>
 							<div style={{flex:1}} />
 							<div className={"font-thin text-sm"}>Logo Design</div>
@@ -136,12 +141,18 @@ export const WeLightProjectData = {
 			{
 				id: 2.1,
 				details:
-					<div className={"w-full flex flex-row justify-center"}>
-						<img src={meetingDiscussionImg} alt={"logo options"}
-							 className={"max-w-md max-h-lg object-contain px-6 pt-6"}
-							 style={{
-								 maxHeight: "300px"
-							 }}/>
+					<div className={"w-full grid grid-cols-2"}>
+						<ClickableImage
+							src={meetingDiscussionImg} alt={"logo options"}
+							className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+							style={{
+								maxHeight: "300px"
+							}}/>
+						{/*<img src={meetingDiscussionImg} alt={"logo options"}*/}
+						{/*	 className={"max-w-md max-h-lg object-contain px-6 pt-6"}*/}
+						{/*	 style={{*/}
+						{/*		 maxHeight: "300px"*/}
+						{/*	 }}/>*/}
 						<div className={"flex flex-col px-6"}>
 							<div style={{flex:1}} />
 							<div className={"font-thin text-sm"}>Dev Meeting</div>
@@ -158,11 +169,16 @@ export const WeLightProjectData = {
 			{
 				id: 3.1,
 				details:
-					<div className={"w-full flex flex-row justify-center"}>
-						<img src={notionImg1} alt={"feedback"}
-							 className={"max-w-md max-h-lg object-contain px-6 pt-6"}
-							 style={{maxWidth: "450px"}}
+					<div className={"w-full grid grid-cols-2"}>
+						<ClickableImage
+							src={notionImg1} alt={"feedback"}
+							className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+							style={{maxWidth: "450px"}}
 						/>
+						{/*<img src={notionImg1} alt={"feedback"}*/}
+						{/*	 className={"max-w-md max-h-lg object-contain px-6 pt-6"}*/}
+						{/*	 style={{maxWidth: "450px"}}*/}
+						{/*/>*/}
 						<div className={"flex flex-col px-3"}>
 							<div style={{flex:1}} />
 							<div className={"font-thin text-sm"}>Iteration I</div>
@@ -174,11 +190,16 @@ export const WeLightProjectData = {
 			{
 				id: 3.2,
 				details:
-					<div className={"w-full flex flex-row"}>
-						<img src={notionImg3} alt={"feedback"}
-							 className={"max-w-md max-h-lg object-contain px-6 pt-6"}
-							 style={{maxWidth: "450px"}}
+					<div className={"w-full grid grid-cols-2"}>
+						<ClickableImage
+							src={notionImg3} alt={"feedback"}
+							className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+							style={{maxWidth: "450px"}}
 						/>
+						{/*<img src={notionImg3} alt={"feedback"}*/}
+						{/*	 className={"max-w-md max-h-lg object-contain px-6 pt-6"}*/}
+						{/*	 style={{maxWidth: "450px"}}*/}
+						{/*/>*/}
 						<div className={"flex flex-col px-3"}>
 							<div style={{flex:1}} />
 							<div className={"font-thin text-sm"}>Iteration II</div>
@@ -191,11 +212,16 @@ export const WeLightProjectData = {
 			{
 				id: 3.3,
 				details:
-					<div className={"w-full flex flex-row"}>
-						<img src={notionImg4} alt={"feedback"}
-							 className={"max-w-md max-h-lg object-contain px-6 pt-6"}
-							 style={{maxWidth: "450px"}}
+					<div className={"w-full grid grid-cols-2"}>
+						<ClickableImage
+							src={notionImg4} alt={"feedback"}
+							className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+							style={{maxWidth: "450px"}}
 						/>
+						{/*<img src={notionImg4} alt={"feedback"}*/}
+						{/*	 className={"max-w-md max-h-lg object-contain px-6 pt-6"}*/}
+						{/*	 style={{maxWidth: "450px"}}*/}
+						{/*/>*/}
 						<div className={"flex flex-col px-3"}>
 							<div style={{flex:1}} />
 							{/*<div className={"font-bold text-md"}>Iteration II</div>*/}
@@ -213,11 +239,16 @@ export const WeLightProjectData = {
 			{
 				id: 4.1,
 				details:
-					<div className={"w-full flex flex-row"}>
-						<img src={feedbackImg} alt={"feedback"}
-							 className={"max-w-md max-h-lg object-contain px-6 pt-6"}
-							 style={{maxHeight: "300px"}}
+					<div className={"w-full grid grid-cols-2"}>
+						<ClickableImage
+							src={feedbackImg} alt={"feedback"}
+							className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+							style={{maxHeight: "300px"}}
 						/>
+						{/*<img src={feedbackImg} alt={"feedback"}*/}
+						{/*	 className={"max-w-md max-h-lg object-contain px-6 pt-6"}*/}
+						{/*	 style={{maxHeight: "300px"}}*/}
+						{/*/>*/}
 						<div className={"flex flex-col px-3"}>
 							<div style={{flex:1}} />
 							<div className={"font-thin text-sm"}>Feedback</div>

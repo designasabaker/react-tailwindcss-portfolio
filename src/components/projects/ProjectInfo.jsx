@@ -25,6 +25,7 @@ const ProjectInfo = () => {
 										|| info.title === 'Research Work (Under Development)'
 										|| info.title === 'Preview Video'
 										|| info.title === 'Other VR Demo Video'
+										|| info.title === 'Github Repo'
 											? (
 											<a
 												href={info.details}
