@@ -26,7 +26,7 @@ export const projectsData = [
 		},
 	},
 	{
-		id: 2,
+		id: 3.5,
 		name: 'OSB',
 		title: 'OSB',
 		brief: 'Cosmetic Ingredients Website Development',
@@ -39,7 +39,7 @@ export const projectsData = [
 		},
 	},
 	{
-		id: 2.5,
+		id: 2,
 		name: "Interactive Architecture",
 		title: 'Interactive Architecture',
 		category: 'Web Application',

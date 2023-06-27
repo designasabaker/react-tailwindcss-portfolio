@@ -6,7 +6,7 @@ export const ProjectsContext = createContext();
 
 // Create the projects context provider
 export const ProjectsProvider = (props) => {
-	const [projects, setProjects] = useState(projectsData);
+	const [projects, setProjects] = useState(projectsData.sort((a, b) => a.id - b.id));
 	const [searchProject, setSearchProject] = useState('');
 	const [selectProject, setSelectProject] = useState('');
 	const projectCategories = Array.from(new Set(projects.map((item) => item.category)));

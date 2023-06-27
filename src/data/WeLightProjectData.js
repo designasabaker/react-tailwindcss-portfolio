@@ -25,6 +25,7 @@ import ClickableImage from "../components/projects/ClickableImage";
 const WELIGHT_LIVE_URL = 'https://welightpreview.vercel.app';
 
 export const WeLightProjectData = {
+	id: 1,
 	name: 'WeLight',
 	ProjectHeader: {
 		title: 'WeLight Tech Platform - Under Development',
