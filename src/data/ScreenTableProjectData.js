@@ -26,6 +26,7 @@ import EcoHomeCover from "../images/EcoHomeCover.png";
 // import WeLightImage1 from '../images/WeLight.png';
 import CheckLiveWebBtn from "../components/projects/CheckLiveWebBtn";
 import notionImg1 from "../images/Projects/welight/notion1.jpg";
+import ClickableImage from "../components/projects/ClickableImage";
 
 const thesisAppUrl = 'https://thesis-app-kkx8.vercel.app/';
 const thesisScreenTableUrl = 'https://thesis-screen-table-react.vercel.app/';
@@ -122,12 +123,18 @@ export const ScreenTableProjectData = {
             {
                 id: 1.1,
                 details:
-                    <div className={"w-full flex flex-row"}>
-                        <img src={menuApp} alt={"feedback"}
-                             className={"max-w-md max-h-lg cover px-6 pt-6"}
-                             style={{maxWidth: "450px"}}
-                             loading={"lazy"}
-                        />
+                    <div className={"w-full grid grid-cols-2"}>
+                        <ClickableImage
+                            className={"max-w-md max-h-lg cover px-6 pt-6"}
+                            style={{maxWidth: "450px"}}
+                            loading={"lazy"}
+                            src={menuApp}
+                            alt={"feedback"}/>
+                        {/*<img src={menuApp} alt={"feedback"}*/}
+                        {/*     className={"max-w-md max-h-lg cover px-6 pt-6"}*/}
+                        {/*     style={{maxWidth: "450px"}}*/}
+                        {/*     loading={"lazy"}*/}
+                        {/*/>*/}
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
                             <div className={"font-thin text-sm"}>Interactive Menu</div>
@@ -140,12 +147,19 @@ export const ScreenTableProjectData = {
             {
                 id: 1.2,
                 details:
-                    <div className={"w-full flex flex-row"}>
-                        <img src={menuApp2} alt={"feedback"}
-                             className={"max-w-md max-h-lg cover px-6 pt-6"}
-                             style={{maxWidth: "450px"}}
-                             loading={"lazy"}
-                        />
+                    <div className={"w-full grid grid-cols-2"}>
+                        <div className={"max-w-md max-h-lg cover px-6 pt-6"}
+                             style={{maxWidth: "450px"}}>
+                            <ClickableImage
+                                loading={"lazy"}
+                                src={menuApp2}
+                                alt={"feedback"}/>
+                        </div>
+                        {/*<img src={menuApp2} alt={"feedback"}*/}
+                        {/*     className={"max-w-md max-h-lg cover px-6 pt-6"}*/}
+                        {/*     style={{maxWidth: "450px"}}*/}
+                        {/*     loading={"lazy"}*/}
+                        {/*/>*/}
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
                             <div className={"font-thin text-sm"}></div>
@@ -158,7 +172,13 @@ export const ScreenTableProjectData = {
             {
                 id: 1.3,
                 details:
-                    <div className={"w-full flex flex-row"}>
+                    <div className={"w-full grid grid-cols-2"}>
+                        {/*<ClickableImage*/}
+                        {/*    className={"max-w-md max-h-lg cover px-6 pt-6"}*/}
+                        {/*    style={{maxWidth: "450px", maxHeight: "60px"}}*/}
+                        {/*    loading={"lazy"}*/}
+                        {/*    src={menuApp3}*/}
+                        {/*    alt={"feedback"}/>*/}
                         <img src={menuApp3} alt={"feedback"}
                              className={"max-w-md max-h-lg contain px-6 pt-6"}
                              style={{maxWidth: "450px"}}
@@ -181,12 +201,18 @@ export const ScreenTableProjectData = {
             {
                 id: 2.1,
                 details:
-                    <div className={"w-full flex flex-row"}>
-                        <img src={rgAnalysis} alt={"feedback"}
-                             className={"max-w-md max-h-lg cover px-6 pt-6"}
-                             style={{maxWidth: "450px"}}
-                             loading={"lazy"}
-                        />
+                    <div className={"w-full grid grid-cols-2"}>
+                        <ClickableImage
+                            className={"max-w-md max-h-lg cover px-6 pt-6"}
+                            style={{maxWidth: "450px"}}
+                            loading={"lazy"}
+                            src={rgAnalysis}
+                            alt={"feedback"}/>
+                        {/*<img src={rgAnalysis} alt={"feedback"}*/}
+                        {/*     className={"max-w-md max-h-lg cover px-6 pt-6"}*/}
+                        {/*     style={{maxWidth: "450px"}}*/}
+                        {/*     loading={"lazy"}*/}
+                        {/*/>*/}
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
                             <div className={"font-thin text-sm"}>Firebase Backend</div>
@@ -204,18 +230,23 @@ export const ScreenTableProjectData = {
             {
                 id: 2.6,
                 details:
-                    <div className={"w-full flex flex-row"}>
-                        <img src={rg02} alt={"feedback"}
-                             className={"max-w-md max-h-lg cover px-6 pt-6"}
-                             style={{maxWidth: "450px"}}
-                             loading={"lazy"}
-                        />
+                    <div className={"w-full grid grid-cols-2"}>
+                        <ClickableImage
+                            className={"max-w-md max-h-lg cover px-6 pt-6"}
+                            style={{maxWidth: "450px"}}
+                            loading={"lazy"}
+                            src={rg02}
+                            alt={"feedback"}/>
+                        {/*<img src={rg02} alt={"feedback"}*/}
+                        {/*     className={"max-w-md max-h-lg cover px-6 pt-6"}*/}
+                        {/*     style={{maxWidth: "450px"}}*/}
+                        {/*     loading={"lazy"}*/}
+                        {/*/>*/}
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
                             <div className={"font-thin text-sm"}>Screen Table</div>
                             <p className={"font-thin text-sm py-2"}>
                                 <CheckLiveWebBtn LIVE_URL={thesisScreenTableUrl} value={"Screen Table"}/>
-
                             </p>
                         </div>
                     </div>,
@@ -223,12 +254,18 @@ export const ScreenTableProjectData = {
             {
                 id: 2.7,
                 details:
-                    <div className={"w-full flex flex-row"}>
-                        <img src={rg03} alt={"feedback"}
-                             className={"max-w-md max-h-lg cover px-6 pt-6"}
-                             style={{maxWidth: "450px"}}
-                             loading={"lazy"}
-                        />
+                    <div className={"w-full grid grid-cols-2"}>
+                        <ClickableImage
+                            loading={"lazy"}
+                            src={rg03}
+                            alt={"feedback"}
+                            className={"max-w-md max-h-lg cover px-6 pt-6"}
+                            style={{maxWidth: "450px"}} />
+                        {/*<img src={rg03} alt={"feedback"}*/}
+                        {/*     className={"max-w-md max-h-lg cover px-6 pt-6"}*/}
+                        {/*     style={{maxWidth: "450px"}}*/}
+                        {/*     loading={"lazy"}*/}
+                        {/*/>*/}
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
                             <div className={"font-thin text-sm"}></div>
@@ -242,12 +279,18 @@ export const ScreenTableProjectData = {
             {
                 id: 2.8,
                 details:
-                    <div className={"w-full flex flex-row"}>
-                        <img src={rg05} alt={"feedback"}
-                             className={"max-w-md max-h-lg cover px-6 pt-6"}
-                             style={{maxWidth: "450px"}}
-                             loading={"lazy"}
-                        />
+                    <div className={"w-full grid grid-cols-2"}>
+                        <ClickableImage
+                            loading={"lazy"}
+                            src={rg05}
+                            alt={"feedback"}
+                            className={"max-w-md max-h-lg cover px-6 pt-6"}
+                            style={{maxWidth: "450px"}} />
+                        {/*<img src={rg05} alt={"feedback"}*/}
+                        {/*     className={"max-w-md max-h-lg cover px-6 pt-6"}*/}
+                        {/*     style={{maxWidth: "450px"}}*/}
+                        {/*     loading={"lazy"}*/}
+                        {/*/>*/}
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
                             <div className={"font-thin text-sm"}></div>
@@ -264,22 +307,39 @@ export const ScreenTableProjectData = {
             {
                 id: 3.1,
                 details:
-                    <div className={"w-full flex flex-row gap-2"}>
-                        <img src={test01} alt={"feedback"}
-                             className={"max-w-md max-h-lg cover px-2 pt-6"}
-                             style={{maxWidth: "150px"}}
-                             loading={"lazy"}
-                        />
-                        <img src={test02} alt={"feedback"}
-                             className={"max-w-md max-h-lg cover px-2 pt-6"}
-                             style={{maxWidth: "150px"}}
-                             loading={"lazy"}
-                        />
-                        <img src={test03} alt={"feedback"}
-                             className={"max-w-md max-h-lg cover px-2 pt-6"}
-                             style={{maxWidth: "150px"}}
-                             loading={"lazy"}
-                        />
+                    <div className={"w-full grid grid-cols-2"}>
+                        <div className={"w-full flex flex-row gap-2"}>
+                            <ClickableImage
+                                loading={"lazy"}
+                                src={test01} alt={"feedback"}
+                                className={"max-w-md max-h-lg cover px-2 pt-6"}
+                                style={{maxWidth: "150px"}} />
+                            {/*<img src={test01} alt={"feedback"}*/}
+                            {/*     className={"max-w-md max-h-lg cover px-2 pt-6"}*/}
+                            {/*     style={{maxWidth: "150px"}}*/}
+                            {/*     loading={"lazy"}*/}
+                            {/*/>*/}
+                            <ClickableImage
+                                loading={"lazy"}
+                                src={test02} alt={"feedback"}
+                                className={"max-w-md max-h-lg cover px-2 pt-6"}
+                                style={{maxWidth: "150px"}} />
+                            {/*<img src={test02} alt={"feedback"}*/}
+                            {/*     className={"max-w-md max-h-lg cover px-2 pt-6"}*/}
+                            {/*     style={{maxWidth: "150px"}}*/}
+                            {/*     loading={"lazy"}*/}
+                            {/*/>*/}
+                            <ClickableImage
+                                loading={"lazy"}
+                                src={test03} alt={"feedback"}
+                                className={"max-w-md max-h-lg cover px-2 pt-6"}
+                                style={{maxWidth: "150px"}} />
+                            {/*<img src={test03} alt={"feedback"}*/}
+                            {/*     className={"max-w-md max-h-lg cover px-2 pt-6"}*/}
+                            {/*     style={{maxWidth: "150px"}}*/}
+                            {/*     loading={"lazy"}*/}
+
+                        </div>
                         <div className={"flex flex-col px-3"}>
                             <div style={{flex:1}} />
                             <div className={"font-thin text-sm"}></div>
