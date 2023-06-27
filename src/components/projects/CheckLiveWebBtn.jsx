@@ -4,7 +4,13 @@ export const CheckLiveWebBtn = (props) => {
     const {LIVE_URL} = props;
     const value = props.value || "Check the live website here";
     return(
-        <div style={{paddingTop:'30px'}}>
+        <div style={{
+            paddingTop:'30px',
+            display: 'block',
+            //overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+        }}>
             <a
                 href={LIVE_URL || "#"}
                 target={"_blank"}
