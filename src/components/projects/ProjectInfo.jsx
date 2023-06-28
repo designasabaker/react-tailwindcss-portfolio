@@ -6,26 +6,16 @@ const ProjectInfo = () => {
 	const { lang } = useApp();
 	const { singleProjectData } = useContext(SingleProjectContext);
 
-	const projectDetailInfo = singleProjectData.ProjectInfo.ProjectDetails.map((details) => {
-		if(!!details[lang]){
-			// has language options
-			return (
-				<div
-					key={details.id}
-					className="w-full font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
-				>
-					{details[lang].details}
-				</div>
-			);
-		}else{
-			return (
-				<div
-					key={details.id}
-					className="w-full font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
-				>
-					{details.details}
-				</div>
-			);}
+	const projectDetailInfo = singleProjectData.ProjectInfo.ProjectDetails.map((detail) => {
+		// has language options
+		return (
+			<div
+				key={detail.id}
+				className="w-full font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
+			>
+				{!!detail.details[lang] ? detail.details[lang] : detail.details}
+			</div>
+		);
 	})
 
 	return (

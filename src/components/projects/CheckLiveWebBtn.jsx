@@ -1,8 +1,16 @@
 import style from "../../data/WeLightProjectStyle.module.scss";
+import {LANGUAGE, useApp} from "../../context/AppContext";
 
 export const CheckLiveWebBtn = (props) => {
+    const {lang} = useApp();
     const {LIVE_URL} = props;
-    const value = props.value || "Check the live website here";
+    const value = props.value;
+
+    const text = {
+        [LANGUAGE.EN]: "Check the live website here",
+        [LANGUAGE.CN]: "查看网站",
+    }
+
     return(
         <div style={{
             paddingTop:'30px',
@@ -25,7 +33,7 @@ export const CheckLiveWebBtn = (props) => {
                 // }}
                 className={style.liveUrlBtn}
             >
-                {value}
+                {!!value ? value : text[lang]}
             </a>
         </div>
     )
