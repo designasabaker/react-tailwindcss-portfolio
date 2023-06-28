@@ -1,8 +1,32 @@
 import { useContext } from 'react';
 import SingleProjectContext from '../../context/SingleProjectContext';
+import {useApp} from "../../context/AppContext";
 
 const ProjectInfo = () => {
+	const { lang } = useApp();
 	const { singleProjectData } = useContext(SingleProjectContext);
+
+	const projectDetailInfo = singleProjectData.ProjectInfo.ProjectDetails.map((details) => {
+		if(!!details[lang]){
+			// has language options
+			return (
+				<div
+					key={details.id}
+					className="w-full font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
+				>
+					{details[lang].details}
+				</div>
+			);
+		}else{
+			return (
+				<div
+					key={details.id}
+					className="w-full font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
+				>
+					{details.details}
+				</div>
+			);}
+	})
 
 	return (
 		<div className="block sm:flex gap-0 sm:gap-10 mt-14">
@@ -104,16 +128,17 @@ const ProjectInfo = () => {
 				<p className="font-general-regular text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
 					{singleProjectData.ProjectInfo.ProjectDetailsHeading}
 				</p>
-				{singleProjectData.ProjectInfo.ProjectDetails.map((details) => {
-					return (
-						<div
-							key={details.id}
-							className="w-full font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
-						>
-							{details.details}
-						</div>
-					);
-				})}
+				{projectDetailInfo}
+				{/*{singleProjectData.ProjectInfo.ProjectDetails.map((details) => {*/}
+				{/*	return (*/}
+				{/*		<div*/}
+				{/*			key={details.id}*/}
+				{/*			className="w-full font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"*/}
+				{/*		>*/}
+				{/*			{details.details}*/}
+				{/*		</div>*/}
+				{/*	);*/}
+				{/*})}*/}
 			</div>
 		</div>
 	);

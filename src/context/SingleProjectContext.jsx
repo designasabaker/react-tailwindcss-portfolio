@@ -18,7 +18,7 @@ import ProjectError from '../components/projects/ProjectError';
 // console.log("modules", modules);
 
 const SingleProjectContext = createContext();
-export const projectsDataList = [
+export const projectsDataListEN = [
 	WeLightProjectDataJson,
 	OSBProjectDataJson,
 	EcoHomeProjectDataJson,
@@ -35,21 +35,21 @@ export const projectsDataList = [
 // export const projectsDataList = modules;
 
 export const SingleProjectProvider = ({ projectName, children }) => {
-	const singleIndex = projectsDataList.findIndex((projectData) => projectData.name === projectName);
+	const singleIndex = projectsDataListEN.findIndex((projectData) => projectData.name === projectName);
 	console.log("singleIndex", singleIndex);
 
 	const [singleProjectData, setSingleProjectData] = useState(
-		projectsDataList[singleIndex]
+		projectsDataListEN[singleIndex]
 	);
 
 	useEffect(() => {
-		const singleIndex = projectsDataList.findIndex((projectData) => projectData.name === projectName);
-		setSingleProjectData(projectsDataList[singleIndex]);
+		const singleIndex = projectsDataListEN.findIndex((projectData) => projectData.name === projectName);
+		setSingleProjectData(projectsDataListEN[singleIndex]);
 	}, [projectName]);
 
 	return (
 		<SingleProjectContext.Provider
-			value={{ singleProjectData, setSingleProjectData, projectsDataList }}
+			value={{ singleProjectData, setSingleProjectData, projectsDataListEN }}
 		>
 			{singleProjectData && children}
 			{!singleProjectData && <ProjectError />}

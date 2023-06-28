@@ -10,7 +10,7 @@ export const LANGUAGES = [LANGUAGE.EN, LANGUAGE.CN]
 export const AppContext = React.createContext({});
 
 export const AppProvider = ({children}) => {
-    const [lang,setLang] = useState(LANGUAGES.EN);
+    const [lang,setLang] = useState(LANGUAGE.EN);
 
     return(
         <AppContext.Provider value={{lang, setLang, LANGUAGE, LANGUAGES}}>

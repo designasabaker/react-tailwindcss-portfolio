@@ -21,16 +21,28 @@ import notionImg4 from '../images/Projects/welight/notion4.jpg';
 import style from './WeLightProjectStyle.module.scss'
 import CheckLiveWebBtn from "../components/projects/CheckLiveWebBtn";
 import ClickableImage from "../components/projects/ClickableImage";
+import {LANGUAGE} from "../context/AppContext";
 
 const WELIGHT_LIVE_URL = 'https://welightpreview.vercel.app';
 
 export const WeLightProjectData = {
 	id: 1,
 	name: 'WeLight',
-	ProjectHeader: {
-		title: 'WeLight Tech Platform - Under Development',
+	ProjectHeader:{
+		title: 'WeLight Tech Platform',
 		publishDate: 'Coming soon',
 		tags: 'UI / Frontend',
+
+		[LANGUAGE.EN]: {
+			title: 'WeLight Tech Platform',
+			publishDate: 'Coming soon',
+			tags: 'UI / Frontend',
+		},
+		[LANGUAGE.CN]: {
+			title: 'WeLight Tech 教育平台',
+			publishDate: '开发中',
+			tags: 'UI / 前端',
+		}
 	},
 	ProjectImages: [
 		{
@@ -113,7 +125,13 @@ export const WeLightProjectData = {
 			{
 				id: 1,
 				details:
-				'During my time at WeLight, an education startup brand, I held a dual role as a UI designer and front-end developer, responsible for improving the user interface of the company\'s web applications. I utilized Tailwind CSS, a popular utility-first CSS framework, to develop new components and update existing ones, with the aim of enhancing the overall look and feel of the platform.'
+				'During my time at WeLight, an education startup brand, I held a dual role as a UI designer and front-end developer, responsible for improving the user interface of the company\'s web applications. I utilized Tailwind CSS, a popular utility-first CSS framework, to develop new components and update existing ones, with the aim of enhancing the overall look and feel of the platform.',
+				[LANGUAGE.EN]: {
+					details:'During my time at WeLight, an education startup brand, I held a dual role as a UI designer and front-end developer, responsible for improving the user interface of the company\'s web applications. I utilized Tailwind CSS, a popular utility-first CSS framework, to develop new components and update existing ones, with the aim of enhancing the overall look and feel of the platform.',
+				},
+				[LANGUAGE.CN]: {
+					details:'在我在WeLight工作的期间，这是一家教育初创品牌，我担任了UI设计师和前端开发者的双重角色，负责改善公司网页应用的用户界面。我使用了Tailwind CSS，这是一个非常受欢迎的实用主义首选的CSS框架，以开发新的组件和更新现有的组件，目的是提升平台整体的视觉效果和用户体验感。'
+				}
 			},
 			{
 				id: 1.1,
@@ -133,6 +151,42 @@ export const WeLightProjectData = {
 							<p className={"font-thin text-sm py-2"}>I spearheaded the logo design, creating multiple versions for team discussions.</p>
 						</div>
 					</div>,
+				[LANGUAGE.EN]: {
+					details:
+						<div className={"w-full grid grid-cols-2"}>
+							<ClickableImage
+								src={logoOptionsImg} alt={"logo options"}
+								className={"object-contain px-6 pt-6"}
+								style={{maxHeight: "300px"}}/>
+							{/*<img src={logoOptionsImg} alt={"logo options"}*/}
+							{/*	 className={"object-contain px-6 pt-6"}*/}
+							{/*	 style={{maxHeight: "300px"}}*/}
+							{/*/>*/}
+							<div className={"flex flex-col px-6 "}>
+								<div style={{flex:1}} />
+								<div className={"font-thin text-sm"}>Logo Design</div>
+								<p className={"font-thin text-sm py-2"}>I spearheaded the logo design, creating multiple versions for team discussions.</p>
+							</div>
+						</div>,
+				},
+				[LANGUAGE.CN]: {
+					details:
+						<div className={"w-full grid grid-cols-2"}>
+							<ClickableImage
+								src={logoOptionsImg} alt={"logo options"}
+								className={"object-contain px-6 pt-6"}
+								style={{maxHeight: "300px"}}/>
+							{/*<img src={logoOptionsImg} alt={"logo options"}*/}
+							{/*	 className={"object-contain px-6 pt-6"}*/}
+							{/*	 style={{maxHeight: "300px"}}*/}
+							{/*/>*/}
+							<div className={"flex flex-col px-6 "}>
+								<div style={{flex:1}} />
+								<div className={"font-thin text-sm"}>Logo 设计</div>
+								<p className={"font-thin text-sm py-2"}>我主导了标志设计，创建了多个版本以供团队讨论。</p>
+							</div>
+						</div>,
+				}
 			},
 			{
 				id: 2,
