@@ -1,4 +1,5 @@
 // Import images
+
 import Image1 from '../images/shekon-1.png';
 import Image2 from '../images/shekon-2.png';
 import Image3 from '../images/shekon-3.png';
@@ -6,18 +7,17 @@ import Image4 from '../images/shekon-4.png';
 import Image5 from '../images/shekon-5.png';
 import Image6 from '../images/shekon-6.png';
 
-import WeLightImage1 from '../images/WeLight.png';
+import ctp01 from '../images/Projects/CrossPell/ctp-01.jpg';
+import ctpCtrl01 from '../images/Projects/CrossPell/ctp-ctrl-01.jpg';
+import ctpCtrl02 from '../images/Projects/CrossPell/ctp-ctrl-02.jpg';
+import ctpMenu01 from '../images/Projects/CrossPell/ctp-menu-01.jpg';
+import ctpMenu02 from '../images/Projects/CrossPell/ctp-menu-02.jpg';
+import ctpCodeFlow from '../images/Projects/CrossPell/ctp-code-flow.jpg';
 
-// Import icons
-import {
-    FiFacebook,
-    FiInstagram,
-    FiLinkedin,
-    FiTwitter,
-    FiYoutube,
-} from 'react-icons/fi';
 import OSBCover from "../images/OSB-1.png";
 import EcoHomeCover from "../images/EcoHomeCover.png";
+import ClickableImage from "../components/projects/ClickableImage";
+import notionImg1 from "../images/Projects/welight/notion1.jpg";
 
 export const CrossPellProjectData = {
     name: 'crosspell',
@@ -59,12 +59,12 @@ export const CrossPellProjectData = {
         },
     ],
     ProjectInfo: {
-        ClientHeading: 'About Client',
+        ClientHeading: 'About',
         CompanyInfo: [
             {
                 id: 1,
                 title: 'Name',
-                details: 'Shé:kon'
+                details: 'Cross the Pell Bridge',
             },
             {
                 id: 2,
@@ -74,12 +74,12 @@ export const CrossPellProjectData = {
             {
                 id: 3,
                 title: 'Preview Video',
-                details: 'https://youtu.be/T1MG7LQY81g',
+                details: 'https://youtu.be/tSzuSx4Bs_o',
             },
             {
                 id: 4,
-                title: 'Other VR Demo Video',
-                details: 'https://youtube.com/shorts/oXG8qh6X67I?feature=share',
+                title: 'Github Repo',
+                details: 'https://github.com/designasabaker/pellunityscript',
             },
             // {
             // 	id: 4,
@@ -94,8 +94,9 @@ export const CrossPellProjectData = {
             {
                 title: 'Tools & Technologies',
                 techs: [
-                    'Unity Android',
+                    'Unity',
                     'C#',
+                    'Figma',
                 ],
             },
         ],
@@ -104,23 +105,94 @@ export const CrossPellProjectData = {
             {
                 id: 1,
                 details:
-                    "Shé:kon is a virtual reality project that I developed for the RISD Museum, with the goal of creating an immersive and educational experience that highlights the indigenous culture of Rhode Island."
+                <>
+                    On December 2nd, 3rd, and 4th, 2022, Bike Newport and the Rhode Island School of Design (RISD)’s Department of Interior Architecture together hosted “Crossing the Pell” at the historic Old Colony House in Newport, RI. Using the magic of virtual and augmented reality, visitors experienced biking and walking across the Pell Bridge through four creative RISD student design concepts. <br /><br />
+                    More than 450 participants, ages 3 to 93, were transported inside these inspiring visions, where they virtually walked and pedaled 2.1 miles across the iconic Claiborne Pell Bridge, the longest suspension bridge in New England.<br />
+                    <small className={"text-sm"}>https://bikenewportri.org/risd-crossing-the-pell/</small>
+                </>
             },
             {
                 id: 2,
                 details:
-                    ' The project allows users to explore the museum\'s exhibits and learn about the indigenous language and culture of the region.',
+                <>
+                    <div className={"w-full grid grid-cols-2"}>
+                        <div className={"flex flex-row gap-2"}>
+                            <ClickableImage
+                                src={ctp01} alt={"feedback"}
+                                className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+                                style={{maxWidth: "450px"}}/>
+                            <ClickableImage
+                                src={ctpCtrl01} alt={"feedback"}
+                                className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+                                style={{maxWidth: "450px"}}/>
+                            <ClickableImage
+                                src={ctpCtrl02} alt={"feedback"}
+                                className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+                                style={{maxWidth: "450px"}}/>
+                        </div>
+                        <div className={"flex flex-col px-3"}>
+                            <div style={{flex:1}} />
+                            <div className={"font-thin text-sm"}>Challenge I</div>
+                            <p className={"font-thin text-sm py-2"}>A menu is developed to enable the user, wearing a headset, to switch scenes or adjust the headset's position using only two buttons.
+                            </p>
+                        </div>
+                    </div>
+                </>
             },
-            // {
-            //     id: 3,
-            //     details:
-            //         'Our goal is to create a visually engaging and user-friendly website that showcases the brand\'s advanced ingredients and its connection to Rhode Island, ultimately attracting the attention of business partners in the cosmetics industry.',
-            // },
-            // {
-            //     id: 4,
-            //     details:
-            //         'In our design approach, we avoided using fancy elements and instead focused on creating a clean and simple aesthetic that reflects the brand\'s commitment to nature.',
-            // },
+            {
+                id: 3,
+                details:
+                    <div>
+                        <h1 className={"font-bold"}>CHALLENGING INPUT MANAGEMENT</h1>
+                        <p>TWO CONTROLLERS ARE FIXED&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp; NO RAYCASTING IN THE GAME</p>
+                        <div>
+                            <p>Only 2 triggers are used =></p>
+                        </div>
+                        <div className={"w-full flex flex-row justify-end"}>
+                            <div className={"px-3"}>
+                                <p>Left Trigger:</p>
+                                <p>&nbsp;</p>
+                                <p>Right Trigger:</p>
+                            </div>
+                            <div className={"px-3"}>
+                                <p>Call the menu</p>
+                                <p>Click the selected button</p>
+                                <p>Switch to the next button</p>
+                            </div>
+                        </div>
+                    </div>
+            },
+            {   id: 4,
+                details:
+                    <div className={"w-full grid grid-cols-2"}>
+                        <div className={"flex flex-row gap-2"}>
+                            <ClickableImage
+                                src={ctpMenu01} alt={"feedback"}
+                                className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+                                style={{maxWidth: "450px"}}/>
+                            <ClickableImage
+                                src={ctpMenu02} alt={"feedback"}
+                                className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+                                style={{maxWidth: "450px"}}/>
+                        </div>
+                        <div className={"flex flex-col px-3"}>
+                            <div style={{flex:1}} />
+                            <div className={"font-thin text-sm"}></div>
+                            <p className={"font-thin text-sm py-2"}>The menu is designed to be simple and intuitive. The user can easily navigate through the menu and select the desired option.
+                            </p>
+                        </div>
+                    </div>
+            },
+            {   id: 5,
+                details:
+                    <div className={''}>
+                        <ClickableImage
+                            isLarge={true}
+                            src={ctpCodeFlow} alt={"code"}
+                            className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+                            style={{maxWidth: "450px"}}/>
+                    </div>
+            },
         ],
         SocialSharingHeading: '',
         SocialSharing: [
