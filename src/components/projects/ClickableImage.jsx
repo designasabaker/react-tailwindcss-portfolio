@@ -15,14 +15,21 @@ export const ClickableImage = (props) => {
     function handleSmallImageClick(e) {
         e.stopPropagation();
         setIsOpen(true);
-        const t =setTimeout(() => {
-            setIsOpen(false);
-        }, 5000);
-        setT(t);
+        // const t =setTimeout(() => {
+        //     setIsOpen(false);
+        // }, 5000);
+        // setT(t);
     }
 
     function handleLargeImageClick(e) {
         e.stopPropagation();
+        const target = e.target;
+        console.log('e target: ',target);
+        console.log('e target id: ',target.getAttribute('id'));
+        const id = target.getAttribute('id');
+        console.log('child name', target.children);
+
+        if(id !== 'div2') return;
         setIsOpen(false);
     }
 
@@ -70,6 +77,7 @@ export const ClickableImage = (props) => {
         {/*  larger view */}
             {isOpen && (
                 <motion.div
+
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
@@ -83,9 +91,10 @@ export const ClickableImage = (props) => {
                         left:0,
                         zIndex: 1000,  // ensure this is on top
                     }}
-                    // onClick={handleLargeImageClick}  // bind click event here
+                    onClick={(e)=>handleLargeImageClick(e)}  // bind click event here
                 >
                     <div
+                        id={"div"}
                         style={{
                             width:'100%',
                             height:'100%',
@@ -94,12 +103,15 @@ export const ClickableImage = (props) => {
                         }}>
                         <p>Large</p>
                         <div
+                            id={"div2"}
                             className={"flex flex-row justify-center items-center align-top"}
                             style={{width:'100%', height:'100%'}}>
-                            <div className={"flex flex-row items-start"}>
-                                <TransformWrapper>
-                                    <TransformComponent >
+                            <div id={"nonC"} className={"flex flex-row items-start"}>
+                                <TransformWrapper name={"largeImage"} onMouseDown={(e)=>e.stopPropagation()}>
+                                    <TransformComponent name={"largeImage"}>
                                         <img
+                                            id="largeImage"
+                                            name={"largeImage"}
                                             key={`${id}-large`}
                                             className=""
                                             src={src}
@@ -108,6 +120,7 @@ export const ClickableImage = (props) => {
                                                 maxHeight: isLarge ? "90vh" : "66vh",
                                                 maxWidth: isLarge ? "90vw" : "66vw",
                                             }}
+                                            onMouseDown={(e)=>e.stopPropagation()}
                                         />
                                     </TransformComponent>
                                     <button
