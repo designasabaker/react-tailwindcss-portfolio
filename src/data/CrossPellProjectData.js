@@ -1,18 +1,12 @@
-// Import images
-
-import Image1 from '../images/shekon-1.png';
-import Image2 from '../images/shekon-2.png';
-import Image3 from '../images/shekon-3.png';
-import Image4 from '../images/shekon-4.png';
-import Image5 from '../images/shekon-5.png';
-import Image6 from '../images/shekon-6.png';
-
 import ctp01 from '../images/Projects/CrossPell/ctp-01.jpg';
 import ctpCtrl01 from '../images/Projects/CrossPell/ctp-ctrl-01.jpg';
 import ctpCtrl02 from '../images/Projects/CrossPell/ctp-ctrl-02.jpg';
 import ctpMenu01 from '../images/Projects/CrossPell/ctp-menu-01.jpg';
 import ctpMenu02 from '../images/Projects/CrossPell/ctp-menu-02.jpg';
 import ctpCodeFlow from '../images/Projects/CrossPell/ctp-code-flow.jpg';
+import ctpCodeFlowHr from '../images/Projects/CrossPell/ctp-code-flow-hr.png';
+import ctpExhi01 from '../images/Projects/CrossPell/ctp-exhi-01.jpg';
+import ctpExhi02 from '../images/Projects/CrossPell/ctp-exhi-02.jpg';
 
 import OSBCover from "../images/OSB-1.png";
 import EcoHomeCover from "../images/EcoHomeCover.png";
@@ -30,32 +24,32 @@ export const CrossPellProjectData = {
         {
             id: 1,
             title: 'Kabul Project Management UI',
-            img: Image1,
+            img: ctp01,
         },
         {
             id: 2,
             title: 'Kabul Project Management UI',
-            img: Image2,
+            img: ctpMenu01,
         },
         {
             id: 3,
             title: 'Kabul Project Management UI',
-            img: Image3,
+            img: ctpMenu02,
         },
         {
             id: 4,
             title: 'Kabul Project Management UI',
-            img: Image4,
+            img: ctpExhi01,
         },
         {
             id: 5,
             title: 'Kabul Project Management UI',
-            img: Image5,
+            img: ctpExhi02,
         },
         {
             id: 6,
             title: 'Kabul Project Management UI',
-            img: Image6,
+            img: ctpCodeFlowHr,
         },
     ],
     ProjectInfo: {
@@ -188,9 +182,25 @@ export const CrossPellProjectData = {
                     <div className={''}>
                         <ClickableImage
                             isLarge={true}
-                            src={ctpCodeFlow} alt={"code"}
+                            src={ctpCodeFlowHr} alt={"code"}
                             className={"max-w-md max-h-lg object-contain px-6 pt-6"}
                             style={{maxWidth: "450px"}}/>
+                    </div>
+            },
+            {
+                id: 5.5,
+                details:
+                    <>
+                        In the original usage scheme, I aimed to confirm button presses by pressing two buttons simultaneously. I achieved control over the game by setting timestamps.<br />
+                    </>
+            },
+            {   id: 6,
+                details:
+                    <div className={'w-full grid grid-cols-2'}>
+                        <iframe style={{width: '100%',height: 315}} src="https://www.youtube.com/embed/AxZvCH3xsNs"
+                                title="YouTube video player" frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen></iframe>
                     </div>
             },
         ],

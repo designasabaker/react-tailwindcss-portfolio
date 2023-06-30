@@ -11,6 +11,7 @@ export const ClickableImage = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     // const [zoom, setZoom] = useState(1);
     const [T, setT] = useState(null);
+    const [isGrabbing, setIsGrabbing] = useState(false);
 
     function handleSmallImageClick(e) {
         e.stopPropagation();
@@ -24,12 +25,16 @@ export const ClickableImage = (props) => {
     function handleLargeImageClick(e) {
         e.stopPropagation();
         const target = e.target;
-        console.log('e target: ',target);
-        console.log('e target id: ',target.getAttribute('id'));
+        //console.log('e target: ',target);
+        //console.log('e target id: ',target.getAttribute('id'));
         const id = target.getAttribute('id');
-        console.log('child name', target.children);
+        //console.log('child name', target.children);
 
         if(id !== 'div2') return;
+        setIsOpen(false);
+    }
+
+    function handleCloseBtnClick(){
         setIsOpen(false);
     }
 
@@ -40,7 +45,7 @@ export const ClickableImage = (props) => {
     },[])
 
 
-    console.log('id isOpen:', id, isOpen)
+    //console.log('id isOpen:', id, isOpen)
 
     return (
         <>
@@ -100,7 +105,11 @@ export const ClickableImage = (props) => {
                             height:'100%',
                             backgroundColor:'rgba(0,0,0,0.5)',
                             position: "relative",
-                        }}>
+                            cursor: isGrabbing ? "grabbing" : "grab",
+                        }}
+                        onMouseDown={()=>setIsGrabbing(true)}
+                        onMouseUp={()=>setIsGrabbing(false)}
+                    >
                         <p>Large</p>
                         <div
                             id={"div2"}
@@ -113,12 +122,11 @@ export const ClickableImage = (props) => {
                                             id="largeImage"
                                             name={"largeImage"}
                                             key={`${id}-large`}
-                                            className=""
                                             src={src}
                                             alt={alt}
                                             style={{
-                                                maxHeight: isLarge ? "90vh" : "66vh",
-                                                maxWidth: isLarge ? "90vw" : "66vw",
+                                                maxHeight: isLarge ? "99vh" : "66vh",
+                                                maxWidth: isLarge ? "99vw" : "66vw",
                                             }}
                                             onMouseDown={(e)=>e.stopPropagation()}
                                         />
@@ -129,7 +137,7 @@ export const ClickableImage = (props) => {
                                             height: "40px",
                                             color:'white',
                                         }}
-                                        onClick={handleLargeImageClick}>
+                                        onClick={handleCloseBtnClick}>
                                         <CloseCircleOutlined />
                                     </button>
                                 </TransformWrapper>
