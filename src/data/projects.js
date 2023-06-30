@@ -11,6 +11,7 @@ import oceanicImage from '../images/oceanic-cover.png';
 import carpetImage from '../images/carpet-cover.png';
 import screenTableImage from '../images/ide-02.png';
 import crosspellImage from '../images/Projects/CrossPell/pell-menu.png';
+import biomimicryImage from '../images/Projects/biomimicry/biomimicry-drawing.png';
 
 export const projectsData = [
 	{
@@ -115,6 +116,14 @@ export const projectsData = [
 		category: 'Graphic Design',
 		brief: 'Professional Works',
 		img: gdImage,
+	},
+	{
+		id: 9.5,
+		name: 'biomimicry',
+		title: 'Biomimicry Maze',
+		category: 'Graphic Design',
+		brief: 'Service Design',
+		img: biomimicryImage,
 	},
 	{
 		id: 10,
