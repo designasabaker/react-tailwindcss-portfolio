@@ -17,7 +17,7 @@ const ProjectSingle = (props) => {
 				delay: 0.15,
 			}}
 			style={{
-				height: "100%",
+				height: "410px",
 			}}
 		>
 			<Link
@@ -27,18 +27,18 @@ const ProjectSingle = (props) => {
 				}}
 			>
 				<div 
-					className="relative shadow-lg h-lg rounded-xl hover:shadow-xl cursor-pointer dark:bg-ternary-dark"
+					className="relative flex flex-col shadow-lg h-lg rounded-xl hover:shadow-xl cursor-pointer dark:bg-ternary-dark"
 					style={{
 						position: "relative",
-						height: "100%",
+						height: "400px",
 					}}
 				>
-					<div className="hover-zoom">
+					<div className="hover-zoom h-full">
 						{isLoading &&
 							<div
 								className="flex flex-row justify-center items-center w-full h-1/2 object-contain overflow-hidden"
 								style={{
-									height: "50%,",
+									height: "100%",
 								}}
 							>
 								<CircularProgress/>
@@ -46,11 +46,11 @@ const ProjectSingle = (props) => {
 						<img
 							style={{
 								display: !isLoading ? "block" : "none" ,
-								height: "50%",
+								height: "100%",
 								objectFit: "cover",
 							}}
 							src={image}
-							className="w-full h-1/2 object-contain overflow-hidden"
+							className="w-full block h-1/2 object-contain overflow-hidden"
 							alt="Single Project"
 							onLoad={()=> {setIsLoading(false)}}
 						/>

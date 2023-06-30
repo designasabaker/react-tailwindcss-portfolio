@@ -20,13 +20,13 @@ const ProjectsGrid = () => {
 	let title = "";
 	switch (lang){
 		case LANGUAGE.EN:
-			title = "Projects portfolio";
+			title = "Projects Portfolio";
 			break;
 		case LANGUAGE.CN:
 			title = "项目一览";
 			break;
 		default:
-			title = "Projects portfolio";
+			title = "Projects Portfolio";
 			break;
 	};
 

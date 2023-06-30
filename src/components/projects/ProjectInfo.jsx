@@ -32,8 +32,7 @@ const ProjectInfo = () => {
 								return (
 									<li
 										className="font-general-regular text-ternary-dark dark:text-ternary-light py-2"
-										key={info.id}
-									>
+										key={info.id}>
 										<span>{info.title}: </span>
 										{info.title === 'Website'
 										|| info.title === 'Research Work (Under Development)'

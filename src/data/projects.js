@@ -2,7 +2,7 @@
 import WeLightImage from '../images/WeLight.png';
 import OSBImage from '../images/OSB-2.png';
 import EcoHomeImage from '../images/EcoHomeCover.png';
-import FPShoppingImage from '../images/FPSCover.png';
+//import FPShoppingImage from '../images/FPSCover.png';
 import SimpleNimImage from '../images/SimpleNim-cover.png';
 import shekonImage from '../images/shekon-cover.png';
 import nasaImage from '../images/nasa-cover.png';
@@ -10,6 +10,7 @@ import gdImage from '../images/gd-cover.png';
 import oceanicImage from '../images/oceanic-cover.png';
 import carpetImage from '../images/carpet-cover.png';
 import screenTableImage from '../images/ide-02.png';
+import crosspellImage from '../images/Projects/CrossPell/pell-menu.png';
 
 export const projectsData = [
 	{
@@ -99,13 +100,14 @@ export const projectsData = [
 		category: 'Web Application',
 		img: SimpleNimImage,
 	},
-	// {
-	// 	id: 8,
-	// 	title: 'Crossing the Pell',
-	// 	category: 'XR Application',
-	// 	brief: 'Unity VR Development',
-	// 	img: OSBImage,
-	// },
+	{
+		id: 8,
+		name: 'crosspell',
+		title: 'Crossing the Pell',
+		category: 'XR Application',
+		brief: 'Unity VR Development',
+		img: crosspellImage,
+	},
 	{
 		id: 9,
 		name: 'gd',

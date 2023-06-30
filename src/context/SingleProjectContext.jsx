@@ -10,6 +10,7 @@ import { GDProjectData as GDProjectDataJson } from "../data/GDProjectData";
 import { OceanicProjectData as OceanicProjectDataJson } from "../data/OceanicProjectData";
 import { CarpetProjectData as CarpetProjectDataJson } from "../data/CarpetProjectData";
 import { ScreenTableProjectData as ScreenTableProjectDataJson} from "../data/ScreenTableProjectData";
+import { CrossPellProjectData as CrossPellProjectDataJson} from "../data/CrossPellProjectData";
 
 import ProjectError from '../components/projects/ProjectError';
 
@@ -29,7 +30,8 @@ export const projectsDataListEN = [
 	GDProjectDataJson,
 	OceanicProjectDataJson,
 	CarpetProjectDataJson,
-	ScreenTableProjectDataJson
+	ScreenTableProjectDataJson,
+	CrossPellProjectDataJson,
 ];
 
 // export const projectsDataList = modules;
