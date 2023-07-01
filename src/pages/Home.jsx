@@ -8,8 +8,7 @@ import MoreProjectsBtn from "../components/projects/MoreProjectsBtn";
 const Home = () => {
 	return (
 		<div className="container mx-auto">
-			<AppBanner></AppBanner>
-
+			<AppBanner />
 			<ProjectsProvider>
 				<ProjectsGrid></ProjectsGrid>
 			</ProjectsProvider>
