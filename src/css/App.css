@@ -4,7 +4,22 @@
 */
 
 body {
-	font-family: 'GeneralSans-Variable';
+	font-family: 'GeneralSans-Variable', sans-serif;
+	overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+	width: 6px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+	background:#1E3851;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #1E3851;    /* color of the scroll thumb */
+	border-radius: 3px;       /* roundness of the scroll thumb */
+	border: 1px solid #f6f7f8;  /* creates padding around scroll thumb */
 }
 
 /* Fonts */
@@ -19,7 +34,7 @@ body {
 }
 
 .font-general-variable {
-	font-family: 'GeneralSans-Variable';
+	font-family: 'GeneralSans-Variable', sans-serif;
 }
 
 @font-face {

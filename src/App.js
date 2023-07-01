@@ -9,6 +9,8 @@ import UseScrollToTop from './hooks/useScrollToTop';
 import AppProvider from "./context/AppContext";
 import {AppSharedLayout} from "./pages/AppSharedLayout";
 
+import Test from './pages/Test';
+
 const About = lazy(() => import('./pages/AboutMe'));
 const Contact = lazy(() => import('./pages/Contact.jsx'));
 const Home = lazy(() => import('./pages/Home'));
@@ -37,6 +39,7 @@ function App() {
 								</Route>
 								<Route path="about" element={<About />} />
 								<Route path="contact" element={<Contact />} />
+								<Route path="test" element={<Test />} />
 								<Route path="*" element={<Error />} />
 							</Route>
 						</Routes>

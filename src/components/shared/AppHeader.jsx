@@ -133,9 +133,15 @@ const AppHeader = () => {
 						<Link to="/">
 							{activeTheme === 'light'
 								?
-								(<img src={logoDark} className="w-36" alt="Dark Logo" style={{opacity: isScrolledDown ? 0 : 1, transition:'all 0.1s ease-in-out'}}/>)
+								(<img src={logoDark} alt="Dark Logo"
+									  style={{opacity: isScrolledDown ? 0 : 1, transition:'all 0.1s ease-in-out'}}
+									  className="w-36 hover:opacity-80 transition-opacity duration-300"
+								/>)
 								:
-								(<img src={logoLight} className="w-36" alt="Dark Logo" style={{opacity: isScrolledDown ? 0 : 1, transition:'all 0.1s ease-in-out'}}/>
+								(<img src={logoLight} alt="Dark Logo"
+									  style={{opacity: isScrolledDown ? 0 : 1, transition:'all 0.1s ease-in-out'}}
+									  className="w-36 hover:border hover:border-white hover:opacity-80 transition-opacity duration-300"
+									/>
 							)}
 						</Link>
 					</div>
@@ -188,7 +194,7 @@ const AppHeader = () => {
 				>
 					<Link
 						to="/projects"
-						className={`block text-left ${isScrolledDown ? 'text-sm' : 'text-lg'} text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2`}
+						className={`block text-left ${isScrolledDown ? 'text-sm' : 'text-lg'} hover:border hover:border-white text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2`}
 						aria-label="Projects"
 					>
 						Projects
@@ -224,7 +230,7 @@ const AppHeader = () => {
 						return(
 							<Link
 								to={link.path || '/'}
-								className={`block text-left ${isScrolledDown ? 'text-sm pb-2' : 'text-lg'} text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2`}
+								className={`block text-left ${isScrolledDown ? 'text-sm pb-2' : 'text-lg'} hover:opacity-50 hover:border hover:border-white text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2`}
 								aria-label="Projects"
 								>
 								{link.value}

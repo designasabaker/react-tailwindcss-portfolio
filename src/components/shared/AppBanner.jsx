@@ -4,6 +4,7 @@ import testGIF from '../../images/gif/test.gif';
 import { motion } from 'framer-motion';
 import {useCallback} from "react";
 import {useApp} from "../../context/AppContext";
+import ImageGallery from "../Home/ImageGallery";
 
 const AppBanner = () => {
 	const {lang, LANGUAGE} = useApp();
@@ -96,14 +97,15 @@ const AppBanner = () => {
 				transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
 				className="w-full sm:w-1/3 text-right float-right mt-8 sm:mt-0"
 			>
-					<img
-						className="w-full rounded-lg cursor-pointer"
-						onClick={executeScroll}
-						src={
-							activeTheme === 'dark' ? testGIF : testGIF
-						}
-						alt="Developer"
-					/>
+					{/*<img*/}
+					{/*	className="w-full rounded-lg cursor-pointer"*/}
+					{/*	onClick={executeScroll}*/}
+					{/*	src={*/}
+					{/*		activeTheme === 'dark' ? testGIF : testGIF*/}
+					{/*	}*/}
+					{/*	alt="Developer"*/}
+					{/*/>*/}
+				<ImageGallery />
 			</motion.div>
 		</motion.section>
 	);
