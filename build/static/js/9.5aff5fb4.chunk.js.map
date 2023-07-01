@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/Error.jsx"],"names":["Error"],"mappings":"4KAAaA,EAAQ,WACjB,OACI,8BACI,wCAKGA","file":"static/js/9.5aff5fb4.chunk.js","sourcesContent":["export const Error = () => {\r\n    return(\r\n        <div>\r\n            <h1>404</h1>\r\n        </div>\r\n    )\r\n}\r\n\r\nexport default Error;"],"sourceRoot":""}
