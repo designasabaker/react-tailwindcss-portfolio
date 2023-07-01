@@ -34,7 +34,7 @@ const useScrollToTop = () => {
 	return (
 		<>
 			<FiChevronUp
-				className="scrollToTop hover:text-yellow-100 dark:hover:text-primary-light cursor-pointer fixed z-50"
+				className="border dark:text-primary-light dark:hover:bg-white dark:border-white cursor-pointer hover:animate-ping fixed z-50"
 				onClick={backToTop}
 				style={{
 					height: 45,

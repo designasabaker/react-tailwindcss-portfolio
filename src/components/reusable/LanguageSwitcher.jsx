@@ -7,7 +7,7 @@ export const LanguageSwitcher = () => {
     return(
         <div className={"w-24 h-12"}>
             <Select
-                className={"w-full overflow-hidden text-ellipsis bg-transparent dark:bg-ternary-dark text-ternary-dark dark:text-ternary-light"}
+                className={`w-full overflow-hidden  text-ellipsis bg-transparent dark:bg-ternary-dark text-ternary-dark dark:text-ternary-light`}
                 defaultValue={'English'}
                 value={lang}
                 onChange={(e) => setLang(e.target.value)}

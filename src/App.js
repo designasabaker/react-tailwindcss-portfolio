@@ -7,6 +7,7 @@ import AppHeader from './components/shared/AppHeader';
 import './css/App.css';
 import UseScrollToTop from './hooks/useScrollToTop';
 import AppProvider from "./context/AppContext";
+import {AppSharedLayout} from "./pages/AppSharedLayout";
 
 const About = lazy(() => import('./pages/AboutMe'));
 const Contact = lazy(() => import('./pages/Contact.jsx'));
@@ -25,7 +26,7 @@ function App() {
 					<AppHeader />
 					<Suspense fallback={""}>
 						<Routes>
-							<Route path="/">
+							<Route path="/" element={<AppSharedLayout />}>
 								<Route exact index element={<Home />} />
 								<Route path="projects">
 									<Route exact index element={<Projects />} />

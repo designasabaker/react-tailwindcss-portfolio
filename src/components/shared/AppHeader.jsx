@@ -5,8 +5,7 @@ import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import HireMeModal from '../HireMeModal';
 import logoLight from '../../images/logo-lightMode.svg';
 import logoDark from '../../images/logo-darkMode.svg';
-import { motion } from 'framer-motion';
-import Button from '../reusable/Button';
+import { motion, useViewportScroll } from "framer-motion"
 import LanguageSwitcher from "../reusable/LanguageSwitcher";
 import {LANGUAGE, useApp} from "../../context/AppContext";
 
@@ -15,12 +14,32 @@ const AppHeader = () => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
 	const [activeTheme, setTheme] = useThemeSwitcher();
+	const [YProgress, setYProgress] = useState(0);
+
+	const [isScrolledDown, setIsScrolledDown] = useState(false);
 
 	const [navLinks, setNavLinks] = useState([
 		{id:1, path:'/projects', value:'Projects'},
 		{id:2, path:'/about', value:'About Me'},
 		{id:3, path:'/contact', value:'Contact'},
 	]);
+
+	function handleScroll() {
+		const windowHeight = window.innerHeight;
+		const height = document.documentElement.scrollHeight - window.innerHeight;
+		if (window.scrollY > windowHeight / 2) {
+			setIsScrolledDown(true);
+		} else {
+			setIsScrolledDown(false);
+		}
+		const scrollProgress = document.scrollingElement.scrollTop / height;
+		setYProgress(scrollProgress);
+	}
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+
+	},[]);
 
 	const updateTextLang = (lang) => {
 		let navLinksVal;
@@ -75,25 +94,48 @@ const AppHeader = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			id="nav"
-			className="top-0 sm:container sm:mx-auto"
+			style={{
+				width: '100vw',
+				height: isScrolledDown ? '32px' : '65px',
+				position: 'fixed',
+				display: 'block',
+				borderBottom: isScrolledDown ? '1px solid rgba(0,0,0.5,0.5)' : 'none',
+				margin: 0,
+				padding: 0,
+				zIndex: 100,
+				transition:'all 0.3s ease-in-out'
+			}}
 		>
-			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
+			<div
+				style={{
+					position: 'fixed',
+					top: 0,
+					left: 0,
+					width: YProgress * window.innerWidth,
+					height: 1,
+					backgroundColor: '#ACC8E5',
+				}}
+			/>
+			<div
+				className="bg-primary-light dark:bg-primary-dark"
+				style={{
+				width: '100%',
+				height: '100%',
+				display: 'flex',
+				flexDirection: 'row',
+				justifyContent: 'space-between',
+				alignItems: 'center',
+				padding: '0 40px',
+			}}>
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
-					<div>
+					<div style={{width:140}}>
 						<Link to="/">
-							{activeTheme === 'light' ? (
-								<img
-									src={logoDark}
-									className="w-36"
-									alt="Dark Logo"
-								/>
-							) : (
-								<img
-									src={logoLight}
-									className="w-36"
-									alt="Dark Logo"
-								/>
+							{activeTheme === 'light'
+								?
+								(<img src={logoDark} className="w-36" alt="Dark Logo" style={{opacity: isScrolledDown ? 0 : 1, transition:'all 0.1s ease-in-out'}}/>)
+								:
+								(<img src={logoLight} className="w-36" alt="Dark Logo" style={{opacity: isScrolledDown ? 0 : 1, transition:'all 0.1s ease-in-out'}}/>
 							)}
 						</Link>
 					</div>
@@ -105,7 +147,9 @@ const AppHeader = () => {
 						className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
 					>
 						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+							<FiMoon
+								height={20}
+								className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
 						) : (
 							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
 						)}
@@ -144,7 +188,7 @@ const AppHeader = () => {
 				>
 					<Link
 						to="/projects"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className={`block text-left ${isScrolledDown ? 'text-sm' : 'text-lg'} text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2`}
 						aria-label="Projects"
 					>
 						Projects
@@ -180,7 +224,7 @@ const AppHeader = () => {
 						return(
 							<Link
 								to={link.path || '/'}
-								className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+								className={`block text-left ${isScrolledDown ? 'text-sm pb-2' : 'text-lg'} text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2`}
 								aria-label="Projects"
 								>
 								{link.value}
@@ -205,16 +249,19 @@ const AppHeader = () => {
 						onClick={() => setTheme(activeTheme)}
 						aria-label="Theme Switcher"
 						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
-					>
+						style={{opacity: isScrolledDown ? 0 : 1, transition: 'opacity 0.5s ease'}}>
 						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+							<FiMoon
+								className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
 						) : (
 							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
 						)}
 					</div>
 
 					{/* language switcher */}
-					<div className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer">
+					<div
+						style={{opacity: isScrolledDown ? 0 : 1, transition: 'opacity 0.5s ease'}}
+						className={`ml-8 ${isScrolledDown ? 'text-sm' : 'text-lg'} bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer`}>
 						<LanguageSwitcher />
 					</div>
 				</div>

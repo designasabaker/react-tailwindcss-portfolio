@@ -8,18 +8,19 @@ import {Link, useParams} from 'react-router-dom';
 import Button from "../components/reusable/Button";
 
 import MoreProjectsBtn from "../components/projects/MoreProjectsBtn";
+import {BackToProjects} from "../components/projects/BackToProjects";
 
 const ProjectSingle = () => {
 	let { projectName } = useParams();
 	
 	return (
 		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1, delay: 1 }}
+			initial={{ opacity: 0, left: -100 }}
+			animate={{ opacity: 1, left: 0 }}
 			transition={{
 				ease: 'easeInOut',
 				duration: 0.6,
-				delay: 0.15,
+				delay: 0,
 			}}
 			className="container mx-auto mt-5 sm:mt-10"
 		>
@@ -29,6 +30,7 @@ const ProjectSingle = () => {
 				<ProjectInfo />
 				<ProjectRelatedProjects />
 				<MoreProjectsBtn />
+				<BackToProjects />
 			</SingleProjectProvider>
 		</motion.div>
 	);
