@@ -1,7 +1,7 @@
 import * as React from "react";
 import {useEffect, useState} from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { wrap } from "popmotion";
+// import { wrap } from "popmotion";
 // import { images } from "./image-data";
 import './style.css';
 import {homeGalleryImages} from '../../images'
@@ -53,7 +53,8 @@ export const Example = () => {
     // then wrap that within 0-2 to find our image ID in the array below. By passing an
     // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
     // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
-    const imageIndex = wrap(0, images.length, page);
+    // const imageIndex = wrap(0, images.length, page);
+    const imageIndex = ((page % images.length) + images.length) % images.length;
 
     function paginate(newDirection){
         setPage([page + newDirection, newDirection]);
