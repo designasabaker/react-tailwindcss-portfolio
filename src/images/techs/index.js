@@ -16,6 +16,24 @@ import ghLogo from './gh.png'
 import cadLogo from './cad.png'
 import racketLogo from './racket.png'
 
-const techLogos = [htmlLogo, cssLogo, jsLogo, reactLogo,racketLogo, pythonLogo, reLogo, unityLogo, csharpLogo, psLogo, aiLogo, idLogo, figmaLogo, prLogo, rhinoLogo, ghLogo, cadLogo]
+const techLogos = [
+    htmlLogo,
+    cssLogo,
+    jsLogo,
+    reLogo,
+    reactLogo,
+    unityLogo,
+    csharpLogo,
+    racketLogo,
+    pythonLogo,
+    psLogo,
+    aiLogo,
+    idLogo,
+    prLogo,
+    figmaLogo,
+    rhinoLogo,
+    ghLogo,
+    cadLogo
+];
 
 export default techLogos;

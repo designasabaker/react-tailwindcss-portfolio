@@ -1,4 +1,5 @@
 import ImageGallery from '../components/Home/ImageGallery';
+import TypeWriter from '../components/test/TypeWriter';
 
 export const Test = () => {
     return (
@@ -11,6 +12,7 @@ export const Test = () => {
             // height: '100vh'}}
         >
             <ImageGallery />
+            <TypeWriter />
         </div>
     );
 }

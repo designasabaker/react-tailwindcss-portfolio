@@ -7,6 +7,7 @@ import {useApp} from "../../context/AppContext";
 import ImageGallery from "../Home/ImageGallery";
 import logos from "../../images/logo/index";
 import techLogos from "../../images/techs/index";
+import TypeWriter from "../test/TypeWriter";
 
 const AppBanner = () => {
 	const {lang, LANGUAGE} = useApp();
@@ -21,12 +22,12 @@ const AppBanner = () => {
 	let greeting, selfIntro, checkResume = '';
 	switch(lang){
 		case LANGUAGE.EN:
-			greeting = "Hi, I am George";
+			greeting = ["Welcome !","I'm George Yihao Xu"];
 			selfIntro = "A Web Developer & Design Enthusiast";
 			checkResume = "Check my Resume";
 			break;
 		case LANGUAGE.CN:
-			greeting = "欢迎";
+			greeting = ["欢迎", "我是许易豪 ：）"];
 			selfIntro = "专注网络开发和交互设计";
 			checkResume = "我的简历";
 			break;
@@ -61,7 +62,8 @@ const AppBanner = () => {
 					}}
 					className="py-1 m-0 font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
 				>
-					{greeting}
+					<TypeWriter textContents={greeting} typeTimeGap={100}/>
+					{/*{greeting}*/}
 				</motion.h1>
 				<motion.p
 					initial={{ opacity: 0 }}
