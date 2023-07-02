@@ -49,8 +49,10 @@ const AppBanner = () => {
 				{/* logos */}
 				<div className={"flex flex-row gap-1 py-3"}>
 					{logos.map((logo, index) => {
-						return <img src={logo} key={index} alt="logo" style={{width:60}}/>
-					})}
+						return (
+							<a href={logo.url} target="_blank" key={index} title={logo.title}>
+								<img src={logo.ico} key={index} alt="logo" style={{width:60}}/>
+							</a>)})}
 				</div>
 				<motion.h1
 					initial={{ opacity: 0 }}
@@ -86,8 +88,15 @@ const AppBanner = () => {
 					paddingTop: 15,
 				}}>
 					{techLogos.map((logo, index) => {
-						return <img src={logo} key={index} alt="techlogo" style={{width:18, height:18}}/>
-					})}
+						return (
+							logo?.url ? (
+								<a href={logo?.url} target={"_blank"} title={logo?.title || ''}>
+									<img src={logo?.ico || logo} key={index} alt={`techLogo: ${logo?.title || ''}`} style={{width:18, height:18}}/>
+								</a>
+							) : (
+								<img src={logo?.ico || logo} key={index} alt={`techLogo: ${logo?.title || ''}`} style={{width:18, height:18}}/>
+							)
+						)})}
 				</div>
 				<motion.div
 					initial={{ opacity: 0 }}
