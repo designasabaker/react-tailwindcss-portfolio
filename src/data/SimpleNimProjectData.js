@@ -22,6 +22,8 @@ import OSBCover from "../images/OSB-1.png";
 import EcoHomeCover from "../images/EcoHomeCover.png";
 import ClickableImage from "../components/projects/ClickableImage";
 import notionImg3 from "../images/Projects/welight/notion3.jpg";
+import Image4 from "../images/EcoHome-4.png";
+import CheckLiveWebBtn from "../components/projects/CheckLiveWebBtn";
 
 export const SimpleNimProjectData = {
     name: 'SimpleNim',
@@ -96,15 +98,35 @@ export const SimpleNimProjectData = {
                     'HTML',
                     'CSS',
                     'JavaScript',
+                    'Matter.js',
                 ],
             },
         ],
         ProjectDetailsHeading: 'Challenge',
         ProjectDetails: [
             {
+                id: 0.1,
+                details:
+                    <div className={"w-full grid grid-cols-2"}>
+                        <ClickableImage
+                            src={Image1} alt={"user story A"}
+                            className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+                            style={{
+                                maxHeight: "300px"
+                            }}/>
+                        <div className={"flex flex-col px-6"}>
+                            <div style={{flex:1}} />
+                            <div className={"font-thin text-md"}>Nim</div>
+                            <p className={"font-thin text-sm py-2"}>Nim is a web game that I developed as part of a CS project at Brown University. The game allows two players to compete against each other, using strategy and logic to outsmart their opponent.</p>
+                            <a className={"font-thin text-sm py-2"} target={"_blank"} href={"https://github.com/designasabaker/Nim/tree/matter"}>Check source code here :)</a>
+                            <CheckLiveWebBtn LIVE_URL={"https://designasabaker.github.io/Nim/"} value={"PLAY!"} />
+                        </div>
+                    </div>,
+            },
+            {
                 id: 1,
                 details:
-                    "Nim is a web game that I developed as part of a CS project at Brown University. The game allows two players to compete against each other, using strategy and logic to outsmart their opponent."
+                    "The initial codebase for the project was written in ReasonML, a functional programming language that allows for more accessible, safe, and simple code. This choice showcases the practical application of ReasonML in web game development, blending the fields of computer science, strategy, and logic in a real-world scenario."
             },
             {
                 id: 9,

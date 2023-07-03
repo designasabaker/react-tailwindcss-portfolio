@@ -8,6 +8,8 @@ import Image6 from '../images/EcoHome-6.png';
 import WeLightImage1 from '../images/WeLight.png';
 import WeLight01 from '../images/WeLight2.png';
 import OSBImage1 from '../images/OSB-1.png';
+import ecohomeAll from '../images/ecohome-all.png';
+import ecohomeLogo from '../images/ecohome-logo.jpg';
 
 // Import icons
 import {
@@ -18,6 +20,8 @@ import {
 	FiYoutube,
 } from 'react-icons/fi';
 import OSBCover from "../images/OSB-1.png";
+import ClickableImage from "../components/projects/ClickableImage";
+import meetingDiscussionImg from "../images/Projects/welight/meeting-discussingBP.png";
 
 export const EcoHomeProjectData = {
 	name: 'EcoHome',
@@ -111,11 +115,45 @@ export const EcoHomeProjectData = {
 					'Our goal is to design an intuitive energy monitoring interface while incorporating social elements to create a more engaging and attractive app.',
 			},
 			{
+				id: 2.1,
+				details:
+					<div className={"w-full grid grid-cols-2"}>
+						<ClickableImage
+							src={Image4} alt={"user story A"}
+							className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+							style={{
+								maxHeight: "300px"
+							}}/>
+						<div className={"flex flex-col px-6"}>
+							<div style={{flex:1}} />
+							<div className={"font-thin text-sm"}>User Story A</div>
+							{/*<p className={"font-thin text-sm py-2"}></p>*/}
+						</div>
+					</div>,
+			},
+			{
 				id: 3,
 				details:
-					<div>User Story A<br/>
+					<div>
 					 One day , Tom came to home early and found he received a very expensive month bill. He checked the meter outside the house and found that the water heater had been broken.\nTom contacted with water-heater company and was recommended a new APP from National Grid and Providence Water which would prevent this problem in the future.<br/>
 						The new APP can monitor the real time electricity and water usages in a household and send warning message as soon as possible. Two weeks later, Tom picked up his phone and received a notification. Tom immediately contacted the repairman. Luckily, the repairman quickly found the leak location and repaired it.</div>,
+			},
+			{
+				id: 3.1,
+				details:
+					<div className={"w-full grid grid-cols-2"}>
+						<ClickableImage
+							src={Image5} alt={"user story A"}
+							className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+							style={{
+								maxHeight: "300px"
+							}}/>
+						<div className={"flex flex-col px-6"}>
+							<div style={{flex:1}} />
+							<div className={"font-thin text-sm"}>User Story B</div>
+							{/*<p className={"font-thin text-sm py-2"}></p>*/}
+						</div>
+					</div>,
 			},
 			{
 				id: 4,
@@ -127,6 +165,87 @@ export const EcoHomeProjectData = {
 						In a couple of days, her friend sent a link of a new app from national grid and Providence Water to her, saying the app can help her to document and therefore take action to improve on her energy usage.
 					</div>,
 			},
+			{
+				id: 4.9,
+				details:
+					<div className={"w-full grid grid-cols-2 gap-2"}>
+						<ClickableImage
+							src={Image1} alt={"user story A"}
+							className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+							style={{
+								maxHeight: "300px"
+							}}/>
+						<div></div>
+						<ClickableImage
+							src={Image2} alt={"user story A"}
+							className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+							style={{
+								maxHeight: "300px"
+							}}/>
+						<div className={"flex flex-col px-6"}>
+							<div style={{flex:1}} />
+							<div className={"font-thin text-sm"}>UI</div>
+							{/*<p className={"font-thin text-sm py-2"}></p>*/}
+						</div>
+					</div>,
+			},
+			{
+				id: 5,
+				details:
+					<div>
+						Our application, ECOHOME, is a sustainability-centered project. The app garners support from notable stakeholders, including NationGrid and Providence Energy, testifying to its credibility and real-world relevance. With a primary focus on promoting eco-friendly practices at home, the app also intends to incorporate social media functionalities. This inclusion is expected to boost user engagement and encourage wider community participation in sustainable practices, fostering an environmentally-conscious lifestyle among its users.
+					</div>,
+			},
+			{
+				id: 5.1,
+				details:
+					<div className={"w-full grid grid-cols-2 gap-0"}>
+						<ClickableImage
+							isLarge={true}
+							src={ecohomeAll} alt={"user story A"}
+							className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+							style={{
+								maxHeight: "300px"
+							}}/>
+						<div className={"flex flex-col px-6"}>
+							<div style={{flex:1}} />
+							<div className={"font-thin text-sm"}>Overview</div>
+							{/*<p className={"font-thin text-sm py-2"}></p>*/}
+						</div>
+					</div>,
+			},
+			{
+				id: 5.2,
+				details:
+					<div>
+						Prioritizing user privacy, our application gives users the autonomy to select from various information detail modes, ensuring their comfort and control over personal data. Additionally, a sharing function has been integrated into the app, allowing users to discuss their sustainability achievements with their friends or broader audiences. This feature not only enhances social interaction but also promotes awareness and encourages further adoption of eco-friendly practices within users' networks.
+					</div>,
+			},
+			// logo
+			{
+				id: 5.5,
+				details:
+					<div className={"w-full grid grid-cols-2"}>
+						<ClickableImage
+							src={ecohomeLogo} alt={"user story A"}
+							className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+							style={{
+								maxWidth: "100px",
+								maxHeight: "300px",
+								overflow: "hidden"
+							}}/>
+						<div className={"flex flex-col px-6"}>
+							<div style={{flex:1}} />
+							<div className={"font-thin text-sm"}>LOGO Design</div>
+						</div>
+					</div>,
+			},
+			{
+				id: 6,
+				details:
+					<p className={"font-thin py-2"}>The logo of our app is an integration of the original Providence Water and National Grid logos, utilizing a classic blue color scheme. With a focus on domestic characteristics, the logo has been designed to convey our app's central theme of home sustainability. This careful amalgamation helps to underscore our app's collaboration with these entities while highlighting its primary mission of promoting eco-friendly practices at home.</p>
+			},
+			// ar
 			{
 				id: 9,
 				details:
