@@ -83,19 +83,19 @@ export const ClickableImage = (props) => {
             {isOpen && (
                 <motion.div
 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                        ease: 'easeInOut',
-                    }}
-                    style={{
-                        width:'100vw',
-                        height:'100vh',
-                        position:'fixed',
-                        top:0,
-                        left:0,
-                        zIndex: 1000,  // ensure this is on top
-                    }}
+                    // initial={{ opacity: 0 }}
+                    // animate={{ opacity: 1 }}
+                    // transition={{
+                    //     ease: 'easeInOut',
+                    // }}
+                    // style={{
+                    //     width:'100vw',
+                    //     height:'100vh',
+                    //     position:'fixed',
+                    //     top:0,
+                    //     left:0,
+                    //     zIndex: 1000,  // ensure this is on top
+                    // }}
                     onClick={(e)=>handleLargeImageClick(e)}  // bind click event here
                 >
                     <div

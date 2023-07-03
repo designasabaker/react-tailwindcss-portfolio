@@ -36,6 +36,7 @@ function App() {
 										path=":projectName"
 										element={<ProjectSingle />}
 									/>
+									<Route path="*" element={<Error />} />
 								</Route>
 								<Route path="about" element={<About />} />
 								<Route path="contact" element={<Contact />} />
