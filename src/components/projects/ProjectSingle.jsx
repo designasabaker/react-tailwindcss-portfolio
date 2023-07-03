@@ -1,16 +1,34 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {useState} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import {CircularProgress} from "@material-ui/core";
 
 const ProjectSingle = (props) => {
-	const { title, category, brief, image, name } = props;
+	const { title, category, brief, image, name, delay=0 } = props;
 	const [isLoading, setIsLoading] = useState(true);
+	const [isVisible, setIsVisible] = useState(false);
+	const domRef = useRef();
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => setIsVisible(entry.isIntersecting));
+		});
+
+		observer.observe(domRef.current);
+		// Don't forget to clean up the observer on unmount.
+		return () => {
+			if (domRef.current) {
+				observer.unobserve(domRef.current);
+			}
+		};
+	}, []);
 
 	return (
 		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1, delay: 1 }}
+			ref={domRef}
+			initial={{ opacity: 0.5 }}
+			animate={{ opacity: isVisible ? 1 : 0 }}
+			delay={delay}
 			transition={{
 				ease: 'easeInOut',
 				duration: 0.7,

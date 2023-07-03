@@ -111,7 +111,7 @@ const ProjectsGrid = () => {
 			{/*<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">*/}
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
 				{selectProject
-					? selectProjectsByCategory.map((project) => (
+					? selectProjectsByCategory.map((project, index) => (
 							<ProjectSingle
 								title={project.title}
 								brief={project.brief}
@@ -119,10 +119,11 @@ const ProjectsGrid = () => {
 								image={project.img}
 								key={project.id}
 								name={project.name}
+								delay={index * 0.1}
 							/>
 					  ))
 					: searchProject
-					? searchProjectsByTitle.map((project) => (
+					? searchProjectsByTitle.map((project, index) => (
 							<ProjectSingle
 								title={project.title}
 								brief={project.brief}
@@ -130,9 +131,10 @@ const ProjectsGrid = () => {
 								image={project.img}
 								key={project.id}
 								name={project.name}
+								delay={index * 0.1}
 							/>
 					  ))
-					: projects.map((project) => (
+					: projects.map((project,index) => (
 							<ProjectSingle
 								title={project.title}
 								brief={project.brief}
@@ -140,6 +142,7 @@ const ProjectsGrid = () => {
 								image={project.img}
 								key={project.id}
 								name={project.name}
+								delay={index * 0.1}
 							/>
 					  ))}
 			</div>

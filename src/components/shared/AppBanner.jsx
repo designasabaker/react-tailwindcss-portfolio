@@ -50,9 +50,16 @@ const AppBanner = () => {
 				<div className={"flex flex-row gap-1 py-3"}>
 					{logos.map((logo, index) => {
 						return (
-							<a href={logo.url} target="_blank" key={index} title={logo.title}>
-								<img src={logo.ico} key={index} alt="logo" style={{width:60}}/>
-							</a>)})}
+							<motion.div
+								initial={{ opacity: 0, y: 30 }}  // initial state: hidden and slightly above the final position
+								animate={{ opacity: 1, y: 0 }}  // final state: fully visible and at final position
+								transition={{ delay: index * 0.8 }}  // adjust delay to your liking
+								key={index}
+							>
+								<a href={logo.url} target="_blank" key={index} title={logo.title}>
+									<img src={logo.ico} key={index} alt="logo" style={{width:60}}/>
+								</a>
+							</motion.div>)})}
 				</div>
 				<motion.h1
 					initial={{ opacity: 0 }}
@@ -89,13 +96,22 @@ const AppBanner = () => {
 				}}>
 					{techLogos.map((logo, index) => {
 						return (
-							logo?.url ? (
-								<a href={logo?.url} target={"_blank"} title={logo?.title || ''}>
-									<img src={logo?.ico || logo} key={index} alt={`techLogo: ${logo?.title || ''}`} style={{width:18, height:18}}/>
-								</a>
-							) : (
-								<img src={logo?.ico || logo} key={index} alt={`techLogo: ${logo?.title || ''}`} style={{width:18, height:18}}/>
-							)
+							<motion.div
+								initial={{ opacity: 0, y: 10 }}  // initial state: hidden and slightly above the final position
+								animate={{ opacity: 1, y: 0 }}  // final state: fully visible and at final position
+								transition={{ delay: index * 0.2 }}  // adjust delay to your liking
+								key={index}
+							>
+								{logo?.url ? (
+									<a href={logo?.url} target={"_blank"} title={logo?.title || ''}>
+										<img src={logo?.ico || logo} key={index} alt={`techLogo: ${logo?.title || ''}`}
+											 style={{width: 18, height: 18}}/>
+									</a>
+								) : (
+									<img src={logo?.ico || logo} key={index} alt={`techLogo: ${logo?.title || ''}`}
+										 style={{width: 18, height: 18}}/>
+								)}
+							</motion.div>
 						)})}
 				</div>
 				<motion.div
