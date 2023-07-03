@@ -127,6 +127,30 @@ export const EcoHomeProjectData = {
 						In a couple of days, her friend sent a link of a new app from national grid and Providence Water to her, saying the app can help her to document and therefore take action to improve on her energy usage.
 					</div>,
 			},
+			{
+				id: 9,
+				details:
+					<div className={"w-full grid grid-cols-2"}>
+						<iframe width={'100%'} height="315" src="https://www.youtube.com/embed/msG6ZHoaZ9Y"
+								title="YouTube video player" frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowFullScreen></iframe>
+						<div className={"flex flex-col px-3"}>
+							<div style={{flex:1}} />
+							<div className={"font-thin text-sm"}>AR Proposal</div>
+							<p className={"font-thin text-sm py-2"}>
+								In our recent UI/UX design project, we have conceptualized the use of augmented reality (AR) glasses for energy monitoring. The proposed solution offers real-time and aggregate data on energy usage for each electrical appliance in a user-friendly, visual format. </p>
+						</div>
+					</div>,
+			},
+			{
+				id: 10,
+				details:
+					<div>By integrating AR technology with energy consumption data, users can gain immediate and intuitive insights into their power usage patterns, allowing them to manage their energy consumption more effectively. The AR glasses overlay this information directly onto the physical appliances, creating an immersive, interactive, and educational user experience.
+
+						The goal of the project is not only to modernize the way we approach energy consumption but also to promote energy efficiency and sustainability. The project showcases the potential of AR technology in transforming everyday experiences and promoting better energy usage habits.
+					</div>,
+			},
 		],
 		// ProjectMoreDetailsHeading: 'Overview',
 		// ProjectMoreDetails: [],

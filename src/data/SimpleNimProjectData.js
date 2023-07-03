@@ -5,6 +5,8 @@ import Image2 from '../images/SimpleNim-2.png';
 // import Image4 from '../images/SimpleNim-4.png';
 // import Image5 from '../images/SimpleNim-5.png';
 import Image6 from '../images/SimpleNim-code.png';
+import chaseImg from '../images/nim/chase.png';
+import connectImg from '../images/nim/connect.png';
 
 import WeLightImage1 from '../images/WeLight.png';
 
@@ -18,13 +20,15 @@ import {
 } from 'react-icons/fi';
 import OSBCover from "../images/OSB-1.png";
 import EcoHomeCover from "../images/EcoHomeCover.png";
+import ClickableImage from "../components/projects/ClickableImage";
+import notionImg3 from "../images/Projects/welight/notion3.jpg";
 
 export const SimpleNimProjectData = {
     name: 'SimpleNim',
     ProjectHeader: {
-        title: 'SimpleNim',
+        title: 'SimpleNim & Connect4 AI & Chase',
         publishDate: 'Jun 21, 2023',
-        tags: 'UI / Frontend',
+        tags: 'Web Game',
     },
     ProjectImages: [
         {
@@ -37,16 +41,16 @@ export const SimpleNimProjectData = {
             title: 'Kabul Project Management UI',
             img: Image2,
         },
-        // {
-        //     id: 3,
-        //     title: 'Kabul Project Management UI',
-        //     img: Image3,
-        // },
-        // {
-        //     id: 4,
-        //     title: 'Kabul Project Management UI',
-        //     img: Image4,
-        // },
+        {
+            id: 3,
+            title: 'Kabul Project Management UI',
+            img: chaseImg,
+        },
+        {
+            id: 4,
+            title: 'Kabul Project Management UI',
+            img: connectImg,
+        },
         // {
         //     id: 5,
         //     title: 'Kabul Project Management UI',
@@ -102,21 +106,27 @@ export const SimpleNimProjectData = {
                 details:
                     "Nim is a web game that I developed as part of a CS project at Brown University. The game allows two players to compete against each other, using strategy and logic to outsmart their opponent."
             },
-            // {
-            //     id: 2,
-            //     details:
-            //         'By incorporating this local element into the brand\'s identity, Ocean State Bioactives is closely linked to the state and its natural resources. In this UI/UX design project, we aim to showcase the brand\'s connection to Rhode Island through a visually engaging and user-friendly digital experience.',
-            // },
-            // {
-            //     id: 3,
-            //     details:
-            //         'Our goal is to create a visually engaging and user-friendly website that showcases the brand\'s advanced ingredients and its connection to Rhode Island, ultimately attracting the attention of business partners in the cosmetics industry.',
-            // },
-            // {
-            //     id: 4,
-            //     details:
-            //         'In our design approach, we avoided using fancy elements and instead focused on creating a clean and simple aesthetic that reflects the brand\'s commitment to nature.',
-            // },
+            {
+                id: 9,
+                details:
+                    <div className={"w-full grid grid-cols-2"}>
+                        <iframe width={"100%"} height={300} src="https://www.youtube.com/embed/Q2q96ESaSaU"
+                                title="YouTube video player" frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen></iframe>
+                        <div className={"flex flex-col px-3"}>
+                            <div style={{flex:1}} />
+                            <div className={"font-thin text-sm"}>Connect 4: Human vs. Human </div>
+                            <p className={"font-thin text-sm py-2"}>
+                                Despite being a console game, it implements a basic user interface using two colors to distinguish between the players' pieces. This game showcases the real-world application of functional programming in creating interactive, state-managed applications like games, providing an insightful perspective into how ReasonML can be used in practical scenarios.                            </p>
+                        </div>
+                    </div>,
+            },
+            {
+                id:10,
+                details:
+                <>Connect 4: Human vs. Human" is a console game developed using ReasonML, a functional programming language that extends OCaml and was developed by Facebook. The game emulates the classic two-player game Connect 4, where players take turns dropping colored discs into a grid, with the goal of being the first to connect four discs in a row, whether vertically, horizontally, or diagonally.</>
+            }
         ],
         SocialSharingHeading: '',
         SocialSharing: [

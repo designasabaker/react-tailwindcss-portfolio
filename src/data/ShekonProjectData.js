@@ -18,6 +18,7 @@ import {
 } from 'react-icons/fi';
 import OSBCover from "../images/OSB-1.png";
 import EcoHomeCover from "../images/EcoHomeCover.png";
+import CheckLiveWebBtn from "../components/projects/CheckLiveWebBtn";
 
 export const ShekonProjectData = {
     name: 'Shekon',
@@ -106,10 +107,50 @@ export const ShekonProjectData = {
                 details:
                     "Shé:kon is a virtual reality project that I developed for the RISD Museum, with the goal of creating an immersive and educational experience that highlights the indigenous culture of Rhode Island."
             },
+
             {
                 id: 2,
                 details:
-                    ' The project allows users to explore the museum\'s exhibits and learn about the indigenous language and culture of the region.',
+                    <div className={"w-full grid grid-cols-2"}>
+                        <iframe width={"100%"} height="315" src="https://www.youtube.com/embed/T1MG7LQY81g"
+                                title="YouTube video player" frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen></iframe>
+                        <div className={"flex flex-col px-3"}>
+                            <div style={{flex:1}} />
+                            <div className={"font-thin text-sm"}>VR Experience</div>
+                            <p className={"font-thin text-sm py-2"}>
+                                The video of the user experience, which showcases the interaction and engagement with the project, was recorded using Oculus glasses. </p>
+                            <CheckLiveWebBtn LIVE_URL={"https://drive.google.com/file/d/1Fe2M8_tum28ZDnUSZ8xmlKkXofCSrdJl/view?usp=sharing"} value={"Download apk file here"} />
+                        </div>
+                    </div>,
+            },
+            {
+                id: 4,
+                details:
+                    ' The project uses VR technology to bring the vibrant indigenous history and culture of Rhode Island to life, offering users an opportunity to learn and engage with this heritage in an interactive, immersive manner. By utilizing Oculus glasses for the VR experience, "Shé:kon" not only provides an educational tool but also a unique cultural exploration that goes beyond traditional museum exhibits.',
+            },
+            {
+                id: 5.9,
+                details:
+                <h1 className={"font-bold text-xl"}>other demo work</h1>
+            },
+            {
+                id: 6,
+                details:
+                    <div className={"w-full grid grid-cols-2"}>
+                        <iframe width={"100%"} height="594" src="https://www.youtube.com/embed/oXG8qh6X67I"
+                                title="FPS VR AugA3" frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen></iframe>
+                        <div className={"flex flex-col px-3"}>
+                            <div style={{flex:1}} />
+                            <div className={"font-thin text-sm"}>VR Shooting Range</div>
+                            <p className={"font-thin text-sm py-2"}>
+                                In the project "FPS-VR-AugA3," I explored the development of a Unity-based First-Person Shooter (FPS) game set in a virtual reality (VR) environment. The game capitalizes on Unity's powerful VR integration capabilities to provide a compelling, immersive experience. As part of this development process, I also utilized third-party assets, demonstrating Unity's vast ecosystem and the ease with which developers can incorporate external resources into their projects for enhanced efficiency and creativity.</p>
+                            <CheckLiveWebBtn LIVE_URL={"https://github.com/designasabaker/fpshopping"} value={"All code's open source in GH"} />
+                        </div>
+                    </div>,
             },
             // {
             //     id: 3,
