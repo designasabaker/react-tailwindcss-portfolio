@@ -110,10 +110,12 @@ export const ClickableImage = (props) => {
                         onMouseDown={()=>setIsGrabbing(true)}
                         onMouseUp={()=>setIsGrabbing(false)}
                     >
+
                         <div
                             id={"div2"}
-                            className={"flex flex-row justify-center items-center align-top"}
+                            className={"flex flex-col justify-center items-center align-top"}
                             style={{width:'100%', height:'100%'}}>
+                            {/*<small>Hold clicking to drag and use mouse wheel to zoom :)</small>*/}
                             <div id={"nonC"} className={"flex flex-row items-start"}>
                                 <TransformWrapper name={"largeImage"} onMouseDown={(e)=>e.stopPropagation()}>
                                     <TransformComponent name={"largeImage"}>
@@ -141,6 +143,7 @@ export const ClickableImage = (props) => {
                                     </button>
                                 </TransformWrapper>
                             </div>
+                            <small className={"text-white"}>Hold clicking to drag and use mouse wheel to zoom :)</small>
                         </div>
                     </div>
                 </motion.div>
