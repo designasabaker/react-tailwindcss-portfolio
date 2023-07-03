@@ -360,6 +360,23 @@ export const ScreenTableProjectData = {
                         </div>
                     </div>,
             },
+            {
+                id: 99,
+                details:
+                    <div className={"w-full grid grid-cols-2"}>
+                        <iframe width={"100%"} height="315" src="https://www.youtube.com/embed/ccrXkPpO0nQ"
+                                title="YouTube video player" frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen></iframe>
+                        <div className={"flex flex-col px-3"}>
+                            <div style={{flex:1}} />
+                            <div className={"font-thin text-sm"}>Web AR Demo</div>
+                            <p className={"font-thin text-sm py-2"}>
+                                The web AR demo is a web-based AR experience that can be accessed by scanning the QR code. The user can interact with the menu and the screen table. The user can also view the preview video of the experience.
+                            </p>
+                        </div>
+                    </div>,
+            },
             // {
             //     id: 4,
             //     details:
