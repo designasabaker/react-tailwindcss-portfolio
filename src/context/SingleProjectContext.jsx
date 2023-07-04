@@ -11,6 +11,7 @@ import { OceanicProjectData as OceanicProjectDataJson } from "../data/OceanicPro
 import { CarpetProjectData as CarpetProjectDataJson } from "../data/CarpetProjectData";
 import { ScreenTableProjectData as ScreenTableProjectDataJson} from "../data/ScreenTableProjectData";
 import { CrossPellProjectData as CrossPellProjectDataJson} from "../data/CrossPellProjectData";
+import { BiomimicryProjectData as BiomimicryProjectDataJson} from "../data/BiomimicryProjectData";
 
 import ProjectError from '../components/projects/ProjectError';
 
@@ -32,6 +33,7 @@ export const projectsDataListEN = [
 	CarpetProjectDataJson,
 	ScreenTableProjectDataJson,
 	CrossPellProjectDataJson,
+	BiomimicryProjectDataJson,
 ];
 
 // export const projectsDataList = modules;
