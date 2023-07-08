@@ -68,8 +68,10 @@ export const Example = () => {
     },[imageIndex]);
 
     return (
-        <div style={{
-            width: '50vw',
+        <div
+
+            style={{
+            width: '100%',
             height: '60vh',
             display: 'flex',
             justifyContent: 'center',

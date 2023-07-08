@@ -43,11 +43,12 @@ const AppBanner = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-			className="flex flex-col sm:justify-around items-center sm:flex-row mt-12 md:mt-2"
+			className="flex flex-col sm:justify-around items-center lg:flex-row mt-12 md:mt-2"
 		>
+			{/* intro */}
 			<div className="w-full md:w-1/3 text-left">
 				{/* logos */}
-				<div className={"flex flex-row gap-1 py-3"}>
+				<div className={"flex flex-row gap-1 py-3 justify-center md:justify-start "}>
 					{logos.map((logo, index) => {
 						return (
 							<motion.div
@@ -142,16 +143,9 @@ const AppBanner = () => {
 				initial={{ opacity: 0, y: -180 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-				className="w-full sm:w-1/3 text-right float-right mt-8 sm:mt-0"
+				className="w-full text-right float-right mt-0"
 			>
-					{/*<img*/}
-					{/*	className="w-full rounded-lg cursor-pointer"*/}
-					{/*	onClick={executeScroll}*/}
-					{/*	src={*/}
-					{/*		activeTheme === 'dark' ? testGIF : testGIF*/}
-					{/*	}*/}
-					{/*	alt="Developer"*/}
-					{/*/>*/}
+				{/* slides */}
 				<ImageGallery />
 			</motion.div>
 		</motion.section>
