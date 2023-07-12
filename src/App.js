@@ -39,19 +39,19 @@ const recordVisit = async () => {
 		// Retrieve user's IP address using an external API
 		const response = await axios.get("https://api.ipify.org?format=json");
 		const ipAddress = response.data.ip;
-		const geoUrl = `http://api.ipstack.com/${ipAddress}?access_key=${ipGeoApiKey}`;
-		const geoResponse = await axios.get(geoUrl);
-		const location = {
-			city: geoResponse.data?.city || "Unknown",
-			country: geoResponse.data?.country_name || "Unknown",
-			region: geoResponse.data?.region_name || "Unknown",
-		};
+		//const geoUrl = `http://api.ipstack.com/${ipAddress}?access_key=${ipGeoApiKey}`;
+		//const geoResponse = await axios.get(geoUrl);
+		// const location = {
+		// 	city: geoResponse.data?.city || "Unknown",
+		// 	country: geoResponse.data?.country_name || "Unknown",
+		// 	region: geoResponse.data?.region_name || "Unknown",
+		// };
 		await addDoc(collection(db, "visits"), {
 			formattedTimestamp,
 			ipAddress,
-			location,
+			// location,
 		});
-		console.log("Visit recorded", formattedTimestamp, ipAddress, location);
+		console.log("Visit recorded", formattedTimestamp, ipAddress);
 	} catch (e) {
 		console.error("Error recording visit: ", e);
 	}
