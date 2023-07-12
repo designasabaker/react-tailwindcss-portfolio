@@ -1,5 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
-import { lazy, Suspense } from 'react';
+import {lazy, Suspense, useEffect} from 'react';
 import {BrowserRouter, BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import AppFooter from './components/shared/AppFooter';
@@ -8,6 +8,8 @@ import './css/App.css';
 import UseScrollToTop from './hooks/useScrollToTop';
 import AppProvider from "./context/AppContext";
 import {AppSharedLayout} from "./pages/AppSharedLayout";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "./firebase";
 
 import Test from './pages/Test';
 
@@ -19,6 +21,22 @@ const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 const Error = lazy(() => import('./pages/Error.jsx'));
 
 function App() {
+	useEffect(() => {
+		const recordVisit = async () => {
+			const timestamp = new Date().getTime();
+			try {
+				await addDoc(collection(db, "visits"), {
+					timestamp: timestamp,
+				});
+				console.log("Visit recorded");
+			} catch (e) {
+				console.error("Error recording visit: ", e);
+			}
+		};
+
+		recordVisit();
+	}, []);
+
 	return (
 		<>
 			<AppProvider>
