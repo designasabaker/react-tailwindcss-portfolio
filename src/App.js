@@ -24,8 +24,8 @@ const Projects = lazy(()=>import('./pages/Projects'));
 const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 const Error = lazy(() => import('./pages/Error.jsx'));
 const ipGeoApiKey = process.env.REACT_APP_IP_GEO_API_KEY;
-console.log("ipGeoApiKey", ipGeoApiKey);
-const recordVisit = throttle(async () => {
+
+const recordVisit = async () => {
 	const formattedTimestamp = new Date().toLocaleString(undefined, {
 		year: 'numeric',
 		month: 'numeric',
@@ -55,7 +55,7 @@ const recordVisit = throttle(async () => {
 	} catch (e) {
 		console.error("Error recording visit: ", e);
 	}
-}, 1000);
+};
 
 function App() {
 	useEffect(() => {
