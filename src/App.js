@@ -13,8 +13,8 @@ import { db } from "./firebase";
 import {debounce, throttle} from "./utils";
 import axios from "axios";
 import Test from './pages/Test';
-import dotenv from 'dotenv';
-dotenv.config();
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 
 const About = lazy(() => import('./pages/AboutMe'));
