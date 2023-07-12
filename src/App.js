@@ -10,8 +10,12 @@ import AppProvider from "./context/AppContext";
 import {AppSharedLayout} from "./pages/AppSharedLayout";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "./firebase";
-
+import {debounce, throttle} from "./utils";
+import axios from "axios";
 import Test from './pages/Test';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 const About = lazy(() => import('./pages/AboutMe'));
 const Contact = lazy(() => import('./pages/Contact.jsx'));
@@ -19,21 +23,44 @@ const Home = lazy(() => import('./pages/Home'));
 const Projects = lazy(()=>import('./pages/Projects'));
 const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 const Error = lazy(() => import('./pages/Error.jsx'));
+const ipGeoApiKey = process.env.REACT_APP_IP_GEO_API_KEY;
+console.log("ipGeoApiKey", ipGeoApiKey);
+const recordVisit = throttle(async () => {
+	const formattedTimestamp = new Date().toLocaleString(undefined, {
+		year: 'numeric',
+		month: 'numeric',
+		day: 'numeric',
+		hour: 'numeric',
+		minute: 'numeric',
+		second: 'numeric',
+		hour12: true,
+	});
+	try {
+		// Retrieve user's IP address using an external API
+		const response = await axios.get("https://api.ipify.org?format=json");
+		const ipAddress = response.data.ip;
+		const geoUrl = `http://api.ipstack.com/${ipAddress}?access_key=${ipGeoApiKey}`;
+		const geoResponse = await axios.get(geoUrl);
+		const location = {
+			city: geoResponse.data?.city || "Unknown",
+			country: geoResponse.data?.country_name || "Unknown",
+			region: geoResponse.data?.region_name || "Unknown",
+		};
+		await addDoc(collection(db, "visits"), {
+			formattedTimestamp,
+			ipAddress,
+			location,
+		});
+		console.log("Visit recorded", formattedTimestamp, ipAddress, location);
+	} catch (e) {
+		console.error("Error recording visit: ", e);
+	}
+}, 1000);
 
 function App() {
 	useEffect(() => {
-		const recordVisit = async () => {
-			const timestamp = new Date().getTime();
-			try {
-				await addDoc(collection(db, "visits"), {
-					timestamp: timestamp,
-				});
-				console.log("Visit recorded");
-			} catch (e) {
-				console.error("Error recording visit: ", e);
-			}
-		};
-
+		// debounce(recordVisit, 1000);
+		// throttle(recordVisit,60);
 		recordVisit();
 	}, []);
 

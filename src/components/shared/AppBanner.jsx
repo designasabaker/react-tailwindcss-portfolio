@@ -47,8 +47,8 @@ const AppBanner = () => {
 		>
 			{/* intro */}
 			<div className="w-full md:w-1/3 text-left">
-				{/* logos */}
-				<div className={"flex flex-row gap-1 py-3 justify-center md:justify-start "}>
+				{/* school logos */}
+				<div className={"flex flex-row gap-1 py-3 justify-start"}>
 					{logos.map((logo, index) => {
 						return (
 							<motion.div
