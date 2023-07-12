@@ -24,6 +24,7 @@ const Projects = lazy(()=>import('./pages/Projects'));
 const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 const Error = lazy(() => import('./pages/Error.jsx'));
 const ipGeoApiKey = process.env.REACT_APP_IP_GEO_API_KEY;
+const ipGeoToken = process.env.REACT_APP_IP_GEO_TOKEN;
 
 const recordVisit = async () => {
 	const formattedTimestamp = new Date().toLocaleString(undefined, {
@@ -46,12 +47,19 @@ const recordVisit = async () => {
 		// 	country: geoResponse.data?.country_name || "Unknown",
 		// 	region: geoResponse.data?.region_name || "Unknown",
 		// };
+		const geoTokenUrl = `https://ipinfo.io?token=${ipGeoToken}`;
+		const geoTokenResponse = await axios.get(geoTokenUrl);
+		const location = {
+			country: geoTokenResponse.data?.country || "Unknown country",
+			city: geoTokenResponse.data?.city || "Unknown city",
+			region: geoTokenResponse.data?.region || "Unknown region",
+		}
 		await addDoc(collection(db, "visits"), {
 			formattedTimestamp,
 			ipAddress,
-			// location,
+			location,
 		});
-		console.log("Visit recorded", formattedTimestamp, ipAddress);
+		console.log("Visit recorded", formattedTimestamp, ipAddress,location);
 	} catch (e) {
 		console.error("Error recording visit: ", e);
 	}
