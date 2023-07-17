@@ -121,7 +121,7 @@ export const ShekonProjectData = {
                             <div className={"font-thin text-sm"}>VR Experience</div>
                             <p className={"font-thin text-sm py-2"}>
                                 The video of the user experience, which showcases the interaction and engagement with the project, was recorded using Oculus glasses. </p>
-                            <CheckLiveWebBtn LIVE_URL={"https://drive.google.com/file/d/1Fe2M8_tum28ZDnUSZ8xmlKkXofCSrdJl/view?usp=sharing"} value={"Download apk file here"} />
+                            <CheckLiveWebBtn LIVE_URL={"https://gyxu.itch.io/shekon"} value={"Enjoy here :)"} />
                         </div>
                     </div>,
             },
