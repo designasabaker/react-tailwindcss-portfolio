@@ -1,0 +1,54 @@
+.note {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 15rem;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s ease-in-out;
+}
+
+.show-note{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.hide-note{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.note p{
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.note a{
+    font-weight: bold;
+}
+
+.note-btn{
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 0;
+    display: block;
+    right: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: white 1px solid;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 0.75em;
+    transition: all 0.3s ease-in-out;
+}
+
+.open{
+    color: black;
+    background: white;
+}

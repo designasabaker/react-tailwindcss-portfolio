@@ -4,6 +4,7 @@ import ProjectsGrid from '../components/projects/ProjectsGrid';
 import { ProjectsProvider } from '../context/ProjectsContext';
 import Button from '../components/reusable/Button';
 import MoreProjectsBtn from "../components/projects/MoreProjectsBtn";
+import Note from "../components/Home/Note";
 
 const Home = () => {
 	return (

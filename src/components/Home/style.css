@@ -59,3 +59,21 @@
   align-items: center;
   cursor: pointer;
 }
+
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-text {
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 24px;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+

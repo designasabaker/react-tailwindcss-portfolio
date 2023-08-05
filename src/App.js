@@ -13,6 +13,7 @@ import { db } from "./firebase";
 import {debounce, throttle} from "./utils";
 import axios from "axios";
 import Test from './pages/Test';
+import Note from "./components/Home/Note";
 // import dotenv from 'dotenv';
 // dotenv.config();
 
@@ -78,6 +79,7 @@ function App() {
 			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
 				<BrowserRouter>
 					<ScrollToTop />
+					<Note />
 					<AppHeader />
 					<Suspense fallback={""}>
 						<Routes>
