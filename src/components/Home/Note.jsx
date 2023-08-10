@@ -24,7 +24,7 @@ function Note() {
             <p className={`${showNote ? 'show-note' : 'hide-note'}`}>
                 Hi, welcome. Now I am working on 2 projects: <br/>
                 One is a indie MERN full-stack app, calculating date: <br />
-                <a href="https://opt-cal-mern-front.onrender.com/" target="_blank" rel="noopener noreferrer">opt app here</a>.<br />
+                <a href="https://www.opt-unemployment-time-calculator.online" target="_blank" rel="noopener noreferrer">opt app here</a>.<br />
                 The other one is a website for a new startup called WanderFlow:<br />
                 <a href="https://wandeflowv2.vercel.app/" target="_blank" rel="noopener noreferrer">WanderFlow here</a>.<br />
                 Please feel free to check :)
