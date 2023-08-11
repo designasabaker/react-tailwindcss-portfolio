@@ -226,9 +226,10 @@ const AppHeader = () => {
 
 				{/* Header links large screen */}
 				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-					{navLinks.map((link) => {
+					{navLinks.map((link,index) => {
 						return(
 							<Link
+								key={index}
 								to={link.path || '/'}
 								className={`block text-left ${isScrolledDown ? 'text-sm pb-2' : 'text-lg'} hover:opacity-50 hover:border hover:border-white text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2`}
 								aria-label="Projects"
