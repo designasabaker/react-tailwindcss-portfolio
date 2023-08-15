@@ -1,7 +1,10 @@
 import { db } from "../firebase";
 import { query, orderBy, getDocs, collection } from "firebase/firestore";
 import { useState, useEffect } from 'react';
-
+import {useNavigate} from "react-router-dom";
+import {useAuth} from "../context/AuthProvider";
+import { doc, deleteDoc } from "firebase/firestore";
+import './log-style.css';
 
 const fetchData = async () => {
     const visitsCollection = collection(db, "visits");
@@ -67,6 +70,9 @@ const Log = () => {
     const [countriesFilters, setCountriesFilters] = useState({});
     const [condition, setCondition] = useState('');
 
+    const navigate = useNavigate();
+    const { currentUser } = useAuth();
+
     const handleRegionCheckChange = (event) => {
         setlocationsFilters(prev => ({
             ...prev,
@@ -89,6 +95,24 @@ const Log = () => {
 
         setCountriesFilters(newCountriesFilters);
     }
+
+    const deleteVisit = async (visitId, location = '') => {
+        // 弹出确认对话框 Double check with the user
+        const userConfirmed = window.confirm(`Are you sure you want to delete this record forever? ${visitId} from ${fullCountryName(location) || '...'}?`);
+        if (!userConfirmed) {
+            return;  // User clicked 'Cancel'
+        }
+
+        const visitRef = doc(db, "visits", visitId);
+        try {
+            await deleteDoc(visitRef);
+            // 在此处更新UI，例如通过从visits数组中删除该访问记录
+            setVisits(visits => visits.filter(visit => visit.id !== visitId));
+            alert(`Record ${visitId} from ${location || '...'} deleted successfully!`)
+        } catch (error) {
+            console.error("Error deleting document: ", error);
+        }
+    };
 
     useEffect(() => {
         const fetchVisits = async () => {
@@ -119,6 +143,10 @@ const Log = () => {
             setCondition('data set')
         };
 
+        if (!currentUser) {
+            navigate("/login");  // Redirect to login if the user is not authenticated
+        }
+
         fetchVisits();
     }, []);
 
@@ -134,18 +162,26 @@ const Log = () => {
     return (
         <div>
             <div className={'grid grid-cols-2 gap-3 px-6'}>
+                {/* all records */}
                 <div className={'scrollable-container px-6'}>
                     {visits.map((visit,index) => (
-                        <div key={visit.id} className={'text-white'}>
-                            <span>{index}</span>
+                        <div key={visit.id} className={'text-white record-container'}>
                             <div>
-                                <span>Time: {visit.formattedTimestamp};</span>&nbsp;&nbsp;&nbsp;
-                                <span>IP: {visit.ipAddress};</span>
+                                <span style={{width:'18px'}}>{index}</span><br/>
+                                <span>{visit.id.substring(0,3)}...</span>
                             </div>
-                            <span>Location: {`${visit.location?.city}-${visit.location?.region}-${visit.location?.country}`};</span>
+                            <div className={'flex flex-col'}>
+                                <span>Time: {visit.formattedTimestamp}</span>
+                                <span>IP: {visit.ipAddress}</span>
+                                <span>Location: {visit.location?.city}-{visit.location?.region}-<b>{fullCountryName(visit.location?.country)}</b></span>
+                            </div>
+                            <div>
+                                <button onClick={()=>deleteVisit(visit.id, visit.location?.country)}>Delete Forever</button>
+                            </div>
                         </div>
                     ))}
                 </div>
+                {/* controlling console */}
                 <div className={'scrollable-container'}>
                     <h1 className={'text-white'}>Log: {condition}</h1>
                     <h1 className={'text-white'}>Filter:</h1>

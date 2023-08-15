@@ -8,6 +8,7 @@ import ImageGallery from "../Home/ImageGallery";
 import logos from "../../images/logo/index";
 import techLogos from "../../images/techs/index";
 import TypeWriter from "../test/TypeWriter";
+import './app-banner.css'
 
 const AppBanner = () => {
 	const {lang, LANGUAGE} = useApp();
@@ -43,10 +44,10 @@ const AppBanner = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-			className="flex flex-col sm:justify-around items-center lg:flex-row mt-12 md:mt-2"
+			className="app-banner-container"
 		>
 			{/* intro */}
-			<div className="w-full md:w-1/3 text-left">
+			<div className="w-full text-left">
 				{/* school logos */}
 				<div className={"flex flex-row gap-1 py-3 justify-start"}>
 					{logos.map((logo, index) => {

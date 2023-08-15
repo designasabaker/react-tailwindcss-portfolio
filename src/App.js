@@ -15,6 +15,8 @@ import {debounce, throttle} from "./utils";
 import axios from "axios";
 import Test from './pages/Test';
 import Note from "./components/Home/Note";
+import {AuthProvider} from "./context/AuthProvider";
+import PrivateRoute from "./utils/PrivateRoute";
 // import dotenv from 'dotenv';
 // dotenv.config();
 
@@ -26,6 +28,8 @@ const Projects = lazy(()=>import('./pages/Projects'));
 const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 const Error = lazy(() => import('./pages/Error.jsx'));
 const Log = lazy(() => import('./pages/Log.jsx'));
+const Login = lazy(() => import('./pages/Login.jsx'));
+
 const ipGeoApiKey = process.env.REACT_APP_IP_GEO_API_KEY;
 const ipGeoToken = process.env.REACT_APP_IP_GEO_TOKEN;
 
@@ -78,37 +82,40 @@ function App() {
 
 	return (
 		<>
-			<AppProvider>
-			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
-				<BrowserRouter>
-					<ScrollToTop />
-					<Note />
-					<AppHeader />
-					<Suspense fallback={""}>
-						<Routes>
-							<Route path="/" element={<AppSharedLayout />}>
-								<Route exact index element={<Home />} />
-								<Route path="projects">
-									<Route exact index element={<Projects />} />
-									<Route
-										path=":projectName"
-										element={<ProjectSingle />}
-									/>
+			<AuthProvider>
+				<AppProvider>
+				<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
+					<BrowserRouter>
+						<ScrollToTop />
+						<Note />
+						<AppHeader />
+						<Suspense fallback={""}>
+							<Routes>
+								<Route path="/" element={<AppSharedLayout />}>
+									<Route exact index element={<Home />} />
+									<Route path="projects">
+										<Route exact index element={<Projects />} />
+										<Route
+											path=":projectName"
+											element={<ProjectSingle />}
+										/>
+										<Route path="*" element={<Error />} />
+									</Route>
+									<Route path="about" element={<About />} />
+									<Route path="contact" element={<Contact />} />
+									<Route path="test" element={<Test />} />
+									<Route path="login" element={<Login />} />
+									<Route path="log" element={<Log />} />
 									<Route path="*" element={<Error />} />
 								</Route>
-								<Route path="about" element={<About />} />
-								<Route path="contact" element={<Contact />} />
-								<Route path="test" element={<Test />} />
-								<Route path="log" element={<Log />} />
-								<Route path="*" element={<Error />} />
-							</Route>
-						</Routes>
-					</Suspense>
-					<AppFooter />
-				</BrowserRouter>
-				<UseScrollToTop />
-			</div>
-			</AppProvider>
+							</Routes>
+						</Suspense>
+						<AppFooter />
+					</BrowserRouter>
+					<UseScrollToTop />
+				</div>
+				</AppProvider>
+			</AuthProvider>
 		</>
 	);
 }

@@ -1,0 +1,7 @@
+.record-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 12px;
+    border-bottom: rgba(255,255,255, 0.1) 1px solid;
+}
