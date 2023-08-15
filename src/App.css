@@ -6,6 +6,7 @@
     overflow-y: scroll;
     max-height: 80vh;
     padding: 0 2rem;
+    width: 100%;
 }
 
 .scrollable-container::-webkit-scrollbar {
@@ -62,4 +63,12 @@
     .btn{
         @apply cursor-pointer bg-midBlue text-white font-bold text-base sm:text-xl rounded-full px-6 pt-1 pb-2 my-6 sm:my-6 hover:bg-midGreen hover:text-dark transition-all duration-300 ease-in-out;
     }
+}
+
+input{
+    color:black;
+}
+
+b{
+    font-weight: 600;
 }

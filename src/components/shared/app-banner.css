@@ -1,0 +1,11 @@
+.app-banner-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+/* mobile view */
+@media (max-width: 640px) {
+    .app-banner-container{
+        grid-template-columns: 1fr;
+    }
+}
