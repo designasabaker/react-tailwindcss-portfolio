@@ -69,6 +69,7 @@ const Log = () => {
     const [countries, setCountries] = useState([]);
     const [countriesFilters, setCountriesFilters] = useState({});
     const [condition, setCondition] = useState('');
+    const [selectedVisitIds, setSelectedVisitIds] = useState([]);
 
     const navigate = useNavigate();
     const { currentUser } = useAuth();
@@ -113,6 +114,55 @@ const Log = () => {
             console.error("Error deleting document: ", error);
         }
     };
+
+    const handleCheckboxChange = (event, visitId) => {
+        event.stopPropagation();
+        if (event.target.checked) {
+            setSelectedVisitIds(prev => {
+                if (!prev.includes(visitId)) {
+                    return [...prev, visitId];
+                }
+                return prev;  // 返回原始数组，如果ID已经存在
+            })}
+        else {
+            setSelectedVisitIds(prev => prev.filter(id => id !== visitId));
+        }
+    };
+
+    const deleteSelectedVisits = async () => {
+        // 弹出确认对话框 Double check with the user
+        const userConfirmed = window.confirm(`Are you sure you want to delete these selected records forever?`);
+        if (!userConfirmed) {
+            return;  // User clicked 'Cancel'
+        }
+
+        // Create a shallow copy of the selectedVisitIds to ensure no mutations occur during deletions
+        const idsToDelete = [...selectedVisitIds];
+
+        // Use Promise.all to attempt deleting all selected visits concurrently for performance
+        const deletePromises = idsToDelete.map(visitId => {
+            const visitRef = doc(db, "visits", visitId);
+            return deleteDoc(visitRef).catch(error => {
+                console.error(`Error deleting document with ID ${visitId}:`, error);
+            });
+        });
+
+        try {
+            await Promise.all(deletePromises);
+
+            // 更新UI，例如通过从visits数组中删除选中的访问记录
+            setVisits(prevVisits => prevVisits.filter(visit => !idsToDelete.includes(visit.id)));
+
+            // Clear the selected IDs since they've been deleted
+            setSelectedVisitIds([]);
+
+            alert(`Selected records deleted successfully!`);
+        } catch (error) {
+            console.error("Error occurred during batch delete:", error);
+        }
+    };
+
+
 
     useEffect(() => {
         const fetchVisits = async () => {
@@ -164,8 +214,26 @@ const Log = () => {
             <div className={'grid grid-cols-2 gap-3 px-6'}>
                 {/* all records */}
                 <div className={'scrollable-container px-6'}>
+                    {/* header */}
+                    <div className={'text-white record-container'}>
+                        <span style={{width: '12px'}}> </span>
+                        <span style={{width: '18px'}}>Index</span>
+                        <span>Info</span>
+                        <span>
+                            <button
+                                onClick={()=>deleteSelectedVisits()}
+                            >Delete Selected</button>
+                        </span>
+                    </div>
                     {visits.map((visit,index) => (
                         <div key={visit.id} className={'text-white record-container'}>
+                            <div>
+                                <input
+                                    style={{width: '18px'}}
+                                    type={'checkbox'}
+                                    checked={selectedVisitIds.includes(visit.id)}
+                                    onChange={event => handleCheckboxChange(event, visit.id)}/>
+                            </div>
                             <div>
                                 <span style={{width:'18px'}}>{index}</span><br/>
                                 <span>{visit.id.substring(0,3)}...</span>
