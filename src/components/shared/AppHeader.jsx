@@ -48,7 +48,7 @@ const AppHeader = () => {
 				navLinksVal = ['Projects', 'About Me', 'Contact'];
 				break;
 			case LANGUAGE.CN:
-				navLinksVal = ['项目', '关于我', '联系方式'];
+				navLinksVal = ['项目', '关于我', '联系方式',''];
 				break;
 			default:
 				navLinksVal = ['Projects', 'About Me', 'Contact'];
