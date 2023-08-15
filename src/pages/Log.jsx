@@ -46,6 +46,18 @@ const fullCountryName = (countryCode) => {
     }
 }
 
+const unLocalTimeString = (timeString) => {
+    const [date, time] = timeString.split(', ');
+    const [month, day, year] = date.split('/');
+    // const [time12, ampm] = time.split(' ');
+    // const [hour, minute, second] = time12.split(':');
+    return new Date(year, month - 1, day);
+}
+
+console.log('unLocalTimeString',unLocalTimeString('8/1/2021, 12:00:00 AM'));
+console.log('test 1', unLocalTimeString('8/4/2021, 12:00:00 AM') - unLocalTimeString('8/1/2021, 12:00:00 AM'));
+console.log('test 2', unLocalTimeString('8/1/2021, 12:00:00 AM') - unLocalTimeString('8/4/2021, 12:00:00 AM'));
+
 const Log = () => {
     const [visits, setVisits] = useState([]);
     const [visitsInitials, setVisitsInitials] = useState([]);
@@ -69,10 +81,21 @@ const Log = () => {
         }));
     }
 
+    const setAllCountries = (bool) => {
+        const newCountriesFilters = countries.reduce((acc, country) => {
+            acc[country] = bool;
+            return acc;
+        }, {});
+
+        setCountriesFilters(newCountriesFilters);
+    }
+
     useEffect(() => {
         const fetchVisits = async () => {
             setCondition('fetching data')
             const fetchedVisits = await fetchData();
+            console.log('fetchedVisits',fetchedVisits)
+            const sortedVisits = fetchedVisits.sort((a, b) => unLocalTimeString(b.formattedTimestamp) - unLocalTimeString(a.formattedTimestamp));
 
             const uniqueLocations = [...new Set(fetchedVisits.map(visit => visit.locationString))];
 
@@ -87,8 +110,8 @@ const Log = () => {
                 return acc;
             }, {});
 
-            setVisits(fetchedVisits);
-            setVisitsInitials(fetchedVisits);
+            setVisits(sortedVisits);
+            setVisitsInitials(sortedVisits);
             setlocationStrings(uniqueLocations);
             setlocationsFilters(locationsFiltersInitial);
             setCountries(uniqueCountries);
@@ -145,6 +168,10 @@ const Log = () => {
                                         &nbsp;<label htmlFor={country}>{fullCountryName(country)}</label>
                                     </div>)})
                             }
+                            <div>
+                                <button className={'btn'} onClick={()=>setAllCountries(true)}>Check all</button>
+                                <button className={'btn'} onClick={()=>setAllCountries(false)}>Uncheck all</button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -31,7 +31,7 @@ const ipGeoToken = process.env.REACT_APP_IP_GEO_TOKEN;
 
 
 const recordVisit = async () => {
-	const formattedTimestamp = new Date().toLocaleString(undefined, {
+	const formattedTimestamp = new Date().toLocaleString('en-US', {
 		year: 'numeric',
 		month: 'numeric',
 		day: 'numeric',
