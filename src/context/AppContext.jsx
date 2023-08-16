@@ -11,9 +11,17 @@ export const AppContext = React.createContext({});
 
 export const AppProvider = ({children}) => {
     const [lang,setLang] = useState(LANGUAGE.EN);
+    const [resumeLink, setResumeLink] = useState('');
 
     return(
-        <AppContext.Provider value={{lang, setLang, LANGUAGE, LANGUAGES}}>
+        <AppContext.Provider value={{
+            lang,
+            setLang,
+            LANGUAGE,
+            LANGUAGES,
+            resumeLink,
+            setResumeLink,
+        }}>
             {children}
         </AppContext.Provider>
     )

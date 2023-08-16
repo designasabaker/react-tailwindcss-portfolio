@@ -29,6 +29,7 @@ const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 const Error = lazy(() => import('./pages/Error.jsx'));
 const Log = lazy(() => import('./pages/Log.jsx'));
 const Login = lazy(() => import('./pages/Login.jsx'));
+const Upload = lazy(() => import('./pages/Upload.jsx'));
 
 const ipGeoApiKey = process.env.REACT_APP_IP_GEO_API_KEY;
 const ipGeoToken = process.env.REACT_APP_IP_GEO_TOKEN;
@@ -105,6 +106,7 @@ function App() {
 									<Route path="contact" element={<Contact />} />
 									<Route path="test" element={<Test />} />
 									<Route path="login" element={<Login />} />
+									<Route path="upload" element={<Upload />} />
 									<Route path="log" element={<Log />} />
 									<Route path="*" element={<Error />} />
 								</Route>
