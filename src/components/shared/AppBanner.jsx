@@ -12,6 +12,7 @@ import './app-banner.css'
 
 const AppBanner = () => {
 	const {lang, LANGUAGE} = useApp();
+	const {resumeLink} = useApp();
 	const [activeTheme] = useThemeSwitcher();
 	const executeScroll = useCallback(() => {
 		const element = document.getElementById("homeProjects");
@@ -128,7 +129,7 @@ const AppBanner = () => {
 				>
 					<a
 						// download="GeorgeResume.pdf"
-						href="/files/Yihao_George_Xu_Resume.pdf"
+						href={resumeLink || "/files/Yihao_George_Xu_Resume.pdf"}
 						target="_blank"
 						className="font-general-medium flex justify-center items-center w-64 sm:w-96 mt-12 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
 						aria-label="Download Resume"

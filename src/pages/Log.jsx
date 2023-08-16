@@ -108,7 +108,9 @@ const Log = () => {
         try {
             await deleteDoc(visitRef);
             // 在此处更新UI，例如通过从visits数组中删除该访问记录
-            setVisits(visits => visits.filter(visit => visit.id !== visitId));
+            // setVisits(visits => visits.filter(visit => visit.id !== visitId));
+            // refresh the data
+            fetchVisits();
             alert(`Record ${visitId} from ${location || '...'} deleted successfully!`)
         } catch (error) {
             console.error("Error deleting document: ", error);
@@ -151,7 +153,9 @@ const Log = () => {
             await Promise.all(deletePromises);
 
             // 更新UI，例如通过从visits数组中删除选中的访问记录
-            setVisits(prevVisits => prevVisits.filter(visit => !idsToDelete.includes(visit.id)));
+            // setVisits(prevVisits => prevVisits.filter(visit => !idsToDelete.includes(visit.id)));
+            // refresh the data
+            fetchVisits();
 
             // Clear the selected IDs since they've been deleted
             setSelectedVisitIds([]);
@@ -162,37 +166,37 @@ const Log = () => {
         }
     };
 
+    async function fetchVisits(){
+        setCondition('fetching data')
+        const fetchedVisits = await fetchData();
+        console.log('fetchedVisits',fetchedVisits)
+        const sortedVisits = fetchedVisits.sort((a, b) => unLocalTimeString(b.formattedTimestamp) - unLocalTimeString(a.formattedTimestamp));
+
+        const uniqueLocations = [...new Set(fetchedVisits.map(visit => visit.locationString))];
+
+        const locationsFiltersInitial = uniqueLocations.reduce((acc, location) => {
+            acc[location] = true;
+            return acc;
+        }, {});
+
+        const uniqueCountries = [...new Set(fetchedVisits.map(visit => visit.location.country))];
+        const countriesFiltersInitial = uniqueCountries.reduce((acc, country) => {
+            acc[country] = true;
+            return acc;
+        }, {});
+
+        setVisits(sortedVisits);
+        setVisitsInitials(sortedVisits);
+        setlocationStrings(uniqueLocations);
+        setlocationsFilters(locationsFiltersInitial);
+        setCountries(uniqueCountries);
+        setCountriesFilters(countriesFiltersInitial);
+        setCondition('data set')
+    };
+
 
 
     useEffect(() => {
-        const fetchVisits = async () => {
-            setCondition('fetching data')
-            const fetchedVisits = await fetchData();
-            console.log('fetchedVisits',fetchedVisits)
-            const sortedVisits = fetchedVisits.sort((a, b) => unLocalTimeString(b.formattedTimestamp) - unLocalTimeString(a.formattedTimestamp));
-
-            const uniqueLocations = [...new Set(fetchedVisits.map(visit => visit.locationString))];
-
-            const locationsFiltersInitial = uniqueLocations.reduce((acc, location) => {
-                acc[location] = true;
-                return acc;
-            }, {});
-
-            const uniqueCountries = [...new Set(fetchedVisits.map(visit => visit.location.country))];
-            const countriesFiltersInitial = uniqueCountries.reduce((acc, country) => {
-                acc[country] = true;
-                return acc;
-            }, {});
-
-            setVisits(sortedVisits);
-            setVisitsInitials(sortedVisits);
-            setlocationStrings(uniqueLocations);
-            setlocationsFilters(locationsFiltersInitial);
-            setCountries(uniqueCountries);
-            setCountriesFilters(countriesFiltersInitial);
-            setCondition('data set')
-        };
-
         if (!currentUser) {
             navigate("/login");  // Redirect to login if the user is not authenticated
         }
