@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
+import { getStorage, ref } from "firebase/storage";
 // import dotenv from 'dotenv';
 // dotenv.config();
 
@@ -27,3 +28,4 @@ const analytics = getAnalytics(app);
 export const db = getFirestore();
 // 初始化 Firebase Auth
 export const auth = getAuth();
+export const storage = getStorage();
