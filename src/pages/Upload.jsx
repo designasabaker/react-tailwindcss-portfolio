@@ -22,7 +22,7 @@ export default function Upload(){
 
     async function onFileUpload() {
         if (auth.currentUser) {
-            console.log("Current user UID:", auth.currentUser.uid);
+            // console.log("Current user UID:", auth.currentUser.uid);
         } else {
             console.log("No user is currently signed in.");
         }
