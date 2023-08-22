@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { auth } from '../firebase'; // 请确保你在这个文件中导出了你的 Firebase 配置和初始化
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, setPersistence, browserSessionPersistence } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 import {useAuth} from "../context/AuthProvider";
 
@@ -20,6 +21,8 @@ function Login() {
             return;
         }
         try {
+            // 设置 session persistence
+            await setPersistence(auth, browserSessionPersistence);
             await signInWithEmailAndPassword(auth, email, password);
             navigate('/log'); // 登录成功后重定向到主页或其他页面
         } catch (err) {
