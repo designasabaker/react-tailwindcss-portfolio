@@ -215,9 +215,9 @@ const Log = () => {
 
     return (
         <div>
-            <div className={'grid grid-cols-2 gap-3 px-6'}>
+            <div className={'grid grid-cols-1 sm:grid-cols-2 gap-3 px-0 sm:px-6'}>
                 {/* all records */}
-                <div className={'scrollable-container px-6'}>
+                <div className={'scrollable-container px-0 sm:px-6'}>
                     {/* header */}
                     <div className={'text-white record-container'}>
                         <span style={{width: '12px'}}> </span>
@@ -248,7 +248,16 @@ const Log = () => {
                                 <span>Location: {visit.location?.city}-{visit.location?.region}-<b>{fullCountryName(visit.location?.country)}</b></span>
                             </div>
                             <div>
-                                <button onClick={()=>deleteVisit(visit.id, visit.location?.country)}>Delete Forever</button>
+                                <button
+                                    className={'delete-btn-desktop'}
+                                    onClick={()=>deleteVisit(visit.id, visit.location?.country)}>
+                                    Delete Forever
+                                </button>
+                                <button
+                                    className={'delete-btn-mobile'}
+                                    onClick={()=>deleteVisit(visit.id, visit.location?.country)}>
+                                    X
+                                </button>
                             </div>
                         </div>
                     ))}

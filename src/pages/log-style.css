@@ -5,3 +5,25 @@
     padding: 12px;
     border-bottom: rgba(255,255,255, 0.1) 1px solid;
 }
+
+.delete-btn-desktop{
+    display: inline-block;
+}
+.delete-btn-mobile{
+    display: none;
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    .record-container{
+        grid-template-columns: 1fr 1fr 7fr 1fr;
+        padding: 0;
+        gap: 1px;
+    }
+    .delete-btn-mobile{
+        display: inline-block;
+    }
+    .delete-btn-desktop{
+        display: none;
+    }
+}
