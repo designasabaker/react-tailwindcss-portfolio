@@ -26,7 +26,7 @@ function Note() {
                 One is a indie MERN full-stack app, calculating date: <br />
                 <a href="https://www.opt-unemployment-time-calculator.online" target="_blank" rel="noopener noreferrer">opt app here</a>.<br />
                 The other one is a website for a new startup called WanderFlow:<br />
-                <a href="https://wandeflowv2.vercel.app/" target="_blank" rel="noopener noreferrer">WanderFlow here</a>.<br />
+                <a href="https://www.wanderflow.co/" target="_blank" rel="noopener noreferrer">WanderFlow here</a>.<br />
                 Please feel free to check :)
             </p>
             <button

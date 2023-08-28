@@ -23,7 +23,42 @@ import CheckLiveWebBtn from "../components/projects/CheckLiveWebBtn";
 import ClickableImage from "../components/projects/ClickableImage";
 import {LANGUAGE} from "../context/AppContext";
 
+import {importAll} from "../utils";
+
+console.log('notionImg4', notionImg4)
+
 const WELIGHT_LIVE_URL = 'https://welightpreview.vercel.app';
+const profileImagesObject = importAll(require.context('../images/Projects/welight/profile', false, /\.(png|jpe?g|svg)$/));
+const sortedProfileImages = Object.entries(profileImagesObject)
+	.sort((a, b) => {
+		const numA = parseInt(a[0].match(/\d+/)[0], 10);  // Extract the number from the filename of 'a'
+		const numB = parseInt(b[0].match(/\d+/)[0], 10);  // Extract the number from the filename of 'b'
+		return numA - numB;  // Sort based on the extracted numbers
+	})
+	.map(entry => entry[1])
+	.map(img => img.default);  // Get the sorted image paths
+
+console.log('sortedProfileImages', sortedProfileImages)
+const profileImagesJSX =sortedProfileImages.map((imgPath, index) => {
+	return(
+		<div key={index}>
+			<div className={"w-full py-2 grid grid-cols-2"}>
+				<ClickableImage
+					src={imgPath} alt={"feedback"}
+					className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+					style={{maxWidth: "450px"}}
+				/>
+				<div className={"flex flex-col px-3"}>
+					<div style={{flex:1}} />
+					{/*<div className={"font-bold text-md"}>Iteration II</div>*/}
+					<p className={"font-thin text-sm py-2"}>
+					</p>
+				</div>
+			</div>
+		</div>
+	)
+});
+console.log('profileImagesJSX', profileImagesJSX)
 
 export const WeLightProjectData = {
 	id: 1,
@@ -274,20 +309,22 @@ export const WeLightProjectData = {
 				id: 3.3,
 				details:{
 					[LANGUAGE.EN]:
-						<div className={"w-full grid grid-cols-2"}>
-							<ClickableImage
-								src={notionImg4} alt={"feedback"}
-								className={"max-w-md max-h-lg object-contain px-6 pt-6"}
-								style={{maxWidth: "450px"}}
-							/>
-							<div className={"flex flex-col px-3"}>
-								<div style={{flex:1}} />
-								{/*<div className={"font-bold text-md"}>Iteration II</div>*/}
-								<p className={"font-thin text-sm py-2"}>
-									Meanwhile, I was also responsible for designing and developing the profile page. Users input their personal information on this page, and after submission, the backend returns a JSON file used to display past case studies.
-								</p>
+						<>
+							<div className={"w-full grid grid-cols-2"}>
+								<ClickableImage
+									src={notionImg4} alt={"feedback"}
+									className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+									style={{maxWidth: "450px"}}
+								/>
+								<div className={"flex flex-col px-3"}>
+									<div style={{flex:1}} />
+									{/*<div className={"font-bold text-md"}>Iteration II</div>*/}
+									<p className={"font-thin text-sm py-2"}>
+										Meanwhile, I was also responsible for designing and developing the profile page. Users input their personal information on this page, and after submission, the backend returns a JSON file used to display past case studies.
+									</p>
+								</div>
 							</div>
-						</div>,
+						</>,
 					[LANGUAGE.CN]:
 						<div className={"w-full grid grid-cols-2"}>
 							<ClickableImage
@@ -307,12 +344,50 @@ export const WeLightProjectData = {
 
 			},
 			{
+				id: 3.4,
+				details:{
+					[LANGUAGE.EN]:
+						<>
+							<div className={"w-full grid grid-cols-2 py-3"}>
+								<ClickableImage
+									src={sortedProfileImages[1]} alt={"feedback"}
+									className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+									style={{maxWidth: "450px"}}
+								/>
+								<div className={"flex flex-col px-3"}>
+									<div style={{flex:1}} />
+									{/*<div className={"font-bold text-md"}>Iteration II</div>*/}
+									<p className={"font-thin text-sm py-2"}>
+
+									</p>
+								</div>
+							</div>
+							<div className={"w-full grid grid-cols-2"}>
+								<ClickableImage
+									src={sortedProfileImages[4]} alt={"feedback"}
+									className={"max-w-md max-h-lg object-contain px-6 pt-6"}
+									style={{maxWidth: "450px"}}
+								/>
+								<div className={"flex flex-col px-3"}>
+									<div style={{flex:1}} />
+									{/*<div className={"font-bold text-md"}>Iteration II</div>*/}
+									<p className={"font-thin text-sm py-2"}>
+										After the user submits their information, the backend returns a JSON file that is used to display past case studies.
+									</p>
+								</div>
+							</div>
+						</>,
+				}
+
+			},
+			{
 				id: 4,
 				details:{
 					[LANGUAGE.EN]: 'Overall, my contributions at WeLight were instrumental in delivering an enhanced user experience, and my use of hooks for animation helped to streamline development and create a dynamic, engaging platform.',
 					[LANGUAGE.CN]: '总的来说，我在WeLight的贡献对于提供增强的用户体验至关重要，我对动画的使用有助于简化开发并创建一个动态，引人入胜的平台。'
 				}
 			},
+
 			{
 				id: 4.1,
 				details:{
@@ -345,7 +420,6 @@ export const WeLightProjectData = {
 							</div>
 						</div>,
 				}
-
 			},
 			{
 				id:100,

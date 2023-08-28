@@ -49,13 +49,7 @@ const recordVisit = async () => {
 		// Retrieve user's IP address using an external API
 		const response = await axios.get("https://api.ipify.org?format=json");
 		const ipAddress = response.data.ip;
-		//const geoUrl = `http://api.ipstack.com/${ipAddress}?access_key=${ipGeoApiKey}`;
-		//const geoResponse = await axios.get(geoUrl);
-		// const location = {
-		// 	city: geoResponse.data?.city || "Unknown",
-		// 	country: geoResponse.data?.country_name || "Unknown",
-		// 	region: geoResponse.data?.region_name || "Unknown",
-		// };
+
 		const geoTokenUrl = `https://ipinfo.io?token=${ipGeoToken}`;
 		const geoTokenResponse = await axios.get(geoTokenUrl);
 		const location = {
