@@ -1,8 +1,6 @@
 // Import images
 import WeLightImage from '../images/WeLight.png';
-import OSBImage from '../images/OSB-2.png';
 import EcoHomeImage from '../images/EcoHomeCover.png';
-//import FPShoppingImage from '../images/FPSCover.png';
 import SimpleNimImage from '../images/SimpleNim-cover.png';
 import shekonImage from '../images/shekon-cover.png';
 import nasaImage from '../images/nasa-cover.png';
@@ -48,14 +46,6 @@ export const projectsData = [
 			tags: 'UI / Frontend',
 		},
 	},
-	// {
-	// 	id: 4,
-	// 	name: 'FPShopping',
-	// 	title: 'FPShopping',
-	// 	brief: 'Academic Design Thesis',
-	// 	category: 'Web Application',
-	// 	img: FPShoppingImage,
-	// },
 	{
 		id: 5,
 		name: 'Shekon',

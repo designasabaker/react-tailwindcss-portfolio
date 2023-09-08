@@ -1,6 +1,5 @@
 import {useState, createContext, useEffect} from 'react';
 import { WeLightProjectData as WeLightProjectDataJson} from '../data/WeLightProjectData';
-import { OSBProjectData as OSBProjectDataJson} from '../data/OSBProjectData';
 import { EcoHomeProjectData as EcoHomeProjectDataJson} from "../data/EcoHomeProjectData";
 import { FPShoppingProjectData as FPShoppingProjectDataJson} from "../data/FPShoppingProjectData";
 import { SimpleNimProjectData as SimpleNimProjectDataJson} from "../data/SimpleNimProjectData";
@@ -22,7 +21,6 @@ import ProjectError from '../components/projects/ProjectError';
 const SingleProjectContext = createContext();
 export const projectsDataListEN = [
 	WeLightProjectDataJson,
-	OSBProjectDataJson,
 	EcoHomeProjectDataJson,
 	FPShoppingProjectDataJson,
 	SimpleNimProjectDataJson,
