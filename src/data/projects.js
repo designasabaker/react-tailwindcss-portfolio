@@ -73,19 +73,6 @@ export const projectsData = [
 		img: SimpleNimImage,
 	},
 	{
-		id: 7,
-		name: 'OSB',
-		title: 'OSB',
-		brief: 'Cosmetic Ingredients Website Development',
-		category: 'Web Application',
-		img: OSBImage,
-		ProjectHeader: {
-			title: 'OSB Website',
-			publishDate: 'Apr 15, 2023',
-			tags: 'UI / Frontend',
-		},
-	},
-	{
 		id: 11,
 		name: "Carpet",
 		title: 'Magic Carpet',
